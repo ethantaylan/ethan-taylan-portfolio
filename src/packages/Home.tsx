@@ -1,11 +1,9 @@
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar';
 
 function Home() {
-  return (
-    <div>
-      <Navbar />
-    </div>
-  )
+	return (
+			<Navbar />
+	);
 }
 
-export default Home
+export default Home;
