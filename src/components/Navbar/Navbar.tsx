@@ -1,9 +1,5 @@
 import styled from 'styled-components';
-
-const primaryColor = '#607b96';
-const secondaryColor = '#1e2d3d';
-const appBg = '#011627';
-const cursorPointer = { cursor: 'pointer' };
+import { Colors } from '../Colors';
 
 const Container = styled.div`
 	width: 100%;
@@ -11,24 +7,24 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	background-color: ${appBg};
-	color: ${primaryColor};
+	background-color: ${Colors.appBg};
+	color: ${Colors.primary};
 	white-space: nowrap;
-	border: 1px solid ${secondaryColor};
+	border: 1px solid ${Colors.secondary};
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
 `;
 
 const BrandContainer = styled.div`
-	width: 30%;
+	width: 300px;
 	height: 100%;
 	display: flex;
 	align-items: center;
-	color: ${primaryColor};
+	color: ${Colors.primary};
 	padding-left: 20px;
 	padding-right: 20px;
-	border-right: 1px solid ${secondaryColor};
-	${cursorPointer}
+	border-right: 1px solid ${Colors.secondary};
+	cursor: ${Colors.cursor};
 `;
 
 const NavContainer = styled.nav`
@@ -43,18 +39,18 @@ const ContactBtn = styled.a`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-left: 1px solid ${secondaryColor};
+	border-left: 1px solid ${Colors.secondary};
 	text-decoration: none;
-	color: ${primaryColor};
+	color: ${Colors.primary};
 	padding: 0 20px 0 20px;
 	border-bottom: 2px solid;
 	border-bottom-color: transparent;
 	border-top: 2px solid;
 	border-top-color: transparent;
-	${cursorPointer}
+	cursor: ${Colors.cursor};
 	&:hover {
 		border-bottom: 2px solid orange;
-		color: unset;
+		color: ${Colors.white};
 	}
 `;
 
@@ -68,7 +64,7 @@ const NavLi = styled.li`
 	display: flex;
 	justify-content: center;
 	height: 100%;
-	border-right: 1px solid ${secondaryColor};
+	border-right: 1px solid ${Colors.secondary};
 	align-items: center;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -76,9 +72,10 @@ const NavLi = styled.li`
 	border-bottom-color: transparent;
 	border-top: 2px solid;
 	border-top-color: transparent;
-	${cursorPointer}
+	cursor: ${Colors.cursor};
 	&:hover {
 		border-bottom: 2px solid orange;
+		color: ${Colors.white} !important;
 	}
 `;
 

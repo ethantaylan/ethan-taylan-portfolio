@@ -2,6 +2,7 @@ import { Github, Instagram, Linkedin } from 'react-bootstrap-icons';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { AiFillInstagram } from 'react-icons/ai';
 import styled, { createGlobalStyle } from 'styled-components';
+import { Colors } from '../Colors';
 
 const primaryColor = '#607b96';
 const secondaryColor = '#1e2d3d';
@@ -53,10 +54,10 @@ const GithubBtn = styled.a`
 	border-bottom-color: transparent;
 	border-top: 2px solid;
 	border-top-color: transparent;
-	${cursorPointer}
 	&:hover {
 		border-bottom: 2px solid orange;
-		color: unset;
+		cursor: ${Colors.cursor};
+		color: ${Colors.white};
 	}
 `;
 
@@ -82,6 +83,8 @@ const NavLi = styled.li`
 	${cursorPointer}
 	&:hover {
 		border-bottom: 2px solid orange;
+		cursor: ${Colors.cursor};
+		color: ${Colors.white};
 	}
 `;
 

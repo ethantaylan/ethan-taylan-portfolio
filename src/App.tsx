@@ -1,17 +1,11 @@
 // import Home from './packages/Home/Home';
 import 'bootstrap/dist/css/bootstrap.css';
-import Footer from './components/Footer/Footer';
-import Navbar from './components/Navbar/Navbar';
-import AboutMe from './packages/AboutMe/SideBar';
-
+import AppLayout from './packages/AppLayout';
 
 function App() {
 	return (
-		<div className='App h-75 p-3'>
-			<Navbar />
-			{/* <Home /> */}
-			<AboutMe />
-			<Footer />
+		<div className='App h-100 w-100'>
+			<AppLayout />
 		</div>
 	);
 }

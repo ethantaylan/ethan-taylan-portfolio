@@ -1,12 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Colors } from '../../components/Colors';
+import { Colors } from './Colors';
 import { AiFillHome } from 'react-icons/ai';
 import { RiContactsFill } from 'react-icons/ri';
 import { FaFileCode } from 'react-icons/fa';
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+    .app-bg {
+        background-color: #011627;
+		border-right: 1px solid ${Colors.secondary};
+    }
+`;
 
 const SideBarContainer = styled.div`
-	width: 65px;
+	width: auto;
 	height: 100%;
 	background-color: ${Colors.appBg};
 	border: 1px solid ${Colors.secondary};
@@ -18,7 +26,7 @@ const SideBarContainer = styled.div`
 `;
 
 const SideBarUl = styled.ul`
-	height: 30%;
+	height: auto;
 	width: 100%;
 	color: ${Colors.primary};
 	display: flex;
@@ -29,11 +37,23 @@ const SideBarUl = styled.ul`
 	align-items: center;
 `;
 
-const SideBarLi = styled.li``;
+interface SideBarProps {
+	children: any;
+}
 
-function SideBar() {
+const SideBarLi = styled.li`
+	padding: 23px;
+	&:hover {
+		cursor: ${Colors.cursor};
+		color: ${Colors.white};
+		background-color: ${Colors.secondary};
+	}
+`;
+
+const SideBar: React.FC<SideBarProps> = ({ children }) => {
 	return (
-		<div className='h-100'>
+		<div className='app-bg h-100 w-100 d-flex flex-row'>
+			<GlobalStyle />
 			<SideBarContainer>
 				<SideBarUl>
 					<SideBarLi>
@@ -47,8 +67,9 @@ function SideBar() {
 					</SideBarLi>
 				</SideBarUl>
 			</SideBarContainer>
+			{children}
 		</div>
 	);
-}
+};
 
 export default SideBar;
