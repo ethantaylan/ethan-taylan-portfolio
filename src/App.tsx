@@ -1,7 +1,8 @@
 // import Home from './packages/Home/Home';
 import 'bootstrap/dist/css/bootstrap.css';
+import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
-import AboutMe from './packages/Home/AboutMe';
+import AboutMe from './packages/AboutMe/SideBar';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
 			<Navbar />
 			{/* <Home /> */}
 			<AboutMe />
+			<Footer />
 		</div>
 	);
 }

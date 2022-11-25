@@ -1,6 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import Footer from '../../components/Footer/Footer';
-import Navbar from '../../components/Navbar/Navbar';
 import LeftContent from './LeftContent/LeftContent';
 import RightContent from './RightContent/RightContent';
 
