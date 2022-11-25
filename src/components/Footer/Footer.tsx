@@ -93,18 +93,36 @@ function Footer() {
 			<FindMeContainer>find-me-in</FindMeContainer>
 			<NavContainer>
 				<NavUl>
-					<NavLi>
-						<AiFillInstagram />
-					</NavLi>
-					<NavLi>
-						<FaLinkedinIn />
-					</NavLi>
+					<a
+						target='_blank'
+						className='w-100 h-100'
+						href='https://www.instagram.com/et.tln/'
+					>
+						<NavLi>
+							<AiFillInstagram />
+						</NavLi>
+					</a>
+					<a
+						target='_blank'
+						className='w-100 h-100'
+						href='https://fr.linkedin.com/in/ethan-taylan-697831199'
+					>
+						<NavLi>
+							<FaLinkedinIn />
+						</NavLi>
+					</a>
 				</NavUl>
 			</NavContainer>
-			<GithubBtn>
-				@ethtaylan
-				<Github className='icons' />
-			</GithubBtn>
+			<a
+				target='_blank'
+				className=' h-100'
+				href='https://github.com/ethantaylan'
+			>
+				<GithubBtn>
+					@ethtaylan
+					<Github className='icons' />
+				</GithubBtn>
+			</a>
 		</Container>
 	);
 }
