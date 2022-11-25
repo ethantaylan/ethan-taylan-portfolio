@@ -1,4 +1,7 @@
-import styled from 'styled-components';
+import { Github, Instagram, Linkedin } from 'react-bootstrap-icons';
+import { FaLinkedinIn } from 'react-icons/fa';
+import { AiFillInstagram } from 'react-icons/ai';
+import styled, { createGlobalStyle } from 'styled-components';
 
 const primaryColor = '#607b96';
 const secondaryColor = '#1e2d3d';
@@ -15,20 +18,19 @@ const Container = styled.div`
 	color: ${primaryColor};
 	white-space: nowrap;
 	border: 1px solid ${secondaryColor};
-	border-top-right-radius: 10px;
-	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
 `;
 
-const BrandContainer = styled.div`
-	width: 30%;
+const FindMeContainer = styled.div`
 	height: 100%;
 	display: flex;
 	align-items: center;
 	color: ${primaryColor};
 	padding-left: 20px;
 	padding-right: 20px;
-	border-right: 1px solid ${secondaryColor};
 	${cursorPointer}
+	border-right: 1px solid ${secondaryColor};
 `;
 
 const NavContainer = styled.nav`
@@ -38,7 +40,7 @@ const NavContainer = styled.nav`
 	align-items: center;
 `;
 
-const ContactBtn = styled.a`
+const GithubBtn = styled.a`
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -70,6 +72,7 @@ const NavLi = styled.li`
 	height: 100%;
 	border-right: 1px solid ${secondaryColor};
 	align-items: center;
+	width: 100%;
 	padding-left: 15px;
 	padding-right: 15px;
 	border-bottom: 2px solid;
@@ -82,20 +85,33 @@ const NavLi = styled.li`
 	}
 `;
 
-function PortfolioNavbar() {
+const GlobalStyle = createGlobalStyle`
+.icons {
+    margin-left: 10px;
+}
+`;
+
+function Footer() {
 	return (
-		<Container>
-			<BrandContainer>ethan-taylan</BrandContainer>
+		<Container className='global-types'>
+			<GlobalStyle />
+			<FindMeContainer>find-me-in</FindMeContainer>
 			<NavContainer>
 				<NavUl>
-					<NavLi>_hello</NavLi>
-					<NavLi>_about-me</NavLi>
-					<NavLi>_works</NavLi>
+					<NavLi>
+						<AiFillInstagram />
+					</NavLi>
+					<NavLi>
+						<FaLinkedinIn />
+					</NavLi>
 				</NavUl>
 			</NavContainer>
-			<ContactBtn>_contact-me</ContactBtn>
+			<GithubBtn>
+				@ethtaylan
+				<Github className='icons' />
+			</GithubBtn>
 		</Container>
 	);
 }
 
-export default PortfolioNavbar;
+export default Footer;
