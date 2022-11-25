@@ -1,4 +1,3 @@
-import './Navbar.scss';
 import styled from 'styled-components';
 
 const primaryColor = '#607b96';
