@@ -13,7 +13,7 @@ const Container = styled.div`
 `;
 
 const Welcome = styled.span`
-	color: #a0ffb4;
+	color: #43D9AD;
 	letter-spacing: normal; ;
 `;
 
@@ -36,6 +36,7 @@ const Subtitle = styled.span`
 
 const Githublink = styled.span`
 	color: white;
+	font-size: 12px;
 `;
 
 function LeftContent() {

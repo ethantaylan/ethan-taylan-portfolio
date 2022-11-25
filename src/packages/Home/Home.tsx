@@ -8,6 +8,7 @@ const secondaryColor = '#1e2d3d';
 
 const GlobalStyle = createGlobalStyle`
 	.app-bg {
+		width: 80%;
 		background-color: #011627;
 		border-left: 1px solid ${secondaryColor};
 		border-right: 1px solid ${secondaryColor};
@@ -16,11 +17,12 @@ const GlobalStyle = createGlobalStyle`
 function Home() {
 	return (
 		<>
-			<Navbar />
 			<GlobalStyle />
-			<div className='app-bg h-100 w-100 d-flex'>
-				<LeftContent />
-				<RightContent />
+			<div className='w-100 h-100 app-bg d-flex justify-content-center'>
+				<div className='h-100 w-75 d-flex'>
+					<LeftContent />
+					<RightContent />
+				</div>
 			</div>
 			<Footer />
 		</>

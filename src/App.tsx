@@ -1,11 +1,15 @@
-import Home from './packages/Home/Home';
+// import Home from './packages/Home/Home';
 import 'bootstrap/dist/css/bootstrap.css';
+import Navbar from './components/Navbar/Navbar';
+import AboutMe from './packages/Home/AboutMe';
 
 
 function App() {
 	return (
 		<div className='App h-75 p-3'>
-			<Home />
+			<Navbar />
+			{/* <Home /> */}
+			<AboutMe />
 		</div>
 	);
 }

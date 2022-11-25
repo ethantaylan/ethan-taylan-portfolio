@@ -32,18 +32,21 @@ const CodeSnipperContainer = styled.div`
 `;
 
 const CodeSnippet = styled.img`
-	height: 335px;
+	height: 400px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	border: 1px solid ${secondaryColor};
+	border-radius: 15px;
+	box-shadow: 0 5px 40px rgba(0, 0, 0, 0.2);
 `;
 
-const Skills = styled.span`
-	color: ${primaryColor};
-	padding-top: 10px;
-	padding-bottom: 10px;
-	font-size: 12px;
-`;
+// const Skills = styled.span`
+// 	color: ${primaryColor};
+// 	padding-top: 10px;
+// 	padding-bottom: 10px;
+// 	font-size: 12px;
+// `;
+
 function RightContent() {
 	return (
 		<div className='h-100 w-100'>
@@ -51,16 +54,16 @@ function RightContent() {
 				<BlurBg>
 					<CodeSnipperContainer>
 						<CodeSnippet src={CodeSnippetImg}></CodeSnippet>
-						{/* <div className='d-flex flex-column'>
-							<Skills>_sass</Skills>
+						<div className='d-flex flex-column'>
+							{/* <Skills>_sass</Skills>
 							<Skills>_bootstrap</Skills>
 							<Skills>_styled</Skills>
 							<Skills>_react</Skills>
 							<Skills>_typescript</Skills>
 							<Skills>_strapi</Skills>
 							<Skills>_photoshop</Skills>
-							<Skills>_figma</Skills>
-						</div> */}
+							<Skills>_figma</Skills> */}
+						</div>
 					</CodeSnipperContainer>
 				</BlurBg>
 			</Container>
