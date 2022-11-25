@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { Colors } from '../Colors';
 
@@ -73,10 +74,6 @@ const NavLi = styled.li`
 	border-top: 2px solid;
 	border-top-color: transparent;
 	cursor: ${Colors.cursor};
-	&:hover {
-		border-bottom: 2px solid orange;
-		color: ${Colors.white} !important;
-	}
 `;
 
 function PortfolioNavbar() {
@@ -85,9 +82,15 @@ function PortfolioNavbar() {
 			<BrandContainer>ethan-taylan</BrandContainer>
 			<NavContainer>
 				<NavUl>
-					<NavLi>_hello</NavLi>
-					<NavLi>_about-me</NavLi>
-					<NavLi>_works</NavLi>
+					<NavLink className='link h-100' to='/'>
+						<NavLi>_home</NavLi>
+					</NavLink>
+					<NavLink className='link h-100' to='/about-me'>
+						<NavLi>_about-me</NavLi>
+					</NavLink>
+					<NavLink className='link h-100' to='/works'>
+						<NavLi>_works</NavLi>
+					</NavLink>
 				</NavUl>
 			</NavContainer>
 			<ContactBtn>_contact-me</ContactBtn>

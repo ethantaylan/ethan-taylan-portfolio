@@ -23,7 +23,6 @@ function Home() {
 					<RightContent />
 				</div>
 			</div>
-			<Footer />
 		</>
 	);
 }

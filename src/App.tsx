@@ -4,9 +4,9 @@ import AppLayout from './packages/AppLayout';
 
 function App() {
 	return (
-		<div className='App h-100 w-100'>
-			<AppLayout />
-		</div>
+				<div className='App h-100 w-100'>
+					<AppLayout />
+				</div>
 	);
 }
 

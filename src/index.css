@@ -97,6 +97,8 @@ video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	color: unset;
+	text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -140,9 +142,32 @@ body,
 #root,
 .App {
 	margin: 0px;
-    background-color: #010C15;
+	background-color: #010c15;
 	font-size: 14px;
 	letter-spacing: -0.7px;
 	width: 99vw !important;
 	height: 100vh !important;
+}
+
+a:hover {
+	text-decoration: none;
+	color: unset;
+}
+
+.active {
+	border-top: 2px solid;
+	border-top-color: transparent;
+	color: #ebebeb;
+	border-bottom: 2px solid orange !important;
+}
+
+.link {
+	border-top: 2px solid;
+	border-top-color: transparent;
+	border-bottom: 2px solid transparent;
+}
+
+.link:hover {
+	color: #ebebeb !important;
+	border-bottom: 2px solid orange;
 }
