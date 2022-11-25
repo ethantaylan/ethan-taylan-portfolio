@@ -44,10 +44,6 @@ const ContactBtn = styled.a`
 	text-decoration: none;
 	color: ${Colors.primary};
 	padding: 0 20px 0 20px;
-	border-bottom: 2px solid;
-	border-bottom-color: transparent;
-	border-top: 2px solid;
-	border-top-color: transparent;
 	cursor: ${Colors.cursor};
 	&:hover {
 		border-bottom: 2px solid orange;
@@ -69,11 +65,7 @@ const NavLi = styled.li`
 	align-items: center;
 	padding-left: 15px;
 	padding-right: 15px;
-	border-bottom: 2px solid;
-	border-bottom-color: transparent;
-	border-top: 2px solid;
-	border-top-color: transparent;
-	cursor: ${Colors.cursor};
+	cursor: ${Colors.cursor}; ;
 `;
 
 function PortfolioNavbar() {
@@ -82,13 +74,22 @@ function PortfolioNavbar() {
 			<BrandContainer>ethan-taylan</BrandContainer>
 			<NavContainer>
 				<NavUl>
-					<NavLink className='link h-100' to='/'>
-						<NavLi>_home</NavLi>
+					<NavLink
+						className='link h-100'
+						to='/'
+					>
+						<NavLi className='m-0'>_home</NavLi>
 					</NavLink>
-					<NavLink className='link h-100' to='/about-me'>
+					<NavLink
+						className='link h-100'
+						to='/about-me'
+					>
 						<NavLi>_about-me</NavLi>
 					</NavLink>
-					<NavLink className='link h-100' to='/works'>
+					<NavLink
+						className='link h-100'
+						to='/works'
+					>
 						<NavLi>_works</NavLi>
 					</NavLink>
 				</NavUl>

@@ -5,6 +5,7 @@ import { AiFillHome } from 'react-icons/ai';
 import { RiContactsFill } from 'react-icons/ri';
 import { FaFileCode } from 'react-icons/fa';
 import { createGlobalStyle } from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 const GlobalStyle = createGlobalStyle`
     .app-bg {
@@ -42,7 +43,7 @@ interface SideBarProps {
 }
 
 const SideBarLi = styled.li`
-	padding: 23px;
+	padding: 15px;
 	&:hover {
 		cursor: ${Colors.cursor};
 		color: ${Colors.white};
@@ -56,15 +57,22 @@ const SideBar: React.FC<SideBarProps> = ({ children }) => {
 			<GlobalStyle />
 			<SideBarContainer>
 				<SideBarUl>
-					<SideBarLi>
-						<AiFillHome />
-					</SideBarLi>
-					<SideBarLi>
-						<RiContactsFill />
-					</SideBarLi>
-					<SideBarLi>
-						<FaFileCode />
-					</SideBarLi>
+					<NavLink to='/'>
+						<SideBarLi>
+							<AiFillHome />
+						</SideBarLi>
+					</NavLink>
+
+					<NavLink to='/about-me'>
+						<SideBarLi>
+							<RiContactsFill />
+						</SideBarLi>
+					</NavLink>
+					<NavLink to='/works'>
+						<SideBarLi>
+							<FaFileCode />
+						</SideBarLi>
+					</NavLink>
 				</SideBarUl>
 			</SideBarContainer>
 			{children}

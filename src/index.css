@@ -145,7 +145,7 @@ body,
 	background-color: #010c15;
 	font-size: 14px;
 	letter-spacing: -0.7px;
-	width: 99vw !important;
+	width: 100vw !important;
 	height: 100vh !important;
 }
 
@@ -155,19 +155,20 @@ a:hover {
 }
 
 .active {
-	border-top: 2px solid;
 	border-top-color: transparent;
 	color: #ebebeb;
-	border-bottom: 2px solid orange !important;
 }
 
 .link {
-	border-top: 2px solid;
-	border-top-color: transparent;
-	border-bottom: 2px solid transparent;
+	border-top-color: 2px solid transparent;
+	width: 100px;
 }
 
 .link:hover {
 	color: #ebebeb !important;
 	border-bottom: 2px solid orange;
+}
+
+.text-decoration-underline-hover:hover {
+	text-decoration: underline;
 }

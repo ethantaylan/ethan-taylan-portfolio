@@ -50,10 +50,6 @@ const GithubBtn = styled.a`
 	text-decoration: none;
 	color: ${primaryColor};
 	padding: 0 20px 0 20px;
-	border-bottom: 2px solid;
-	border-bottom-color: transparent;
-	border-top: 2px solid;
-	border-top-color: transparent;
 	&:hover {
 		border-bottom: 2px solid orange;
 		cursor: ${Colors.cursor};
@@ -76,10 +72,6 @@ const NavLi = styled.li`
 	width: 100%;
 	padding-left: 15px;
 	padding-right: 15px;
-	border-bottom: 2px solid;
-	border-bottom-color: transparent;
-	border-top: 2px solid;
-	border-top-color: transparent;
 	${cursorPointer}
 	&:hover {
 		border-bottom: 2px solid orange;

@@ -13,8 +13,8 @@ const Container = styled.div`
 `;
 
 const Welcome = styled.span`
-	color: #43D9AD;
-	letter-spacing: normal; ;
+	color: #43d9ad;
+	letter-spacing: normal;
 `;
 
 const Name = styled.span`
@@ -28,29 +28,33 @@ const Name = styled.span`
 const Frontend = styled.span`
 	color: #4d5bce;
 	font-size: 28px;
+	margin-top: 10px;
 `;
 
 const Subtitle = styled.span`
 	color: ${primaryColor};
+	margin-top: 10px;
+	margin-bottom: 10px;
 `;
 
-const Githublink = styled.span`
+const GithubLink = styled.span`
 	color: white;
-	font-size: 12px;
+	font-size: 14px;
+	margin-top: 20px;
 `;
 
 function LeftContent() {
 	return (
 		<Container>
-			<div className='d-flex flex-column h-100 justify-content-center'>
-				<div className='d-flex h-25 justify-content-around flex-column'>
+			<div className='d-flex flex-column'>
+				<div className='d-flex justify-content-around flex-column'>
 					<Welcome>Welcome()</Welcome>
 					<Name>Ethan Taylan</Name>
 					<Frontend>{'>'} Frontend developer</Frontend>
 				</div>
-				<div className='d-flex h-25 mt-5 justify-content-around flex-column'>
+				<div className='d-flex mt-5 justify-content-around flex-column'>
 					<Subtitle>
-						// You can check see my works{' '}
+						// You can see my works {'->'}{' '}
 						<span
 							style={{ fontWeight: 'bold', fontStyle: 'italic', cursor: 'pointer' }}
 						>
@@ -58,11 +62,22 @@ function LeftContent() {
 						</span>
 					</Subtitle>
 					<Subtitle>// You can also go to my Github page</Subtitle>
-					<Githublink>
+
+					<GithubLink>
 						<span style={{ color: '#4d5bce' }}>const</span>{' '}
 						<span style={{ color: '#43D9AD' }}>GithubLink</span> ={' '}
-						<span style={{ color: 'orange' }}>https://github.com/ethantaylan/</span>
-					</Githublink>
+						<span style={{ color: 'orange' }}>
+							<a
+								target='_blank'
+								href='https://github.com/ethantaylan/'
+								className='my-2'
+							>
+								<span className='text-decoration-underline-hover'>
+									https://github.com/ethantaylan/
+								</span>
+							</a>
+						</span>
+					</GithubLink>
 				</div>
 			</div>
 		</Container>
