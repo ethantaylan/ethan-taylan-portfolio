@@ -1,35 +1,79 @@
 import React from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
-import { Colors, FolderColors } from '../../components/Colors';
-import { AiFillFolder } from 'react-icons/ai';
-import Items from './Items';
-import ItemsTitle from './ItemsTitle';
+import styled from 'styled-components';
+import { Generics } from '../../components/Generics';
+import Items from '../../components/AboutMeItems/AboutMeItems';
+import ItemsTitle from '../../components/AboutMeItems/AboutMeItemsTitle';
+import AboutMeSubItems from '../../components/AboutMeItems/AboutMeSubItems';
+import { folderColors } from '../../components/AboutMeItems/AboutMeItems';
 
 const FolderContainer = styled.div`
 	width: auto;
 	height: 100%;
-	border-right: 1px solid ${Colors.secondary};
+	border-right: 1px solid ${Generics.secondary};
 `;
 
-const AboutMe = () => {
+interface AboutMeProps {}
+
+const AboutMe: React.FC<AboutMeProps> = ({}) => {
 	return (
 		<FolderContainer>
 			<ItemsTitle itemsTitle='personal-info' />
 			<Items
+				folderColors={folderColors.salmon}
 				title={'bio'}
-				children={<AiFillFolder color={FolderColors.salmon} />}
+				children={
+					<AboutMeSubItems
+						subItemTitle='bio.txt'
+					/>
+				}
 			/>
 			<Items
+				folderColors={folderColors.blue}
 				title={'interests'}
-				children={<AiFillFolder color={FolderColors.green} />}
+				children={
+					<AboutMeSubItems
+						subItemTitle='hobbies.txt'
+					/>
+				}
 			/>
 			<Items
+				folderColors={folderColors.green}
 				title={'education'}
-				children={<AiFillFolder color={FolderColors.blue} />}
+				children={
+					<AboutMeSubItems
+						subItemTitle='education.txt'
+					/>
+				}
 			/>
 			<ItemsTitle
 				className='my-border-top'
 				itemsTitle='contacts'
+			/>
+			<Items
+				chevronIconActive={false}
+				folderIconActive={false}
+				children={
+					<AboutMeSubItems
+						fileIconActive={false}
+						subItemTitle='+33766704190'
+						telIconActive={true}
+					/>
+				}
+				title={''}
+			/>
+			<Items
+				className="my-border-top d-none"
+				chevronIconActive={false}
+				folderIconActive={false}
+				children={
+					<div className='d-flex flex-row'>
+						<AboutMeSubItems
+							fileIconActive={false}
+							subItemTitle='taylanethan@gmail.com'
+							mailIconActive={true}
+						/>
+					</div>
+				}
 			/>
 		</FolderContainer>
 	);

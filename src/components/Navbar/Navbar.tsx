@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { Colors } from '../Colors';
+import { Generics } from '../Generics';
 
 const Container = styled.div`
 	width: 100%;
@@ -8,10 +8,10 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	background-color: ${Colors.appBg};
-	color: ${Colors.primary};
+	background-color: ${Generics.appBg};
+	color: ${Generics.primary};
 	white-space: nowrap;
-	border: 1px solid ${Colors.secondary};
+	border: 1px solid ${Generics.secondary};
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
 `;
@@ -21,11 +21,11 @@ const BrandContainer = styled.div`
 	height: 100%;
 	display: flex;
 	align-items: center;
-	color: ${Colors.primary};
+	color: ${Generics.primary};
 	padding-left: 20px;
 	padding-right: 20px;
-	border-right: 1px solid ${Colors.secondary};
-	cursor: ${Colors.cursor};
+	border-right: 1px solid ${Generics.secondary};
+	cursor: ${Generics.cursor};
 `;
 
 const NavContainer = styled.nav`
@@ -40,14 +40,14 @@ const ContactBtn = styled.a`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-left: 1px solid ${Colors.secondary};
+	border-left: 1px solid ${Generics.secondary};
 	text-decoration: none;
-	color: ${Colors.primary};
+	color: ${Generics.primary};
 	padding: 0 20px 0 20px;
-	cursor: ${Colors.cursor};
+	cursor: ${Generics.cursor};
 	&:hover {
 		border-bottom: 2px solid orange;
-		color: ${Colors.white};
+		color: ${Generics.white};
 	}
 `;
 
@@ -61,11 +61,11 @@ const NavLi = styled.li`
 	display: flex;
 	justify-content: center;
 	height: 100%;
-	border-right: 1px solid ${Colors.secondary};
+	border-right: 1px solid ${Generics.secondary};
 	align-items: center;
 	padding-left: 15px;
 	padding-right: 15px;
-	cursor: ${Colors.cursor}; ;
+	cursor: ${Generics.cursor}; ;
 `;
 
 function PortfolioNavbar() {

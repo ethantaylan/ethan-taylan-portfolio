@@ -1,8 +1,8 @@
 import { Github, Instagram, Linkedin } from 'react-bootstrap-icons';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { AiFillInstagram } from 'react-icons/ai';
-import styled, { createGlobalStyle } from 'styled-components';
-import { Colors } from '../Colors';
+import styled from 'styled-components';
+import { Generics } from '../Generics';
 
 const primaryColor = '#607b96';
 const secondaryColor = '#1e2d3d';
@@ -41,7 +41,7 @@ const NavContainer = styled.nav`
 	align-items: center;
 `;
 
-const GithubBtn = styled.a`
+const GithubBtn = styled.span`
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -52,8 +52,8 @@ const GithubBtn = styled.a`
 	padding: 0 20px 0 20px;
 	&:hover {
 		border-bottom: 2px solid orange;
-		cursor: ${Colors.cursor};
-		color: ${Colors.white};
+		cursor: ${Generics.cursor};
+		color: ${Generics.white};
 	}
 `;
 
@@ -75,21 +75,14 @@ const NavLi = styled.li`
 	${cursorPointer}
 	&:hover {
 		border-bottom: 2px solid orange;
-		cursor: ${Colors.cursor};
-		color: ${Colors.white};
+		cursor: ${Generics.cursor};
+		color: ${Generics.white};
 	}
-`;
-
-const GlobalStyle = createGlobalStyle`
-.icons {
-    margin-left: 10px;
-}
 `;
 
 function Footer() {
 	return (
 		<Container className='global-types'>
-			<GlobalStyle />
 			<FindMeContainer>find-me-in</FindMeContainer>
 			<NavContainer>
 				<NavUl>

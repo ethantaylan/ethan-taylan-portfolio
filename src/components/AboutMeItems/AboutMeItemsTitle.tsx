@@ -1,28 +1,23 @@
 import React from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
-import { Colors } from '../../components/Colors';
+import styled from 'styled-components';
+import { Generics } from '../../components/Generics';
 import { TiArrowSortedDown } from 'react-icons/ti';
 
 const MainTitleContainer = styled.div`
 	width: 100%;
-	border-bottom: 1px solid ${Colors.secondary};
+	border-bottom: 1px solid ${Generics.secondary};
 `;
 
 const MainTitle = styled.h1`
 	width: 100%;
 	padding: 10px;
 	display: flex;
-	color: ${Colors.primary};
+	color: ${Generics.primary};
 	&:hover {
-		cursor: ${Colors.cursor};
-		color: ${Colors.white};
+		cursor: ${Generics.cursor};
+		color: ${Generics.white};
 	}
 `;
-
-const GlobalStyle = createGlobalStyle`
-  .my-border-top {
-    border-top: 1px solid ${Colors.secondary}
-}`;
 
 interface ItemsTitleProps {
 	itemsTitle: string;
@@ -32,7 +27,6 @@ interface ItemsTitleProps {
 const ItemsTitle: React.FC<ItemsTitleProps> = ({className, itemsTitle }) => {
 	return (
 		<div>
-            <GlobalStyle />
 			<MainTitleContainer className={className}>
 				<MainTitle>
 					<TiArrowSortedDown className='mx-1' />

@@ -1,24 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Colors } from './Colors';
+import { Generics } from '../Generics';
 import { AiFillHome } from 'react-icons/ai';
 import { RiContactsFill } from 'react-icons/ri';
 import { FaFileCode } from 'react-icons/fa';
-import { createGlobalStyle } from 'styled-components';
 import { NavLink } from 'react-router-dom';
-
-const GlobalStyle = createGlobalStyle`
-    .app-bg {
-        background-color: #011627;
-		border-right: 1px solid ${Colors.secondary};
-    }
-`;
 
 const SideBarContainer = styled.div`
 	width: auto;
 	height: 100%;
-	background-color: ${Colors.appBg};
-	border: 1px solid ${Colors.secondary};
+	background-color: ${Generics.appBg};
+	border: 1px solid ${Generics.secondary};
 	border-bottom: none;
 	border-top: none;
 	display: flex;
@@ -29,7 +21,7 @@ const SideBarContainer = styled.div`
 const SideBarUl = styled.ul`
 	height: auto;
 	width: 100%;
-	color: ${Colors.primary};
+	color: ${Generics.primary};
 	display: flex;
 	justify-content: space-around;
 	padding-top: 20px;
@@ -45,16 +37,15 @@ interface SideBarProps {
 const SideBarLi = styled.li`
 	padding: 15px;
 	&:hover {
-		cursor: ${Colors.cursor};
-		color: ${Colors.white};
-		background-color: ${Colors.secondary};
+		cursor: ${Generics.cursor};
+		color: ${Generics.white};
+		background-color: ${Generics.secondary};
 	}
 `;
 
 const SideBar: React.FC<SideBarProps> = ({ children }) => {
 	return (
 		<div className='app-bg h-100 w-100 d-flex flex-row'>
-			<GlobalStyle />
 			<SideBarContainer>
 				<SideBarUl>
 					<NavLink to='/'>

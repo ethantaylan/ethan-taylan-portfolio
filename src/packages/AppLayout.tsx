@@ -2,7 +2,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar/Navbar';
-import SideBar from '../components/SideBar';
+import SideBar from '../components/Navbar/SideBar';
 import AboutMe from './AboutMe/AboutMe';
 import Home from './Home/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';

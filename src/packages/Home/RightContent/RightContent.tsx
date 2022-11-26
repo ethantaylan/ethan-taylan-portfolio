@@ -2,7 +2,7 @@ import React from 'react';
 import BlurImg from '../../../assets/bg-blurs.png';
 import CodeSnippetImg from '../../../assets/code-snippet.png';
 import styled from 'styled-components';
-import { Colors } from '../../../components/Colors';
+import { Generics } from '../../../components/Generics';
 
 const BlurBg = styled.div`
 	background-image: url(${BlurImg});
@@ -31,7 +31,7 @@ const CodeSnipperContainer = styled.div`
 
 const CodeSnippet = styled.img`
 	width: 50%;
-	border: 1px solid ${Colors.secondary};
+	border: 1px solid ${Generics.secondary};
 	border-radius: 12px;
 	box-shadow: 0 5px 40px rgba(0, 0, 0, 0.2);
 `;

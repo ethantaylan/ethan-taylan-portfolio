@@ -149,6 +149,19 @@ body,
 	height: 100vh !important;
 }
 
+.app-bg {
+	background-color: #011627;
+	border-right: 1px solid #1e2d3d;
+}
+
+.my-border-top {
+	border-top: 1px solid #1e2d3d;
+}
+
+.icons {
+	margin-left: 10px;
+}
+
 a:hover {
 	text-decoration: none;
 	color: unset;
@@ -171,4 +184,17 @@ a:hover {
 
 .text-decoration-underline-hover:hover {
 	text-decoration: underline;
+}
+
+.hover:hover {
+	color: #ebebeb;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.margin-left {
+margin-left: 24px;
+margin-top: 5px;
 }
