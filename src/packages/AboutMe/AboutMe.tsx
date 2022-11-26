@@ -8,6 +8,7 @@ import { folderColors } from '../../components/AboutMeItems/folder-colors';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { IoMailSharp } from 'react-icons/io5';
 import { NavLink } from 'react-router-dom';
+import Bio from './Bio';
 
 const FolderContainer = styled.div`
 	width: 250px;

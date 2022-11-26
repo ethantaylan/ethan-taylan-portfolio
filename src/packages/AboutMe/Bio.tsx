@@ -10,13 +10,11 @@ const Square = styled.div`
 `;
 
 interface BioProps {
-	children: any;
 }
 
-const Bio: React.FC<BioProps> = ({ children }) => {
+const Bio: React.FC<BioProps> = ({}) => {
 	return (
 		<div>
-			<SideBar children={<AboutMe children={children} />} />
 			<Square />
 		</div>
 	);
