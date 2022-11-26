@@ -67,8 +67,10 @@ const SideBar: React.FC<SideBarProps> = ({ children }) => {
 						</SideBarLi>
 					</NavLink>
 				</SideBarUl>
+
 			</SideBarContainer>
-			<AboutMe />
+
+			{children}
 		</div>
 	);
 };

@@ -13,11 +13,7 @@ interface BioProps {
 }
 
 const Bio: React.FC<BioProps> = ({}) => {
-	return (
-		<div>
-			<Square />
-		</div>
-	);
+	return <Square />;
 };
 
 export default Bio;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { AiFillFileText } from 'react-icons/ai';
 import styled, { createGlobalStyle } from 'styled-components';
+import Bio from '../../packages/AboutMe/Bio';
 import { Generics } from '../Generics';
 
 const SubItemContainer = styled.div`
@@ -28,15 +29,17 @@ const AboutMeSubItems: React.FC<AboutMeSubItemsProps> = ({
 	subItemTitle,
 }) => {
 	return (
-		<SubItemContainer className='hover d-flex cursor-pointer'>
-			<GlobalStyle />
-			<div className='d-flex margin-top-5 align-items-center padding-bottom-12 justify-content-center'>
-				{fileIconActive && (
-					<AiFillFileText className='margin-left'></AiFillFileText>
-				)}
-				{subItemTitle}
-			</div>
-		</SubItemContainer>
+		<div>
+			<SubItemContainer className='hover d-flex cursor-pointer'>
+				<GlobalStyle />
+				<div className='d-flex margin-top-5 align-items-center padding-bottom-12 justify-content-center'>
+					{fileIconActive && (
+						<AiFillFileText className='margin-left'></AiFillFileText>
+					)}
+					{subItemTitle}
+				</div>
+			</SubItemContainer>
+		</div>
 	);
 };
 

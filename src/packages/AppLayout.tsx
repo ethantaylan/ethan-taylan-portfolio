@@ -18,7 +18,7 @@ function App() {
 						<Routes>
 							<Route
 								path='/about-me'
-								element={<AboutMe />}
+								element={<AboutMe children={<h1>fils dep uteeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</h1>}/>}
 							></Route>
 							<Route
 								path='/about-me'
