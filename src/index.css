@@ -158,6 +158,18 @@ body,
 	border-top: 1px solid #1e2d3d;
 }
 
+.my-border-bottom {
+	border-bottom: 1px solid #1e2d3d;
+}
+
+.my-border-left {
+	border-left: 1px solid #1e2d3d;
+}
+
+.my-border-right {
+	border-right: 1px solid #1e2d3d;
+}
+
 .icons {
 	margin-left: 10px;
 }
@@ -204,4 +216,8 @@ a:hover {
 
 .padding-bottom-12 {
 	padding-bottom: 12px;
+}
+
+.line-height-20 {
+line-height: 20px;
 }

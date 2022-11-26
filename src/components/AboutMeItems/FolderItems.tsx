@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import { Generics } from '../Generics';
 import { FaChevronDown, FaChevronRight } from 'react-icons/fa';
 import { AiFillFolder } from 'react-icons/ai';
-import { BsFillTelephoneFill } from 'react-icons/bs';
-import { IoMailSharp } from 'react-icons/io5';
 
 const TitleContainer = styled.div`
 	color: ${Generics.primary};
