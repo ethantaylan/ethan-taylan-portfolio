@@ -16,7 +16,7 @@ const SubItemContainer = styled.div`
 
 const GlobalStyle = createGlobalStyle`
 .icon-spacing {
-margin-right: 4px
+margin-right: 8px
 }
 `;
 
@@ -34,14 +34,16 @@ const AboutMeSubItems: React.FC<AboutMeSubItemsProps> = ({
     mailIconActive,
 }) => {
 	return (
-		<SubItemContainer className='hover cursor-pointer'>
+		<SubItemContainer className='hover d-flex cursor-pointer'>
 			<GlobalStyle />
+            <div className="d-flex  margin-top-5 align-items-center justify-content-center">
 			{fileIconActive && (
-				<AiFillFileText className='margin-left icon-spacing'></AiFillFileText>
+				<AiFillFileText className='margin-left'></AiFillFileText>
 			)}
             {telIconActive && <BsFillTelephoneFill className='mx-2' size={16} />}
             {mailIconActive && <IoMailSharp className='mx-2' size={16} />}
 			{subItemTitle}
+            </div>
 		</SubItemContainer>
 	);
 };

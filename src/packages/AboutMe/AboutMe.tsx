@@ -4,7 +4,7 @@ import { Generics } from '../../components/Generics';
 import Items from '../../components/AboutMeItems/AboutMeItems';
 import ItemsTitle from '../../components/AboutMeItems/AboutMeItemsTitle';
 import AboutMeSubItems from '../../components/AboutMeItems/AboutMeSubItems';
-import { folderColors } from '../../components/AboutMeItems/AboutMeItems';
+import { folderColors } from '../../components/AboutMeItems/folder-colors';
 
 const FolderContainer = styled.div`
 	width: auto;

@@ -12,12 +12,6 @@ const TitleContainer = styled.div`
 	flex-direction: column;
 `;
 
-export enum folderColors {
-	salmon = '#CC827B',
-	green = '#43D9AD',
-	blue = '#3A49A4',
-}
-
 interface ItemsProps {
 	title?: string;
 	children: any;
@@ -39,11 +33,11 @@ const Items: React.FC<ItemsProps> = ({
 			<TitleContainer>
 				<div className='d-flex hover flex-row align-items-center mb-2'>
 					{chevronIconActive && (
-						<span className='px-1'>
-							<FaChevronDown size={10} />
+						<span className='px-2'>
+							<FaChevronRight size={14} />
 						</span>
 					)}
-					{folderIconActive && <AiFillFolder color={folderColors} />}
+					{folderIconActive && <AiFillFolder size={18} color={folderColors} />}
 					<span className='d-flex mx-1'>{title}</span>
 				</div>
 				{children}
