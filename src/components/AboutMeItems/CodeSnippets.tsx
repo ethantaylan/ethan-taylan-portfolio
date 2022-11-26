@@ -6,12 +6,11 @@ import { Generics } from '../Generics';
 import { IoIosClose } from 'react-icons/io';
 
 const CodeSnippetsContainer = styled.div`
-	max-height: 100vh;
 	width: 85%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-  padding: 20px;
+	padding: 20px;
 `;
 
 const UserContainer = styled.div`
@@ -57,6 +56,7 @@ const CodeContainer = styled.div`
 	background-color: #010c15;
 	border-radius: 12px;
 	border: 1px solid ${Generics.secondary};
+    padding: 15px;
 `;
 
 const Comments = styled.span`
@@ -71,7 +71,6 @@ const CommentsCloseBtn = styled.span`
 `;
 
 const Container = styled.div`
-	width: 100%;
 	display: flex;
 	color: ${Generics.primary};
 	flex-direction: column;
@@ -86,19 +85,16 @@ const FileCloseContainer = styled.div`
 	align-items: center;
 	border-left: 1px solid ${Generics.secondary};
 	align-self: flex-start;
-  border-bottom: 1px solid ${Generics.secondary};
-  
-  
+	border-bottom: 1px solid ${Generics.secondary};
 `;
 
 const ClosePlusTxt = styled.div`
 	width: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 6px;
-  border-right: 1px solid ${Generics.secondary};
-
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 6px;
+	border-right: 1px solid ${Generics.secondary};
 `;
 
 function CodeSnippets() {
@@ -134,7 +130,9 @@ function CodeSnippets() {
 						<span>details</span>
 					</DetailsContainer>
 				</UserContainer>
-				<CodeContainer />
+				<CodeContainer>
+					<h1>test</h1>
+				</CodeContainer>
 				<div className='d-flex w-100 justify-content-between align-items-start mt-3 px-3'>
 					<Comments>
 						"My work here was 5 months ago. It was for the project called Enemy. A
