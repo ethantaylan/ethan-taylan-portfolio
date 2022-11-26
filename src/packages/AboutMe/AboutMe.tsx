@@ -7,6 +7,7 @@ import AboutMeSubItems from '../../components/AboutMeItems/SubItems';
 import { folderColors } from '../../components/AboutMeItems/folder-colors';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { IoMailSharp } from 'react-icons/io5';
+import CodeSnippets from '../../components/AboutMeItems/CodeSnippets';
 
 const FolderContainer = styled.div`
 	width: 250px;

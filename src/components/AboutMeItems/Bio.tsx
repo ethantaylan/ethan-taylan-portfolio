@@ -1,4 +1,5 @@
 import React from 'react';
+import { IoIosClose } from 'react-icons/io';
 import styled from 'styled-components';
 import { Generics } from '../Generics';
 import CodeSnippets from './CodeSnippets';
@@ -8,15 +9,15 @@ interface BioProps {}
 const RightContent = styled.div`
 	width: 100%;
 	display: flex;
-	justify-content: center;
 	padding: 20px;
+	flex-direction: column;
+	align-items: center;
 `;
 
 const LeftContent = styled.div`
 	width: 100%;
-    padding: 20px;
-    border-right: 5px solid ${Generics.primary};
-
+	padding: 20px;
+	border-right: 5px solid ${Generics.primary};
 `;
 
 const FileCloseContainer = styled.div`
@@ -27,6 +28,7 @@ const FileCloseContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	color: ${Generics.primary};
+	align-items: center;
 `;
 
 const TextBody = styled.span`
@@ -36,7 +38,6 @@ const TextBody = styled.span`
 	height: 100%;
 	display: flex;
 	flex-direction: row;
-
 `;
 
 export const Bio: React.FC<BioProps> = ({}) => {
@@ -45,7 +46,12 @@ export const Bio: React.FC<BioProps> = ({}) => {
 			<div className='d-flex flex-column w-100'>
 				<FileCloseContainer>
 					<span>BIO.TXT</span>
-					<span className='cursor-pointer'>x</span>
+					<span className='d-flex cursor-pointer'>
+						<IoIosClose
+							size={22}
+							color={Generics.primary}
+						/>
+					</span>
 				</FileCloseContainer>
 				<TextBody>
 					{/* Left content */}
@@ -79,8 +85,6 @@ export const Bio: React.FC<BioProps> = ({}) => {
 					</LeftContent>
 					{/* Right content */}
 					<RightContent>
-						<span>// Code snippets showcase</span>
-                        <CodeSnippets />
 					</RightContent>
 				</TextBody>
 			</div>
