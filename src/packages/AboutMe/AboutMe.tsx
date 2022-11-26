@@ -7,6 +7,7 @@ import AboutMeSubItems from '../../components/AboutMeItems/AboutMeSubItems';
 import { folderColors } from '../../components/AboutMeItems/folder-colors';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { IoMailSharp } from 'react-icons/io5';
+import { NavLink } from 'react-router-dom';
 
 const FolderContainer = styled.div`
 	width: 250px;
@@ -24,18 +25,23 @@ const AboutMe: React.FC<AboutMeProps> = ({}) => {
 			<Items
 				folderColors={folderColors.salmon}
 				title={'bio'}
-				children={<AboutMeSubItems subItemTitle='bio.txt' />}
-			/>
+			>
+				<NavLink to='/about-me/bio'>
+					<AboutMeSubItems subItemTitle='bio.txt' />
+				</NavLink>
+			</Items>
 			<Items
 				folderColors={folderColors.blue}
 				title={'interests'}
-				children={<AboutMeSubItems subItemTitle='hobbies.txt' />}
-			/>
+			>
+				<AboutMeSubItems subItemTitle={'hobbites.txt'} />
+			</Items>
 			<Items
 				folderColors={folderColors.green}
 				title={'education'}
-				children={<AboutMeSubItems subItemTitle='education.txt' />}
-			/>
+			>
+				<AboutMeSubItems subItemTitle='education.txt' />
+			</Items>
 			<ItemsTitle
 				className='my-border-top'
 				itemsTitle='contacts'

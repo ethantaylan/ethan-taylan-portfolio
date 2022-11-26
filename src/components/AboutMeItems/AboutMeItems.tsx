@@ -24,7 +24,7 @@ interface ItemsProps {
 	telIconActive?: boolean;
 	mailIconActive?: boolean;
 	number?: string;
-	mail?: string
+	mail?: string;
 }
 
 const AboutMeItems: React.FC<ItemsProps> = ({
@@ -34,7 +34,7 @@ const AboutMeItems: React.FC<ItemsProps> = ({
 	folderColors,
 	number,
 	mail,
-	children
+	children,
 }) => {
 	const [isFolderActive, setisFolderActive] = React.useState<boolean>(false);
 
@@ -68,7 +68,7 @@ const AboutMeItems: React.FC<ItemsProps> = ({
 					{number && <span>{number}</span>}
 					{mail && <span>{mail}</span>}
 				</div>
-				 {isFolderActive && children}
+				{isFolderActive && children}
 			</TitleContainer>
 		</div>
 	);

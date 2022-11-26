@@ -6,6 +6,7 @@ import SideBar from '../components/Navbar/SideBar';
 import AboutMe from './AboutMe/AboutMe';
 import Home from './Home/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Bio from './AboutMe/Bio';
 
 function App() {
 	return (
@@ -18,6 +19,10 @@ function App() {
 							<Route
 								path='/about-me'
 								element={<AboutMe />}
+							></Route>
+							<Route
+								path='/about-me'
+								element={<Bio />}
 							></Route>
 							<Route
 								path='/'
