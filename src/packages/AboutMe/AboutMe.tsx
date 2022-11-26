@@ -20,69 +20,73 @@ interface AboutMeProps {
 }
 
 const AboutMe: React.FC<AboutMeProps> = ({ children }) => (
-	<div className='d-flex w-100'>
-		<FolderContainer>
-			<ItemsTitle itemsTitle='personal-info' />
-			<Items
-				folderColors={folderColors.salmon}
-				title={'bio'}
-			>
-				<AboutMeSubItems
-					to='/about-me/bio'
-					subItemTitle='biography.txt'
-				/>
-			</Items>
-			<Items
-				folderColors={folderColors.blue}
-				title={'interests'}
-			>
-				<AboutMeSubItems
-					to='about-me/hobbies'
-					subItemTitle={'hobbies.txt'}
-				/>
-			</Items>
-			<Items
-				folderColors={folderColors.green}
-				title={'education'}
-			>
-				<AboutMeSubItems
-					to='/education'
-					subItemTitle='education.txt'
-				/>
-			</Items>
-			<ItemsTitle
-				className='my-border-top'
-				itemsTitle='contacts'
-			/>
-			<Items
-				mail='taytlanethan@gmail.com'
-				mailIconActive={true}
-				telIconActive={false}
-				chevronIconActive={false}
-				folderIconActive={false}
-				title={
-					<IoMailSharp
-						className='mx-2'
-						size={16}
+	<React.Fragment>
+		<div className='d-flex w-100 my-border-bottom'>
+			<FolderContainer>
+				<ItemsTitle itemsTitle='personal-info' />
+				<Items
+					folderColors={folderColors.salmon}
+					title={'bio'}
+				>
+					<AboutMeSubItems
+						to='/about-me/bio'
+						subItemTitle='biography.txt'
 					/>
-				}
-			/>
-			<Items
-				number='+33766704190'
-				telIconActive={true}
-				mailIconActive={false}
-				chevronIconActive={false}
-				folderIconActive={false}
-				title={
-					<BsFillTelephoneFill
-						className='mx-2'
-						size={16}
+				</Items>
+				<Items
+					folderColors={folderColors.blue}
+					title={'interests'}
+				>
+					<AboutMeSubItems
+						to='about-me/hobbies'
+						subItemTitle={'hobbies.txt'}
 					/>
-				}
-			/>
-		</FolderContainer>
-		{children}
-	</div>
+				</Items>
+				<Items
+					folderColors={folderColors.green}
+					title={'education'}
+				>
+					<AboutMeSubItems
+						to='/education'
+						subItemTitle='education.txt'
+					/>
+				</Items>
+				<ItemsTitle
+					className='my-border-top'
+					itemsTitle='contacts'
+				/>
+				<Items
+					mail='taylanethan@gmail.com'
+					mailIconActive={true}
+					telIconActive={false}
+					chevronIconActive={false}
+					folderIconActive={false}
+					title={
+						<IoMailSharp
+							className='mx-2'
+							size={16}
+						/>
+					}
+				/>
+				<Items
+					number='+33766704190'
+					telIconActive={true}
+					mailIconActive={false}
+					chevronIconActive={false}
+					folderIconActive={false}
+					title={
+						<BsFillTelephoneFill
+							className='mx-2'
+							size={16}
+						/>
+					}
+				/>
+			</FolderContainer>
+
+			{children}
+		</div>
+		<CodeSnippets />
+	</React.Fragment>
 );
 
 export default AboutMe;

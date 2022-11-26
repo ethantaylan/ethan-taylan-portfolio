@@ -7,10 +7,11 @@ import { IoIosClose } from 'react-icons/io';
 
 const CodeSnippetsContainer = styled.div`
 	max-height: 100vh;
-	width: 100%;
+	width: 85%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+  padding: 20px;
 `;
 
 const UserContainer = styled.div`
@@ -69,41 +70,85 @@ const CommentsCloseBtn = styled.span`
 	color: ${Generics.primary};
 `;
 
+const Container = styled.div`
+	width: 100%;
+	display: flex;
+	color: ${Generics.primary};
+	flex-direction: column;
+	align-items: center;
+`;
+
+const FileCloseContainer = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	color: ${Generics.primary};
+	align-items: center;
+	border-left: 1px solid ${Generics.secondary};
+	align-self: flex-start;
+  border-bottom: 1px solid ${Generics.secondary};
+  
+  
+`;
+
+const ClosePlusTxt = styled.div`
+	width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px;
+  border-right: 1px solid ${Generics.secondary};
+
+`;
+
 function CodeSnippets() {
 	return (
-		<CodeSnippetsContainer>
-			<span>Code Snippets showcase</span>
-			<UserContainer>
-				<div className='d-flex flex-row'>
-					<UserAvatar></UserAvatar>
-					<div className='d-flex justify-content-between flex-column'>
-						<UserName>@ethantaylan</UserName>
-						<CreatedAt>Created 5 months ago</CreatedAt>
+		<Container>
+			<FileCloseContainer>
+				<ClosePlusTxt>
+					<span>BIO.TXT</span>
+					<span className='d-flex cursor-pointer'>
+						<IoIosClose
+							size={22}
+							color={Generics.primary}
+						/>
+					</span>
+				</ClosePlusTxt>
+			</FileCloseContainer>
+			<CodeSnippetsContainer>
+				<span>Code Snippets showcase</span>
+				<UserContainer>
+					<div className='d-flex flex-row'>
+						<UserAvatar></UserAvatar>
+						<div className='d-flex justify-content-between flex-column'>
+							<UserName>@ethantaylan</UserName>
+							<CreatedAt>Created 5 months ago</CreatedAt>
+						</div>
 					</div>
-				</div>
-				<DetailsContainer className='cursor-pointer hover '>
-					<BiCommentDetail
-						className='mx-2'
-						size={'16px'}
-					/>
+					<DetailsContainer className='cursor-pointer hover '>
+						<BiCommentDetail
+							className='mx-2'
+							size={'16px'}
+						/>
 
-					<span>details</span>
-				</DetailsContainer>
-			</UserContainer>
-			<CodeContainer />
-			<div className='d-flex w-100 justify-content-between align-items-start mt-3 px-3'>
-				<Comments>
-					"My work here was 5 months ago. It was for the project called Enemy". A
-					World of Warcraft guild.
-				</Comments>
-				<CommentsCloseBtn>
-					<IoIosClose
-						size={22}
-						color={Generics.primary}
-					/>
-				</CommentsCloseBtn>
-			</div>
-		</CodeSnippetsContainer>
+						<span>details</span>
+					</DetailsContainer>
+				</UserContainer>
+				<CodeContainer />
+				<div className='d-flex w-100 justify-content-between align-items-start mt-3 px-3'>
+					<Comments>
+						"My work here was 5 months ago. It was for the project called Enemy. A
+						World of Warcraft guild".
+					</Comments>
+					<CommentsCloseBtn>
+						<IoIosClose
+							size={22}
+							color={Generics.primary}
+						/>
+					</CommentsCloseBtn>
+				</div>
+			</CodeSnippetsContainer>
+		</Container>
 	);
 }
 

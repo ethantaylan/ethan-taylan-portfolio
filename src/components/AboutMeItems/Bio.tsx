@@ -6,14 +6,6 @@ import CodeSnippets from './CodeSnippets';
 
 interface BioProps {}
 
-const RightContent = styled.div`
-	width: 100%;
-	display: flex;
-	padding: 20px;
-	flex-direction: column;
-	align-items: center;
-`;
-
 const LeftContent = styled.div`
 	width: 100%;
 	padding: 20px;
@@ -23,7 +15,7 @@ const LeftContent = styled.div`
 const FileCloseContainer = styled.div`
 	height: 34px;
 	width: 250px;
-	padding: 10px;
+	padding: 6px;
 	border-right: 1px solid ${Generics.secondary};
 	display: flex;
 	justify-content: space-between;
@@ -84,8 +76,6 @@ export const Bio: React.FC<BioProps> = ({}) => {
 						</div>
 					</LeftContent>
 					{/* Right content */}
-					<RightContent>
-					</RightContent>
 				</TextBody>
 			</div>
 		</div>
