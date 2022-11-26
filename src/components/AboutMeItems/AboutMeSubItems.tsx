@@ -36,7 +36,7 @@ const AboutMeSubItems: React.FC<AboutMeSubItemsProps> = ({
 	return (
 		<SubItemContainer className='hover d-flex cursor-pointer'>
 			<GlobalStyle />
-            <div className="d-flex  margin-top-5 align-items-center justify-content-center">
+            <div className="d-flex margin-top-5 align-items-center padding-bottom-12 justify-content-center">
 			{fileIconActive && (
 				<AiFillFileText className='margin-left'></AiFillFileText>
 			)}

@@ -7,7 +7,7 @@ import AboutMeSubItems from '../../components/AboutMeItems/AboutMeSubItems';
 import { folderColors } from '../../components/AboutMeItems/folder-colors';
 
 const FolderContainer = styled.div`
-	width: auto;
+	width: 200px;
 	height: 100%;
 	border-right: 1px solid ${Generics.secondary};
 `;
