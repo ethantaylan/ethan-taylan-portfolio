@@ -1,8 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Generics } from '../Generics';
+import CodeSnippets from './CodeSnippets';
 
 interface BioProps {}
+
+const RightContent = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+`;
+
+const LeftContent = styled.div`
+	width: 100%;
+    padding: 20px;
+    border-right: 5px solid ${Generics.primary};
+
+`;
 
 const FileCloseContainer = styled.div`
 	height: 34px;
@@ -15,13 +30,13 @@ const FileCloseContainer = styled.div`
 `;
 
 const TextBody = styled.span`
-	padding: 20px;
 	color: ${Generics.primary};
 	width: 100%;
 	border-top: 1px solid ${Generics.secondary};
 	height: 100%;
 	display: flex;
 	flex-direction: row;
+
 `;
 
 export const Bio: React.FC<BioProps> = ({}) => {
@@ -34,7 +49,7 @@ export const Bio: React.FC<BioProps> = ({}) => {
 				</FileCloseContainer>
 				<TextBody>
 					{/* Left content */}
-					<div className='w-100'>
+					<LeftContent>
 						<div className='line-height-20'>
 							* About me <br />
 							* I have 5 years of еxperience in web <br />
@@ -61,11 +76,12 @@ export const Bio: React.FC<BioProps> = ({}) => {
 							* officia deserunt mollit anim id est laborum */
 							<br />
 						</div>
-					</div>
+					</LeftContent>
 					{/* Right content */}
-					<div className='w-100 d-flex justify-content-center'>
-                        test
-                    </div>
+					<RightContent>
+						<span>// Code snippets showcase</span>
+                        <CodeSnippets />
+					</RightContent>
 				</TextBody>
 			</div>
 		</div>
