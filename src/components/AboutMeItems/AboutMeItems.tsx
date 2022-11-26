@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { Generics } from '../../components/Generics';
 import { FaChevronDown, FaChevronRight } from 'react-icons/fa';
 import { AiFillFolder } from 'react-icons/ai';
+import { BsFillTelephoneFill } from 'react-icons/bs';
+import { IoMailSharp } from 'react-icons/io5';
 
 const TitleContainer = styled.div`
 	color: ${Generics.primary};
@@ -13,20 +15,26 @@ const TitleContainer = styled.div`
 `;
 
 interface ItemsProps {
-	title?: string;
-	children: any;
+	title?: any;
+	children?: any;
 	folderColors?: any;
 	folderIconActive?: boolean;
 	chevronIconActive?: boolean;
 	className?: string;
+	telIconActive?: boolean;
+	mailIconActive?: boolean;
+	number?: string;
+	mail?: string
 }
 
-const Items: React.FC<ItemsProps> = ({
+const AboutMeItems: React.FC<ItemsProps> = ({
 	chevronIconActive = true,
 	folderIconActive = true,
 	title,
-	children,
 	folderColors,
+	number,
+	mail,
+	children
 }) => {
 	const [isFolderActive, setisFolderActive] = React.useState<boolean>(false);
 
@@ -57,6 +65,8 @@ const Items: React.FC<ItemsProps> = ({
 						/>
 					)}
 					<span className='d-flex mx-1'>{title}</span>
+					{number && <span>{number}</span>}
+					{mail && <span>{mail}</span>}
 				</div>
 				 {isFolderActive && children}
 			</TitleContainer>
@@ -64,4 +74,4 @@ const Items: React.FC<ItemsProps> = ({
 	);
 };
 
-export default Items;
+export default AboutMeItems;
