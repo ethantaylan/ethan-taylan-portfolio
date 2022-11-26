@@ -5,14 +5,19 @@ import Items from '../../components/AboutMeItems/AboutMeItems';
 import ItemsTitle from '../../components/AboutMeItems/AboutMeItemsTitle';
 import AboutMeSubItems from '../../components/AboutMeItems/AboutMeSubItems';
 import { folderColors } from '../../components/AboutMeItems/folder-colors';
+import { BsFillTelephoneFill } from 'react-icons/bs';
+import { IoMailSharp } from 'react-icons/io5';
+import { NavLink } from 'react-router-dom';
+import Bio from './Bio';
 
 const FolderContainer = styled.div`
-	width: auto;
+	width: 250px;
 	height: 100%;
 	border-right: 1px solid ${Generics.secondary};
 `;
 
-interface AboutMeProps {}
+interface AboutMeProps {
+}
 
 const AboutMe: React.FC<AboutMeProps> = ({}) => {
 	return (
@@ -21,58 +26,51 @@ const AboutMe: React.FC<AboutMeProps> = ({}) => {
 			<Items
 				folderColors={folderColors.salmon}
 				title={'bio'}
-				children={
-					<AboutMeSubItems
-						subItemTitle='bio.txt'
-					/>
-				}
-			/>
+			>
+				<NavLink to='/about-me/bio'>
+					<AboutMeSubItems subItemTitle='bio.txt' />
+				</NavLink>
+			</Items>
 			<Items
 				folderColors={folderColors.blue}
 				title={'interests'}
-				children={
-					<AboutMeSubItems
-						subItemTitle='hobbies.txt'
-					/>
-				}
-			/>
+			>
+				<AboutMeSubItems subItemTitle={'hobbites.txt'} />
+			</Items>
 			<Items
 				folderColors={folderColors.green}
 				title={'education'}
-				children={
-					<AboutMeSubItems
-						subItemTitle='education.txt'
-					/>
-				}
-			/>
+			>
+				<AboutMeSubItems subItemTitle='education.txt' />
+			</Items>
 			<ItemsTitle
 				className='my-border-top'
 				itemsTitle='contacts'
 			/>
 			<Items
+				mail='taytlanethan@gmail.com'
+				mailIconActive={true}
+				telIconActive={false}
 				chevronIconActive={false}
 				folderIconActive={false}
-				children={
-					<AboutMeSubItems
-						fileIconActive={false}
-						subItemTitle='+33766704190'
-						telIconActive={true}
+				title={
+					<IoMailSharp
+						className='mx-2'
+						size={16}
 					/>
 				}
-				title={''}
 			/>
 			<Items
-				className="my-border-top d-none"
+				number='+33766704190'
+				telIconActive={true}
+				mailIconActive={false}
 				chevronIconActive={false}
 				folderIconActive={false}
-				children={
-					<div className='d-flex flex-row'>
-						<AboutMeSubItems
-							fileIconActive={false}
-							subItemTitle='taylanethan@gmail.com'
-							mailIconActive={true}
-						/>
-					</div>
+				title={
+					<BsFillTelephoneFill
+						className='mx-2'
+						size={16}
+					/>
 				}
 			/>
 		</FolderContainer>
