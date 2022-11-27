@@ -6,8 +6,8 @@ import SideBar from '../components/Navbar/SideBar';
 import AboutMe from './AboutMe/AboutMe';
 import Home from './Home/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Bio from '../components/Biopgrahy/Bio';
-import Hobbies from '../components/Interests/Hobbies';
+import Bio from '../components/AboutMe/Biopgrahy/Biography';
+import Hobbies from '../components/AboutMe/Hobbies/Hobbies';
 
 function App() {
 	return (

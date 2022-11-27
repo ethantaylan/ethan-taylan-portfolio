@@ -17,7 +17,6 @@ const CodeSnippetsContainer = styled.div`
 
 const UserContainer = styled.div`
 	width: 100%;
-	height: 100px;
 	display: flex;
 	align-items: flex-end;
 	justify-content: space-between;
@@ -117,7 +116,7 @@ function CodeSnippets() {
 				</ClosePlusTxt>
 			</FileCloseContainer>
 			<CodeSnippetsContainer>
-				<span>Code Snippets showcase</span>
+				<span className='mb-4'>Code Snippets showcase</span>
 				<UserContainer>
 					<div className='d-flex align-items-center flex-row'>
 						<UserAvatar></UserAvatar>

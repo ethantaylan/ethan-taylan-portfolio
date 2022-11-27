@@ -1,9 +1,7 @@
 import React from 'react';
 import { IoIosClose } from 'react-icons/io';
 import styled from 'styled-components';
-import { Generics } from '../Generics';
-
-interface BioProps {}
+import { Generics } from '../../Generics';
 
 const LeftContent = styled.div`
 	width: 100%;
@@ -30,12 +28,16 @@ const TextBody = styled.span`
 	flex-direction: row;
 `;
 
-export const Bio: React.FC<BioProps> = ({}) => {
+interface AboutMeProps {
+	tabTitle: string;
+}
+
+export const Bio: React.FC<AboutMeProps> = ({ tabTitle }) => {
 	return (
 		<div className='d-flex flex-row w-100 '>
 			<div className='d-flex flex-column w-100'>
 				<FileCloseContainer>
-					<span>BIOGRAPHY.TXT</span>
+					<span>{tabTitle}</span>
 					<span className='d-flex cursor-pointer'>
 						<IoIosClose
 							size={22}
