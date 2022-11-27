@@ -101,9 +101,14 @@ const ClosePlusTxt = styled.div`
 	border-right: 1px solid ${Generics.secondary};
 `;
 
-function CodeSnippets() {
+interface CodeSnippetsProps {
+	onClick(): void;
+}
+
+export const CodeSnippets: React.FC<CodeSnippetsProps> = ({ onClick }) => {
+
 	return (
-		<Container>
+		<Container onClick={onClick}>
 			<FileCloseContainer>
 				<ClosePlusTxt>
 					<span>CODESNIPPETS.TXT</span>
@@ -153,6 +158,6 @@ function CodeSnippets() {
 			</CodeSnippetsContainer>
 		</Container>
 	);
-}
+};
 
 export default CodeSnippets;

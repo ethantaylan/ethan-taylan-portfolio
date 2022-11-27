@@ -19,72 +19,85 @@ interface AboutMeProps {
 	children?: any;
 }
 
-const AboutMe: React.FC<AboutMeProps> = ({ children }) => (
-	<React.Fragment>
-		<div className='d-flex w-100 my-border-bottom'>
-			<FolderContainer>
-				<ItemsTitle itemsTitle='personal-info' />
-				<AboutMeItems
-					folderColors={folderColors.salmon}
-					title={'bio'}
-				>
-					<AboutMeSubItems
-						to='/about-me/biography'
-						subItemTitle='biography.txt'
+const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
+	const [snippet, setSnippet] = React.useState<boolean>(true);
+
+	const clickHandler = () => {
+		setSnippet(!snippet);
+	};
+
+	return (
+		<React.Fragment>
+			<div className='d-flex w-100 my-border-bottom'>
+				<FolderContainer>
+					<ItemsTitle itemsTitle='personal-info' />
+					<AboutMeItems
+						folderColors={folderColors.salmon}
+						title={'bio'}
+					>
+						<AboutMeSubItems
+							to='/about-me/biography'
+							subItemTitle='biography.txt'
+						/>
+						<AboutMeSubItems
+							to='/about-me/biography'
+							subItemTitle='career.txt'
+						/>
+					</AboutMeItems>
+					<AboutMeItems
+						folderColors={folderColors.blue}
+						title={'interests'}
+					>
+						<AboutMeSubItems
+							to='/about-me/hobbies'
+							subItemTitle={'hobbies.txt'}
+						/>
+						<AboutMeSubItems
+							to='/about-me/hobbies'
+							subItemTitle={'else.txt'}
+						/>
+					</AboutMeItems>
+					<AboutMeItems
+						folderColors={folderColors.green}
+						title={'education'}
+					>
+						<AboutMeSubItems
+							to='/about-me/education'
+							subItemTitle='education.txt'
+						/>
+					</AboutMeItems>
+					<div className='m-2' />
+					<ItemsTitle
+						className='my-border-top'
+						itemsTitle='contacts'
 					/>
-					<AboutMeSubItems
-						to='/about-me/biography'
-						subItemTitle='career.txt'
+					<AboutMeItems
+						mail='taylanethan@gmail.com'
+						mailIconActive={true}
+						telIconActive={false}
+						chevronIconActive={false}
+						folderIconActive={false}
+						title={<IoMailSharp size={16} />}
 					/>
-				</AboutMeItems>
-				<AboutMeItems
-					folderColors={folderColors.blue}
-					title={'interests'}
-				>
-					<AboutMeSubItems
-						to='/about-me/hobbies'
-						subItemTitle={'hobbies.txt'}
+					<AboutMeItems
+						number='+33766704190'
+						telIconActive={true}
+						mailIconActive={false}
+						chevronIconActive={false}
+						folderIconActive={false}
+						title={<BsFillTelephoneFill size={16} />}
 					/>
-					<AboutMeSubItems
-						to='/about-me/hobbies'
-						subItemTitle={'else.txt'}
-					/>
-				</AboutMeItems>
-				<AboutMeItems
-					folderColors={folderColors.green}
-					title={'education'}
-				>
-					<AboutMeSubItems
-						to='/about-me/education'
-						subItemTitle='education.txt'
-					/>
-				</AboutMeItems>
-				<div className='m-2' />
-				<ItemsTitle
-					className='my-border-top'
-					itemsTitle='contacts'
+				</FolderContainer>
+				{children}
+			</div>
+			<div className={snippet ? 'd-flex' : 'd-none'}>
+				<CodeSnippets
+					className='bg-light'
+					onClick={clickHandler}
 				/>
-				<AboutMeItems
-					mail='taylanethan@gmail.com'
-					mailIconActive={true}
-					telIconActive={false}
-					chevronIconActive={false}
-					folderIconActive={false}
-					title={<IoMailSharp size={16} />}
-				/>
-				<AboutMeItems
-					number='+33766704190'
-					telIconActive={true}
-					mailIconActive={false}
-					chevronIconActive={false}
-					folderIconActive={false}
-					title={<BsFillTelephoneFill size={16} />}
-				/>
-			</FolderContainer>
-			{children}
-		</div>
-		<CodeSnippets />
-	</React.Fragment>
-);
+			</div>
+		</React.Fragment>
+	);
+};
 
 export default AboutMe;
