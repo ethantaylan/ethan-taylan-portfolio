@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoIosClose } from 'react-icons/io';
 import styled from 'styled-components';
-import { Generics } from './Generics';
+import { Generics } from '../Generics';
 
 const LeftContent = styled.div`
 	width: 100%;

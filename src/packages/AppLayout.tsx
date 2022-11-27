@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Bio from '../components/AboutMe/Biopgrahy/Biography';
 import Hobbies from '../components/AboutMe/Hobbies/Hobbies';
 import Education from '../components/AboutMe/Education/Education';
+import Works from './Works/Works';
 
 function App() {
 	return (
@@ -24,6 +25,10 @@ function App() {
 						<Route
 							path='/about-me'
 							element={<AboutMe />}
+						/>
+						<Route
+							path='/works'
+							element={<Works />}
 						/>
 						<Route
 							path='/about-me/biography'

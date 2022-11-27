@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutMeContents from '../../AboutMeContents';
+import AboutMeContents from '../AboutMeContents';
 
 export const Bio = () => {
 	return (

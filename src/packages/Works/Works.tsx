@@ -23,36 +23,24 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => (
 	<React.Fragment>
 		<div className='d-flex w-100 my-border-bottom'>
 			<FolderContainer>
-				<ItemsTitle itemsTitle='personal-info' />
+				<ItemsTitle itemsTitle='works' />
 				<AboutMeItems
 					folderColors={folderColors.salmon}
-					title={'bio'}
+					title={'frontend'}
+
 				>
 					<AboutMeSubItems
 						to='/about-me/biography'
-						subItemTitle='biography.txt'
+						subItemTitle='biography.tsx'
 					/>
 					<AboutMeSubItems
 						to='/about-me/biography'
-						subItemTitle='career.txt'
-					/>
-				</AboutMeItems>
-				<AboutMeItems
-					folderColors={folderColors.blue}
-					title={'interests'}
-				>
-					<AboutMeSubItems
-						to='/about-me/hobbies'
-						subItemTitle={'hobbies.txt'}
-					/>
-					<AboutMeSubItems
-						to='/about-me/hobbies'
-						subItemTitle={'else.txt'}
+						subItemTitle='career.tsx'
 					/>
 				</AboutMeItems>
 				<AboutMeItems
 					folderColors={folderColors.green}
-					title={'education'}
+					title={'webdesign'}
 				>
 					<AboutMeSubItems
 						to='/about-me/education'
@@ -60,30 +48,9 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => (
 					/>
 				</AboutMeItems>
 				<div className='m-2' />
-				<ItemsTitle
-					className='my-border-top'
-					itemsTitle='contacts'
-				/>
-				<AboutMeItems
-					mail='taylanethan@gmail.com'
-					mailIconActive={true}
-					telIconActive={false}
-					chevronIconActive={false}
-					folderIconActive={false}
-					title={<IoMailSharp size={16} />}
-				/>
-				<AboutMeItems
-					number='+33766704190'
-					telIconActive={true}
-					mailIconActive={false}
-					chevronIconActive={false}
-					folderIconActive={false}
-					title={<BsFillTelephoneFill size={16} />}
-				/>
 			</FolderContainer>
 			{children}
 		</div>
-		<CodeSnippets />
 	</React.Fragment>
 );
 
