@@ -92,7 +92,6 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 			</div>
 			<div className={snippet ? 'd-flex' : 'd-none'}>
 				<CodeSnippets
-					className='bg-light'
 					onClick={clickHandler}
 				/>
 			</div>
