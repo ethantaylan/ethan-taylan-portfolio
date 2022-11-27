@@ -4,6 +4,9 @@ import Avatar from '../../assets/avatar.png';
 import { BiCommentDetail } from 'react-icons/bi';
 import { Generics } from '../Generics';
 import { IoIosClose } from 'react-icons/io';
+import { codeSnippetsColors } from './code-snippets-colors';
+import CodeSnippetSpan from './CodeSnippetSpan';
+import Code from './Code';
 
 const CodeSnippetsContainer = styled.div`
 	width: 85%;
@@ -56,7 +59,7 @@ const CodeContainer = styled.div`
 	background-color: #010c15;
 	border-radius: 12px;
 	border: 1px solid ${Generics.secondary};
-    padding: 15px;
+	padding: 15px;
 `;
 
 const Comments = styled.span`
@@ -102,7 +105,7 @@ function CodeSnippets() {
 		<Container>
 			<FileCloseContainer>
 				<ClosePlusTxt>
-					<span>BIO.TXT</span>
+					<span>CODESNIPPETS.TXT</span>
 					<span className='d-flex cursor-pointer'>
 						<IoIosClose
 							size={22}
@@ -131,7 +134,7 @@ function CodeSnippets() {
 					</DetailsContainer>
 				</UserContainer>
 				<CodeContainer>
-					<h1>test</h1>
+					<Code />
 				</CodeContainer>
 				<div className='d-flex w-100 justify-content-between align-items-start mt-3 px-3'>
 					<Comments>

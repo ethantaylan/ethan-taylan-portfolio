@@ -37,7 +37,7 @@ export const Bio: React.FC<BioProps> = ({}) => {
 		<div className='d-flex flex-row w-100 '>
 			<div className='d-flex flex-column w-100'>
 				<FileCloseContainer>
-					<span>BIO.TXT</span>
+					<span>BIOGRAPHY.TXT</span>
 					<span className='d-flex cursor-pointer'>
 						<IoIosClose
 							size={22}
