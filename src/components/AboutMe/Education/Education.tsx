@@ -3,7 +3,7 @@ import AboutMeContents from '../../AboutMeContents';
 
 export const Bio = () => {
 	return (
-		<AboutMeContents tabTitle='BIOGRAPHY.TXT' />
+		<AboutMeContents tabTitle='EDUCATION.TXT' />
 	);
 };
 

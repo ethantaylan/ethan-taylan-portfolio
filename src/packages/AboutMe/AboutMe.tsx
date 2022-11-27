@@ -47,7 +47,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => (
 					title={'education'}
 				>
 					<AboutMeSubItems
-						to='/education'
+						to='/about-me/education'
 						subItemTitle='education.txt'
 					/>
 				</AboutMeItems>

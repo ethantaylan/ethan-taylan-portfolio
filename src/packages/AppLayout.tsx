@@ -8,6 +8,7 @@ import Home from './Home/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Bio from '../components/AboutMe/Biopgrahy/Biography';
 import Hobbies from '../components/AboutMe/Hobbies/Hobbies';
+import Education from '../components/AboutMe/Education/Education';
 
 function App() {
 	return (
@@ -31,6 +32,10 @@ function App() {
 						<Route
 							path='/about-me/hobbies'
 							element={<AboutMe children={<Hobbies />} />}
+						/>
+						<Route
+							path='/about-me/education'
+							element={<AboutMe children={<Education />} />}
 						/>
 					</Routes>
 				</SideBar>

@@ -1,7 +1,7 @@
 import React from 'react';
-import AboutMeContents from '../Biopgrahy/AboutMeContents';
+import AboutMeContents from '../../AboutMeContents';
 
-export const Bio: React.FC = ({}) => {
+export const Bio = () => {
 	return (
 		<AboutMeContents tabTitle='HOBBIES.TXT' />
 	);
