@@ -10,6 +10,7 @@ import Code from './Code';
 
 const CodeSnippetsContainer = styled.div`
 	width: 85%;
+    height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -78,6 +79,8 @@ const Container = styled.div`
 	color: ${Generics.primary};
 	flex-direction: column;
 	align-items: center;
+    border-left: 3px solid ${Generics.primary};
+
 `;
 
 const FileCloseContainer = styled.div`

@@ -2,14 +2,12 @@ import React from 'react';
 import { IoIosClose } from 'react-icons/io';
 import styled from 'styled-components';
 import { Generics } from '../Generics';
-import CodeSnippets from './CodeSnippets';
 
 interface BioProps {}
 
 const LeftContent = styled.div`
 	width: 100%;
 	padding: 20px;
-	border-right: 5px solid ${Generics.primary};
 `;
 
 const FileCloseContainer = styled.div`
