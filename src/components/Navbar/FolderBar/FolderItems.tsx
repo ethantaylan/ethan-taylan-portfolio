@@ -45,7 +45,7 @@ const AboutMeItems: React.FC<ItemsProps> = ({
 			<TitleContainer>
 				<div
 					onClick={handleActive}
-					className='cursor-pointer d-flex hover flex-row align-items-center mb-2'
+					className='cursor-pointer d-flex hover align-items-center mb-1'
 				>
 					{chevronIconActive && (
 						<span className='px-2'>
@@ -62,9 +62,9 @@ const AboutMeItems: React.FC<ItemsProps> = ({
 							color={folderColors}
 						/>
 					)}
-					<span className='d-flex mx-1'>{title}</span>
-					{number && <span>{number}</span>}
-					{mail && <span>{mail}</span>}
+					<span className='d-flex px-2'>{title}</span>
+					{number && <span className='px-2'>{number}</span>}
+					{mail && <span className='px-2'>{mail}</span>}
 				</div>
 				{isFolderActive && children}
 			</TitleContainer>

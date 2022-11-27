@@ -51,6 +51,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => (
 						subItemTitle='education.txt'
 					/>
 				</AboutMeItems>
+				<div className='m-2' />
 				<ItemsTitle
 					className='my-border-top'
 					itemsTitle='contacts'
@@ -61,12 +62,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => (
 					telIconActive={false}
 					chevronIconActive={false}
 					folderIconActive={false}
-					title={
-						<IoMailSharp
-							className='mx-2'
-							size={16}
-						/>
-					}
+					title={<IoMailSharp size={16} />}
 				/>
 				<AboutMeItems
 					number='+33766704190'
@@ -74,12 +70,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => (
 					mailIconActive={false}
 					chevronIconActive={false}
 					folderIconActive={false}
-					title={
-						<BsFillTelephoneFill
-							className='mx-2'
-							size={16}
-						/>
-					}
+					title={<BsFillTelephoneFill size={16} />}
 				/>
 			</FolderContainer>
 			{children}

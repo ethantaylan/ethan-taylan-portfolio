@@ -13,7 +13,7 @@ import Education from '../components/AboutMe/Education/Education';
 function App() {
 	return (
 		<BrowserRouter>
-			<div className='h-100 w-100 d-flex justify-content-between flex-column p-3'>
+			<div className='h-100 w-100 d-flex justify-content-between flex-column p-5'>
 				<Navbar />
 				<SideBar>
 					<Routes>
