@@ -1,13 +1,13 @@
-import React, { Children } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Generics } from '../../components/Generics';
-import Items from '../../components/AboutMeItems/FolderItems';
-import ItemsTitle from '../../components/AboutMeItems/FolderBarTitles';
-import AboutMeSubItems from '../../components/AboutMeItems/SubItems';
-import { folderColors } from '../../components/AboutMeItems/folder-colors';
+import { folderColors } from '../../components/Navbar/FolderBar/folder-colors';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { IoMailSharp } from 'react-icons/io5';
-import CodeSnippets from '../../components/AboutMeItems/CodeSnippets';
+import CodeSnippets from '../../components/CodeSnippet/CodeSnippets';
+import AboutMeSubItems from '../../components/Navbar/FolderBar/SubItems';
+import ItemsTitle from '../../components/Navbar/FolderBar/FolderBarTitles';
+import AboutMeItems from '../../components/Navbar/FolderBar/FolderItems';
 
 const FolderContainer = styled.div`
 	width: 250px;
@@ -24,25 +24,25 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => (
 		<div className='d-flex w-100 my-border-bottom'>
 			<FolderContainer>
 				<ItemsTitle itemsTitle='personal-info' />
-				<Items
+				<AboutMeItems
 					folderColors={folderColors.salmon}
 					title={'bio'}
 				>
 					<AboutMeSubItems
-						to='/about-me/bio'
+						to='/about-me/biography'
 						subItemTitle='biography.txt'
 					/>
-				</Items>
-				<Items
+				</AboutMeItems>
+				<AboutMeItems
 					folderColors={folderColors.blue}
 					title={'interests'}
 				>
 					<AboutMeSubItems
-						to='about-me/hobbies'
+						to='/about-me/hobbies'
 						subItemTitle={'hobbies.txt'}
 					/>
-				</Items>
-				<Items
+				</AboutMeItems>
+				<AboutMeItems
 					folderColors={folderColors.green}
 					title={'education'}
 				>
@@ -50,12 +50,12 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => (
 						to='/education'
 						subItemTitle='education.txt'
 					/>
-				</Items>
+				</AboutMeItems>
 				<ItemsTitle
 					className='my-border-top'
 					itemsTitle='contacts'
 				/>
-				<Items
+				<AboutMeItems
 					mail='taylanethan@gmail.com'
 					mailIconActive={true}
 					telIconActive={false}
@@ -68,7 +68,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => (
 						/>
 					}
 				/>
-				<Items
+				<AboutMeItems
 					number='+33766704190'
 					telIconActive={true}
 					mailIconActive={false}
@@ -82,7 +82,6 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => (
 					}
 				/>
 			</FolderContainer>
-
 			{children}
 		</div>
 		<CodeSnippets />

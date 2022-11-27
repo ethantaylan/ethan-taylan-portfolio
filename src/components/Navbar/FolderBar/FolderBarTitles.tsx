@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Generics } from '../Generics';
+import { Generics } from '../../Generics';
 import { TiArrowSortedDown } from 'react-icons/ti';
 
 const MainTitleContainer = styled.div`

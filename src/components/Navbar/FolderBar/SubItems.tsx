@@ -2,7 +2,7 @@ import React, { Children } from 'react';
 import { NavLink } from 'react-router-dom';
 import { AiFillFileText } from 'react-icons/ai';
 import styled, { createGlobalStyle } from 'styled-components';
-import { Generics } from '../Generics';
+import { Generics } from '../../Generics';
 
 const SubItemContainer = styled.div`
 	color: ${Generics.primary};

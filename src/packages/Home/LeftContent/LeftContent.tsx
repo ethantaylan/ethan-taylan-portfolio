@@ -15,12 +15,13 @@ const Container = styled.div`
 const Welcome = styled.span`
 	color: #43d9ad;
 	letter-spacing: normal;
+	font-size: 20px;
+	margin-bottom: 5px;
 `;
 
 const Name = styled.span`
 	font-size: 45px;
 	color: white;
-	letter-spacing: normal;
 	text-indent: -3px;
 	font-weight: bold;
 `;
@@ -28,7 +29,8 @@ const Name = styled.span`
 const Frontend = styled.span`
 	color: #4d5bce;
 	font-size: 28px;
-	margin-top: 10px;
+	margin-top: 5px;
+	letter-spacing: -1.3px;
 `;
 
 const Subtitle = styled.span`
@@ -48,7 +50,7 @@ function LeftContent() {
 		<Container>
 			<div className='d-flex flex-column'>
 				<div className='d-flex justify-content-around flex-column'>
-					<Welcome>Welcome()</Welcome>
+					<Welcome>_hello ! i'm</Welcome>
 					<Name>Ethan Taylan</Name>
 					<Frontend>{'>'} Frontend developer</Frontend>
 				</div>

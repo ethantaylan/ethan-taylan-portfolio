@@ -73,7 +73,6 @@ export const Bio: React.FC<BioProps> = ({}) => {
 							<br />
 						</div>
 					</LeftContent>
-					{/* Right content */}
 				</TextBody>
 			</div>
 		</div>

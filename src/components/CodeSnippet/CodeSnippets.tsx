@@ -4,13 +4,11 @@ import Avatar from '../../assets/avatar.png';
 import { BiCommentDetail } from 'react-icons/bi';
 import { Generics } from '../Generics';
 import { IoIosClose } from 'react-icons/io';
-import { codeSnippetsColors } from './code-snippets-colors';
-import CodeSnippetSpan from './CodeSnippetSpan';
 import Code from './Code';
 
 const CodeSnippetsContainer = styled.div`
 	width: 85%;
-    height: 100%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -27,8 +25,8 @@ const UserContainer = styled.div`
 `;
 
 const UserAvatar = styled.div`
-	height: 40px;
-	width: 40px;
+	height: 35px;
+	width: 35px;
 	background-image: url(${Avatar});
 	background-size: contain;
 	border-radius: 100%;
@@ -42,7 +40,6 @@ const UserName = styled.div`
 	flex-direction: column;
 	color: #5b86ff;
 	font-weight: bold;
-	margin-bottom: 5px;
 `;
 
 const CreatedAt = styled.span`
@@ -53,6 +50,7 @@ const DetailsContainer = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
+	align-self: end;
 `;
 const CodeContainer = styled.div`
 	height: 200px;
@@ -68,6 +66,8 @@ const Comments = styled.span`
 	display: flex;
 	justify-content: space-between;
 	line-height: 20px;
+	flex-direction: column;
+	font-size: 14px;
 `;
 
 const CommentsCloseBtn = styled.span`
@@ -79,8 +79,7 @@ const Container = styled.div`
 	color: ${Generics.primary};
 	flex-direction: column;
 	align-items: center;
-    border-left: 3px solid ${Generics.primary};
-
+	border-left: 3px solid ${Generics.primary};
 `;
 
 const FileCloseContainer = styled.div`
@@ -120,11 +119,10 @@ function CodeSnippets() {
 			<CodeSnippetsContainer>
 				<span>Code Snippets showcase</span>
 				<UserContainer>
-					<div className='d-flex flex-row'>
+					<div className='d-flex align-items-center flex-row'>
 						<UserAvatar></UserAvatar>
 						<div className='d-flex justify-content-between flex-column'>
 							<UserName>@ethantaylan</UserName>
-							<CreatedAt>Created 5 months ago</CreatedAt>
 						</div>
 					</div>
 					<DetailsContainer className='cursor-pointer hover '>
@@ -143,7 +141,9 @@ function CodeSnippets() {
 					<Comments>
 						"My work here was 5 months ago. It was for the project called Enemy. A
 						World of Warcraft guild".
+						<CreatedAt>// Created 5 months ago</CreatedAt>
 					</Comments>
+
 					<CommentsCloseBtn>
 						<IoIosClose
 							size={22}

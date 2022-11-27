@@ -106,6 +106,7 @@ function Footer() {
 					</a>
 				</NavUl>
 			</NavContainer>
+			<span className='h-100 d-flex justify-content-center align-items-center my-border-left px-4'>v1.0.0</span>
 			<a
 				target='_blank'
 				className=' h-100'

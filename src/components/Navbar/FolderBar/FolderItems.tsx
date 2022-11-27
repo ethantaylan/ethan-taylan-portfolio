@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Generics } from '../Generics';
+import { Generics } from '../../Generics';
 import { FaChevronDown, FaChevronRight } from 'react-icons/fa';
 import { AiFillFolder } from 'react-icons/ai';
 
