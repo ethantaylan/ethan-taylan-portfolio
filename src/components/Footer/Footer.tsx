@@ -32,6 +32,11 @@ const FindMeContainer = styled.div`
 	padding-right: 20px;
 	${cursorPointer}
 	border-right: 1px solid ${secondaryColor};
+	@media (width < 768px) {
+	
+	display: none;
+
+}
 `;
 
 const NavContainer = styled.nav`

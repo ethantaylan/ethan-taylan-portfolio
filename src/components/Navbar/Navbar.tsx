@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { Generics } from '../Generics';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Container = styled.div`
 	width: 100%;
@@ -14,6 +15,9 @@ const Container = styled.div`
 	border: 1px solid ${Generics.secondary};
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
+	@media (width < 768px) {
+		min-height: 60px;
+	}
 `;
 
 const BrandContainer = styled.div`
@@ -26,6 +30,9 @@ const BrandContainer = styled.div`
 	padding-right: 20px;
 	border-right: 1px solid ${Generics.secondary};
 	cursor: ${Generics.cursor};
+	@media (width < 768px) {
+		border-right: 0px;
+	}
 `;
 
 const NavContainer = styled.nav`
@@ -49,12 +56,18 @@ const ContactBtn = styled.a`
 		border-bottom: 2px solid orange;
 		color: ${Generics.white};
 	}
+	@media (width < 768px) {
+		display: none;
+	}
 `;
 
 const NavUl = styled.ul`
 	height: 100%;
 	display: flex;
 	align-items: center;
+	@media (width < 768px) {
+		display: none;
+	}
 `;
 
 const NavLi = styled.li`
@@ -66,6 +79,21 @@ const NavLi = styled.li`
 	padding-left: 15px;
 	padding-right: 15px;
 	cursor: ${Generics.cursor}; ;
+`;
+
+const BurgerBtn = styled.span`
+	display: none;
+	@media (width < 768px) {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+		color: ${Generics.primary};
+		padding: 0 20px 0 20px;
+		cursor: ${Generics.cursor};
+		font-size: 20px;
+	}
 `;
 
 function PortfolioNavbar() {
@@ -94,6 +122,9 @@ function PortfolioNavbar() {
 					</NavLink>
 				</NavUl>
 			</NavContainer>
+			<BurgerBtn>
+				<GiHamburgerMenu />
+			</BurgerBtn>
 			<ContactBtn>_contact-me</ContactBtn>
 		</Container>
 	);

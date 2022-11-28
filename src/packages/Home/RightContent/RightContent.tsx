@@ -36,7 +36,9 @@ const CodeSnippet = styled.img`
 	box-shadow: 0 5px 40px rgba(0, 0, 0, 0.2);
 `;
 
-function RightContent() {
+interface RightContentProps {}
+
+const RightContent: React.FC<RightContentProps> = () => {
 	return (
 		<div className='h-100 w-100'>
 			<Container>
@@ -48,6 +50,6 @@ function RightContent() {
 			</Container>
 		</div>
 	);
-}
+};
 
 export default RightContent;
