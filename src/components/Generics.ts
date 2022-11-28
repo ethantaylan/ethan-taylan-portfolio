@@ -3,5 +3,6 @@ export enum Generics {
 	secondary = '#1e2d3d',
 	appBg = '#011627',
 	cursor = 'pointer',
-	white = '#ebebeb'
+	white = '#ebebeb',
+	purple = '#5565E8'
 }

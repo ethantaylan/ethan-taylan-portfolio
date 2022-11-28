@@ -18,7 +18,7 @@ interface AboutMeProps {
 
 const AboutMe: React.FC<AboutMeProps> = ({ children }) => (
 	<React.Fragment>
-		<div className='d-flex w-100 my-border-bottom'>
+		<div className='d-flex w-100'>
 			<FolderContainer>
 				<ItemsTitle itemsTitle='works' />
 				<AboutMeItems

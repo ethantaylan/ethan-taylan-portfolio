@@ -150,6 +150,10 @@ body,
 	height: 100vh !important;
 }
 
+.primary {
+	color: #607b96 !important;
+}
+
 .app-bg {
 	background-color: #011627;
 	border-right: 1px solid #1e2d3d;
@@ -229,4 +233,14 @@ a:hover {
 
 .margin-right-5 {
 	margin-right: 5px;
+}
+
+.portfolio-img-style {
+	filter: saturate(0);
+	opacity: 0.6;
+}
+
+.portfolio-img-style:hover {
+	filter: saturate(0.8);
+	opacity: 0.8;
 }

@@ -153,6 +153,7 @@ export const CodeSnippets: React.FC<CodeSnippetsProps> = ({ onClick }) => {
 						<IoIosClose
 							size={22}
 							color={Generics.primary}
+							className="cursor-pointer"
 						/>
 					</CommentsCloseBtn>
 				</div>

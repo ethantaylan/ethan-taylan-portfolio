@@ -5,8 +5,6 @@ import { AiFillHome } from 'react-icons/ai';
 import { RiContactsFill } from 'react-icons/ri';
 import { FaFileCode } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
-import Bio from '../../packages/AboutMe/Bio';
-import AboutMe from '../../packages/AboutMe/AboutMe';
 
 const SideBarContainer = styled.div`
 	width: auto;
@@ -50,7 +48,7 @@ const SideBar: React.FC<SideBarProps> = ({ children }) => {
 		<div className='app-bg h-100 w-100 d-flex flex-row'>
 			<SideBarContainer>
 				<SideBarUl>
-					<NavLink to='/'>
+					<NavLink to='/home'>
 						<SideBarLi>
 							<AiFillHome />
 						</SideBarLi>

@@ -6,13 +6,13 @@ import SideBar from '../components/Navbar/SideBar';
 import AboutMe from './AboutMe/AboutMe';
 import Home from './Home/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Bio from '../components/AboutMe/Biopgrahy/Biography';
+import Bio from '../components/AboutMe/Biography/Biography';
 import Hobbies from '../components/AboutMe/Hobbies/Hobbies';
 import Education from '../components/AboutMe/Education/Education';
 import Works from './Works/Works';
-import Orinoco from '../components/Works/PortfolioItems/Orinoco';
-import PowerBottle from '../components/Works/PortfolioItems/PowerBottle';
-import Reservia from '../components/Works/PortfolioItems/Reservia';
+import Orinoco from '../components/Works/Portfolio/PortfolioItems/Orinoco';
+import PowerBottle from '../components/Works/Portfolio/PortfolioItems/PowerBottle';
+import Reservia from '../components/Works/Portfolio/PortfolioItems/Reservia';
 
 function App() {
 	return (

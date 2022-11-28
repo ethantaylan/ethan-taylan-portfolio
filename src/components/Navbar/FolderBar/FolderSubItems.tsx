@@ -36,9 +36,9 @@ const AboutMeSubItems: React.FC<AboutMeSubItemsProps> = ({
 }) => {
 	return (
 		<div>
-			<NavLink to={to}>
-				<SubItemContainer className='hover d-flex cursor-pointer'>
-					<GlobalStyle />
+			<SubItemContainer className='hover d-flex cursor-pointer'>
+				<GlobalStyle />
+				<NavLink to={to}>
 					<div className='d-flex margin-top-5 align-items-center padding-bottom-12 justify-content-center'>
 						{fileIconActive && (
 							<AiFillFileText className='margin-left'></AiFillFileText>
@@ -51,8 +51,8 @@ const AboutMeSubItems: React.FC<AboutMeSubItemsProps> = ({
 						)}
 						{subItemTitle}
 					</div>
-				</SubItemContainer>
-			</NavLink>
+				</NavLink>
+			</SubItemContainer>
 		</div>
 	);
 };
