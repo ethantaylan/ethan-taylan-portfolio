@@ -10,14 +10,12 @@ import Bio from '../components/AboutMe/Biography/Biography';
 import Hobbies from '../components/AboutMe/Hobbies/Hobbies';
 import Education from '../components/AboutMe/Education/Education';
 import Works from './Works/Works';
-import Orinoco from '../components/Works/Portfolio/PortfolioItems/Orinoco';
-import PowerBottle from '../components/Works/Portfolio/PortfolioItems/PowerBottle';
-import Reservia from '../components/Works/Portfolio/PortfolioItems/Reservia';
+import Portfolio from '../components/Works/Portfolio/PortfolioItems/Portfolio';
 
 function App() {
 	return (
 		<BrowserRouter>
-			<div className='h-100 w-100 d-flex justify-content-between flex-column p-5'>
+			<div className='applayout d-flex justify-content-between flex-column'>
 				<Navbar />
 				<SideBar>
 					<Routes>
@@ -49,16 +47,8 @@ function App() {
 						/>
 						//* ROUTES FOR PORTFOLIO ITEMS *//
 						<Route
-							path='/works/orinoco'
-							element={<Works children={<Orinoco />} />}
-						/>
-						<Route
-							path='/works/power-bottle'
-							element={<Works children={<PowerBottle />} />}
-						/>
-						<Route
-							path='/works/reservia'
-							element={<Works children={<Reservia />} />}
+							path='/works/portfolio'
+							element={<Works children={<Portfolio />} />}
 						/>
 					</Routes>
 				</SideBar>

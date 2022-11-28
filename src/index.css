@@ -99,6 +99,9 @@ video {
 	vertical-align: baseline;
 	color: unset;
 	text-decoration: none;
+	scrollbar-color: red #010c15 !important;
+	scrollbar-width: 200px !important;
+
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -141,14 +144,19 @@ html,
 body,
 #root,
 .App {
-	padding: 0px;
 	margin: 0px;
 	background-color: #010c15;
 	font-size: 14px;
 	letter-spacing: -0.7px;
-	width: 100vw !important;
-	height: 100vh !important;
+	width: 100% !important;
+	height: 100% !important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
+
+.App {
+padding: 10px;}
 
 .primary {
 	color: #607b96 !important;
@@ -238,9 +246,52 @@ a:hover {
 .portfolio-img-style {
 	filter: saturate(0);
 	opacity: 0.6;
+	object-fit: cover;
+	height: 250px;
 }
 
 .portfolio-img-style:hover {
 	filter: saturate(0.8);
 	opacity: 0.8;
 }
+
+.scroll-portfolio {
+    overflow-y: scroll;
+	max-height: 600px;
+	padding: 40px;
+}
+
+.applayout {
+width: 95%;
+height: 95%;
+}
+
+
+
+
+
+
+
+
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #273e47 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #1e2d3d;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #607b96;
+    border-radius: 0px;
+    border: 0px solid #ffffff;
+  }

@@ -4,7 +4,7 @@ import { Generics } from '../Generics';
 
 const Container = styled.div`
 	width: 100%;
-	height: 50px;
+	min-height: 43px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;

@@ -26,20 +26,8 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => (
 					title={'my-works'}
 				>
 					<AboutMeSubItems
-						to='/works/orinoco'
-						subItemTitle='orinoco.tsx'
-						codeIconActive={true}
-						fileIconActive={false}
-					/>
-					<AboutMeSubItems
-						to='/works/power-bottle'
-						subItemTitle='power-bottle.tsx'
-						codeIconActive={true}
-						fileIconActive={false}
-					/>
-					<AboutMeSubItems
-						to='/works/reservia'
-						subItemTitle='reservia.tsx'
+						to='/works/portfolio'
+						subItemTitle='portfolio.tsx'
 						codeIconActive={true}
 						fileIconActive={false}
 					/>
