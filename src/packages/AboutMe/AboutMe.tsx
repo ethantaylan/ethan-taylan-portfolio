@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Generics } from '../../components/Generics';
-import { folderColors } from '../../components/Navbar/FolderBar/folder-colors';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { IoMailSharp } from 'react-icons/io5';
 import CodeSnippets from '../../components/CodeSnippet/CodeSnippets';
-import AboutMeSubItems from '../../components/Navbar/FolderBar/SubItems';
+import AboutMeSubItems from '../../components/Navbar/FolderBar/FolderSubItems';
 import ItemsTitle from '../../components/Navbar/FolderBar/FolderBarTitles';
 import AboutMeItems from '../../components/Navbar/FolderBar/FolderItems';
 import { NavLink } from 'react-router-dom';
+import { folderColors } from '../../components/folder-colors';
 
 const FolderContainer = styled.div`
 	width: 250px;

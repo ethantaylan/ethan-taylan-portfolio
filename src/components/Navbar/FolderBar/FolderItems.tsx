@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Generics } from '../../Generics';
-import { FaChevronDown, FaChevronRight } from 'react-icons/fa';
+import { FaChevronDown, FaChevronRight, FaReact } from 'react-icons/fa';
 import { AiFillFolder } from 'react-icons/ai';
-import { MdTextSnippet } from 'react-icons/md';
 
 const TitleContainer = styled.div`
 	color: ${Generics.primary};
@@ -25,7 +24,6 @@ interface ItemsProps {
 	number?: string;
 	mail?: string;
 	codeIconActive?: boolean;
-
 }
 
 const AboutMeItems: React.FC<ItemsProps> = ({
@@ -67,7 +65,7 @@ const AboutMeItems: React.FC<ItemsProps> = ({
 						/>
 					)}
 					{codeIconActive && (
-						<MdTextSnippet
+						<FaReact
 							className=''
 							size={18}
 						/>

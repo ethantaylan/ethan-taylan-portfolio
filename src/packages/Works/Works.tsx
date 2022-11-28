@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Generics } from '../../components/Generics';
-import { folderColors } from '../../components/Navbar/FolderBar/folder-colors';
-import AboutMeSubItems from '../../components/Navbar/FolderBar/SubItems';
+import { folderColors } from '../../components/folder-colors';
+import AboutMeSubItems from '../../components/Navbar/FolderBar/FolderSubItems';
 import ItemsTitle from '../../components/Navbar/FolderBar/FolderBarTitles';
 import AboutMeItems from '../../components/Navbar/FolderBar/FolderItems';
 
@@ -22,29 +22,28 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => (
 			<FolderContainer>
 				<ItemsTitle itemsTitle='works' />
 				<AboutMeItems
-					folderColors={folderColors.salmon}
-					title={'frontend'}
-
+					folderColors={folderColors.orange}
+					title={'my-works'}
 				>
 					<AboutMeSubItems
-						to='/about-me/biography'
-						subItemTitle='biography.tsx'
+						to='/works/orinoco'
+						subItemTitle='orinoco.tsx'
+						codeIconActive={true}
+						fileIconActive={false}
 					/>
 					<AboutMeSubItems
-						to='/about-me/biography'
-						subItemTitle='career.tsx'
+						to='/works/power-bottle'
+						subItemTitle='power-bottle.tsx'
+						codeIconActive={true}
+						fileIconActive={false}
 					/>
-				</AboutMeItems>
-				<AboutMeItems
-					folderColors={folderColors.green}
-					title={'webdesign'}
-				>
 					<AboutMeSubItems
-						to='/about-me/education'
-						subItemTitle='education.txt'
+						to='/works/reservia'
+						subItemTitle='reservia.tsx'
+						codeIconActive={true}
+						fileIconActive={false}
 					/>
 				</AboutMeItems>
-				<div className='m-2' />
 			</FolderContainer>
 			{children}
 		</div>
