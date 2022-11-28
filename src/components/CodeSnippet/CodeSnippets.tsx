@@ -108,7 +108,7 @@ interface CodeSnippetsProps {
 export const CodeSnippets: React.FC<CodeSnippetsProps> = ({ onClick }) => {
 
 	return (
-		<Container onClick={onClick}>
+		<Container>
 			<FileCloseContainer>
 				<ClosePlusTxt>
 					<span>CODESNIPPETS.TXT</span>
@@ -116,6 +116,7 @@ export const CodeSnippets: React.FC<CodeSnippetsProps> = ({ onClick }) => {
 						<IoIosClose
 							size={22}
 							color={Generics.primary}
+							onClick={onClick}
 						/>
 					</span>
 				</ClosePlusTxt>

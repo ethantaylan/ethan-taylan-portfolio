@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Generics } from '../../Generics';
 import { FaChevronDown, FaChevronRight } from 'react-icons/fa';
 import { AiFillFolder } from 'react-icons/ai';
+import { MdTextSnippet } from 'react-icons/md';
 
 const TitleContainer = styled.div`
 	color: ${Generics.primary};
@@ -23,11 +24,14 @@ interface ItemsProps {
 	mailIconActive?: boolean;
 	number?: string;
 	mail?: string;
+	codeIconActive?: boolean;
+
 }
 
 const AboutMeItems: React.FC<ItemsProps> = ({
 	chevronIconActive = true,
 	folderIconActive = true,
+	codeIconActive = false,
 	title,
 	folderColors,
 	number,
@@ -60,6 +64,12 @@ const AboutMeItems: React.FC<ItemsProps> = ({
 						<AiFillFolder
 							size={18}
 							color={folderColors}
+						/>
+					)}
+					{codeIconActive && (
+						<MdTextSnippet
+							className='mx-2'
+							size={18}
 						/>
 					)}
 					<span className='d-flex px-2'>{title}</span>

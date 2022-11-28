@@ -8,6 +8,7 @@ import CodeSnippets from '../../components/CodeSnippet/CodeSnippets';
 import AboutMeSubItems from '../../components/Navbar/FolderBar/SubItems';
 import ItemsTitle from '../../components/Navbar/FolderBar/FolderBarTitles';
 import AboutMeItems from '../../components/Navbar/FolderBar/FolderItems';
+import { NavLink } from 'react-router-dom';
 
 const FolderContainer = styled.div`
 	width: 250px;
@@ -22,8 +23,13 @@ interface AboutMeProps {
 const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 	const [snippet, setSnippet] = React.useState<boolean>(true);
 
-	const clickHandler = () => {
+
+	const handleSnippet = () => {
 		setSnippet(!snippet);
+	};
+
+	const setActiveSnippet = () => {
+		setSnippet(true);
 	};
 
 	return (
@@ -31,19 +37,23 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 			<div className='d-flex w-100 my-border-bottom'>
 				<FolderContainer>
 					<ItemsTitle itemsTitle='personal-info' />
-					<AboutMeItems
-						folderColors={folderColors.salmon}
-						title={'bio'}
-					>
-						<AboutMeSubItems
-							to='/about-me/biography'
-							subItemTitle='biography.txt'
-						/>
-						<AboutMeSubItems
-							to='/about-me/biography'
-							subItemTitle='career.txt'
-						/>
-					</AboutMeItems>
+					<div>
+						<AboutMeItems
+							folderColors={folderColors.salmon}
+							title={'bio'}
+						>
+							<NavLink to='/about-me'>
+								<AboutMeSubItems
+									to='/about-me/biography'
+									subItemTitle='biography.txt'
+								/>
+							</NavLink>
+							<AboutMeSubItems
+								to='/'
+								subItemTitle='career.txt'
+							/>
+						</AboutMeItems>
+					</div>
 					<AboutMeItems
 						folderColors={folderColors.blue}
 						title={'interests'}
@@ -53,7 +63,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 							subItemTitle={'hobbies.txt'}
 						/>
 						<AboutMeSubItems
-							to='/about-me/hobbies'
+							to='/'
 							subItemTitle={'else.txt'}
 						/>
 					</AboutMeItems>
@@ -66,6 +76,14 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 							subItemTitle='education.txt'
 						/>
 					</AboutMeItems>
+					<div onClick={setActiveSnippet}>
+						<AboutMeItems
+							title={'code-snippets.tsx'}
+							folderIconActive={false}
+							chevronIconActive={false}
+							codeIconActive={true}
+						></AboutMeItems>
+					</div>
 					<div className='m-2' />
 					<ItemsTitle
 						className='my-border-top'
@@ -91,9 +109,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 				{children}
 			</div>
 			<div className={snippet ? 'd-flex' : 'd-none'}>
-				<CodeSnippets
-					onClick={clickHandler}
-				/>
+				<CodeSnippets onClick={handleSnippet}/>
 			</div>
 		</React.Fragment>
 	);
