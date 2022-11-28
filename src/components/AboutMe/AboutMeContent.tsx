@@ -31,59 +31,35 @@ const TextBody = styled.span`
 
 interface AboutMeContentProps {
 	tabTitle: string;
+	text: any;
 }
 
 export const AboutMeContent: React.FC<AboutMeContentProps> = ({
 	tabTitle,
+	text,
 }) => {
-
 	return (
 		<React.Fragment>
-				<div className='d-flex flex-row w-100 '>
-					<div className='d-flex flex-column w-100'>
-						<FileCloseContainer>
-							<span>{tabTitle}</span>
-							<span className='d-flex cursor-pointer'>
-								<NavLink to='/about-me'>
-									<IoIosClose
-										size={22}
-										color={Generics.primary}
-									/>
-								</NavLink>
-							</span>
-						</FileCloseContainer>
-						<TextBody>
-							<LeftContent>
-								<div className='line-height-20'>
-									* About me <br />
-									* I have 5 years of еxperience in web <br />
-									* development lorem ipsum dolor sit amet, <br />
-									* consectetur adipiscing elit, sed do eiusmod
-									<br />
-									* tempor incididunt ut labore et dolore
-									<br />
-									* magna aliqua. Ut enim ad minim veniam,
-									<br />
-									* quis nostrud exercitation ullamco laboris
-									<br />
-									* nisi ut aliquip ex ea commodo consequat.
-									<br />
-									* Duis aute irure dolor in reprehenderit in
-									<br />
-									*<br />
-									* Duis aute irure dolor in reprehenderit in
-									<br />
-									* voluptate velit esse cillum dolore eu fugiat <br />
-									* nulla pariatur. Excepteur sint occaecat <br />
-									* officia deserunt mollit anim id est laborum.
-									<br />
-									* officia deserunt mollit anim id est laborum */
-									<br />
-								</div>
-							</LeftContent>
-						</TextBody>
-					</div>
+			<div className='d-flex flex-row w-100 '>
+				<div className='d-flex flex-column w-100'>
+					<FileCloseContainer>
+						<span>{tabTitle}</span>
+						<span className='d-flex cursor-pointer'>
+							<NavLink to='/about-me'>
+								<IoIosClose
+									size={22}
+									color={Generics.primary}
+								/>
+							</NavLink>
+						</span>
+					</FileCloseContainer>
+					<TextBody>
+						<LeftContent>
+							<div className='line-height-20'>{text}</div>
+						</LeftContent>
+					</TextBody>
 				</div>
+			</div>
 		</React.Fragment>
 	);
 };

@@ -68,7 +68,7 @@ const AboutMeItems: React.FC<ItemsProps> = ({
 					)}
 					{codeIconActive && (
 						<MdTextSnippet
-							className='mx-2'
+							className=''
 							size={18}
 						/>
 					)}

@@ -42,12 +42,10 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 							folderColors={folderColors.salmon}
 							title={'bio'}
 						>
-							<NavLink to='/about-me'>
-								<AboutMeSubItems
-									to='/about-me/biography'
-									subItemTitle='biography.txt'
-								/>
-							</NavLink>
+							<AboutMeSubItems
+								to='/about-me/biography'
+								subItemTitle='biography.txt'
+							/>
 							<AboutMeSubItems
 								to='/'
 								subItemTitle='career.txt'
@@ -76,12 +74,16 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 							subItemTitle='education.txt'
 						/>
 					</AboutMeItems>
-					<div onClick={setActiveSnippet}>
+					<div
+						className='margin-left-28'
+						onClick={setActiveSnippet}
+					>
 						<AboutMeItems
 							title={'code-snippets.tsx'}
 							folderIconActive={false}
 							chevronIconActive={false}
 							codeIconActive={true}
+							className='no-space'
 						></AboutMeItems>
 					</div>
 					<div className='m-2' />
@@ -109,7 +111,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 				{children}
 			</div>
 			<div className={snippet ? 'd-flex' : 'd-none'}>
-				<CodeSnippets onClick={handleSnippet}/>
+				<CodeSnippets onClick={handleSnippet} />
 			</div>
 		</React.Fragment>
 	);

@@ -220,5 +220,9 @@ a:hover {
 }
 
 .line-height-20 {
-line-height: 20px;
+	line-height: 20px;
+}
+
+.margin-left-28 {
+	margin-left: 28px;
 }
