@@ -36,11 +36,13 @@ const CodeSnippet = styled.img`
 	box-shadow: 0 5px 40px rgba(0, 0, 0, 0.2);
 `;
 
-interface RightContentProps {}
+interface RightContentProps {
+	className: string;
+}
 
-const RightContent: React.FC<RightContentProps> = () => {
+const RightContent: React.FC<RightContentProps> = ({ className }) => {
 	return (
-		<div className='h-100 w-100'>
+		<div className={`${'h-100 w-100'} ${className}`}>
 			<Container>
 				<BlurBg>
 					<CodeSnipperContainer>

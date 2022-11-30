@@ -16,6 +16,9 @@ const SideBarContainer = styled.div`
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	@media (width < 768px) {
+		display: none;
+	}
 `;
 
 const SideBarUl = styled.ul`
@@ -30,8 +33,8 @@ const SideBarUl = styled.ul`
 	align-items: center;
 `;
 
-interface SideBarProps {
-	children: any;
+export interface SideBarProps {
+	children?: any;
 }
 
 const SideBarLi = styled.li`
@@ -44,16 +47,16 @@ const SideBarLi = styled.li`
 `;
 
 const SideBar: React.FC<SideBarProps> = ({ children }) => {
+	
 	return (
-		<div className='app-bg h-100 w-100 d-flex flex-row'>
+		<div className='position-relative my-border-right h-100 w-100 d-flex flex-md-row'>
 			<SideBarContainer>
-				<SideBarUl>
+				<SideBarUl className='d-768-none'>
 					<NavLink to='/home'>
 						<SideBarLi>
 							<AiFillHome />
 						</SideBarLi>
 					</NavLink>
-
 					<NavLink to='/about-me'>
 						<SideBarLi>
 							<RiContactsFill />
@@ -65,9 +68,7 @@ const SideBar: React.FC<SideBarProps> = ({ children }) => {
 						</SideBarLi>
 					</NavLink>
 				</SideBarUl>
-
 			</SideBarContainer>
-
 			{children}
 		</div>
 	);

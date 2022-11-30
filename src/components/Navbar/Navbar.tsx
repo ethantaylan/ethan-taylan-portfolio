@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { Generics } from '../Generics';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import React from 'react';
 
 const Container = styled.div`
 	width: 100%;
@@ -96,38 +97,41 @@ const BurgerBtn = styled.span`
 	}
 `;
 
-function PortfolioNavbar() {
-	return (
-		<Container>
-			<BrandContainer>ethan-taylan</BrandContainer>
-			<NavContainer>
-				<NavUl>
-					<NavLink
-						className='link h-100'
-						to='/'
-					>
-						<NavLi className='m-0'>_home</NavLi>
-					</NavLink>
-					<NavLink
-						className='link h-100'
-						to='/about-me'
-					>
-						<NavLi>_about-me</NavLi>
-					</NavLink>
-					<NavLink
-						className='link h-100'
-						to='/works'
-					>
-						<NavLi>_works</NavLi>
-					</NavLink>
-				</NavUl>
-			</NavContainer>
-			<BurgerBtn>
-				<GiHamburgerMenu />
-			</BurgerBtn>
-			<ContactBtn>_contact-me</ContactBtn>
-		</Container>
-	);
-}
+const Navbar = ({ setToggleMobileNavbar }: any) => {
 
-export default PortfolioNavbar;
+	return (
+		<React.Fragment>
+			<Container>
+				<BrandContainer>ethan-taylan</BrandContainer>
+				<NavContainer>
+					<NavUl>
+						<NavLink
+							className='link h-100'
+							to='/'
+						>
+							<NavLi className='m-0'>_home</NavLi>
+						</NavLink>
+						<NavLink
+							className='link h-100'
+							to='/about-me'
+						>
+							<NavLi>_about-me</NavLi>
+						</NavLink>
+						<NavLink
+							className='link h-100'
+							to='/works'
+						>
+							<NavLi>_works</NavLi>
+						</NavLink>
+					</NavUl>
+				</NavContainer>
+				<BurgerBtn onClick={setToggleMobileNavbar}>
+					<GiHamburgerMenu />
+				</BurgerBtn>
+				<ContactBtn>_contact-me</ContactBtn>
+			</Container>
+		</React.Fragment>
+	);
+};
+
+export default Navbar;

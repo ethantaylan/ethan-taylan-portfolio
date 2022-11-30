@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const primaryColor = '#607b96';
@@ -10,6 +9,11 @@ const Container = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	@media (width < 768px) {
+		padding: 20px;
+		align-items: flex-start;
+		justify-content: space-around;
+	}
 `;
 
 const Welcome = styled.span`
@@ -24,19 +28,27 @@ const Name = styled.span`
 	color: white;
 	text-indent: -3px;
 	font-weight: bold;
+	@media (width < 768px) {
+		font-size: 35px;
+	}
 `;
 
 const Frontend = styled.span`
 	color: #4d5bce;
-	font-size: 28px;
+	font-size: 30px;
 	margin-top: 5px;
 	letter-spacing: -1.3px;
+	@media (width < 768px) {
+		font-size: 22px;
+	}
 `;
 
 const Subtitle = styled.span`
 	color: ${primaryColor};
 	margin-top: 10px;
 	margin-bottom: 10px;
+	@media (width < 768px) {
+	}
 `;
 
 const GithubLink = styled.span`
@@ -48,7 +60,7 @@ const GithubLink = styled.span`
 function LeftContent() {
 	return (
 		<Container>
-			<div className='d-flex flex-column'>
+			<div className='d-flex h-75 justify-content-around flex-column'>
 				<div className='d-flex justify-content-around flex-column'>
 					<Welcome>_hello ! i'm</Welcome>
 					<Name>Ethan Taylan</Name>

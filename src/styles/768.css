@@ -1,5 +1,5 @@
 @media (width < 768px) {
 	.d-768-none {
-		display: none;
+		display: none !important;
 	}
 }

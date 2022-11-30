@@ -4,21 +4,16 @@ import { AiFillInstagram } from 'react-icons/ai';
 import styled from 'styled-components';
 import { Generics } from '../Generics';
 
-const primaryColor = '#607b96';
-const secondaryColor = '#1e2d3d';
-const appBg = '#011627';
-const cursorPointer = { cursor: 'pointer' };
-
 const Container = styled.div`
 	width: 100%;
 	min-height: 43px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	background-color: ${appBg};
-	color: ${primaryColor};
+	background-color: ${Generics.appBg};
+	color: ${Generics.primary};
 	white-space: nowrap;
-	border: 1px solid ${secondaryColor};
+	border: 1px solid ${Generics.secondary};
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
 `;
@@ -27,15 +22,13 @@ const FindMeContainer = styled.div`
 	height: 100%;
 	display: flex;
 	align-items: center;
-	color: ${primaryColor};
+	color: ${Generics.primary};
 	padding-left: 20px;
 	padding-right: 20px;
-	${cursorPointer}
-	border-right: 1px solid ${secondaryColor};
+	cursor: ${Generics.cursor};
+	border-right: 1px solid ${Generics.secondary};
 	@media (width < 768px) {
-	
 	display: none;
-
 }
 `;
 
@@ -51,9 +44,9 @@ const GithubBtn = styled.span`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-left: 1px solid ${secondaryColor};
+	border-left: 1px solid ${Generics.secondary};
 	text-decoration: none;
-	color: ${primaryColor};
+	color: ${Generics.primary};
 	padding: 0 20px 0 20px;
 	&:hover {
 		border-bottom: 2px solid orange;
@@ -72,12 +65,12 @@ const NavLi = styled.li`
 	display: flex;
 	justify-content: center;
 	height: 100%;
-	border-right: 1px solid ${secondaryColor};
+	border-right: 1px solid ${Generics.secondary};
 	align-items: center;
 	width: 100%;
 	padding-left: 15px;
 	padding-right: 15px;
-	${cursorPointer}
+	cursor: ${Generics.cursor};
 	&:hover {
 		border-bottom: 2px solid orange;
 		cursor: ${Generics.cursor};

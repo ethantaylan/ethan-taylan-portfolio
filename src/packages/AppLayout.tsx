@@ -19,8 +19,12 @@ function App() {
 				<Navbar />
 				<SideBar>
 					<Routes>
-						<Route
+					<Route
 							path='/'
+							element={<Home />}
+						/>
+						<Route
+							path='/home'
 							element={<Home />}
 						/>
 						//* page ABOUTME *//
