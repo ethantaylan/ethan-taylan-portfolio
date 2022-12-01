@@ -108,7 +108,7 @@ interface CodeSnippetsProps {
 export const CodeSnippets: React.FC<CodeSnippetsProps> = ({ onClick }) => {
 
 	return (
-		<Container>
+		<Container className='app-bg'>
 			<FileCloseContainer>
 				<ClosePlusTxt>
 					<span>CODESNIPPETS.TXT</span>

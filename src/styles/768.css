@@ -2,4 +2,7 @@
 	.d-768-none {
 		display: none !important;
 	}
+	.link {
+		width: 100%;
+	}
 }

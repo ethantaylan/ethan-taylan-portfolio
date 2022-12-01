@@ -33,7 +33,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 
 	return (
 		<React.Fragment>
-			<div className='d-flex w-100'>
+			<div className='d-flex app-bg w-100'>
 				<FolderContainer>
 					<ItemsTitle itemsTitle='personal-info' />
 					<div>

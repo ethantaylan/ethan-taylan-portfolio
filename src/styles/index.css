@@ -99,9 +99,6 @@ video {
 	vertical-align: baseline;
 	color: unset;
 	text-decoration: none;
-	scrollbar-color: red #010c15 !important;
-	scrollbar-width: 200px !important;
-
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -145,7 +142,6 @@ body,
 #root,
 .App {
 	margin: 0px;
-	background-color: #010c15;
 	font-size: 14px;
 	letter-spacing: -0.7px;
 	width: 100% !important;
@@ -156,7 +152,9 @@ body,
 }
 
 .App {
-padding: 10px;}
+	padding: 20px;
+	background-color: #000f1b;
+}
 
 .primary {
 	color: #607b96 !important;
@@ -255,42 +253,34 @@ a:hover {
 }
 
 .scroll-portfolio {
-    overflow-y: scroll;
+	overflow-y: scroll;
 	max-height: 600px;
 	padding: 40px;
 }
 
 .applayout {
-width: 95%;
-height: 95%;
+	width: 95%;
+	height: 95%;
 }
 
-
-
-
-
-
-
-
-
 /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: auto;
-    scrollbar-color: #273e47 #ffffff;
-  }
+/* Firefox */
+* {
+	scrollbar-width: auto;
+	scrollbar-color: #273e47 #ffffff;
+}
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 16px;
-  }
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 16px;
+}
 
-  *::-webkit-scrollbar-track {
-    background: #1e2d3d;
-  }
+*::-webkit-scrollbar-track {
+	background: #1e2d3d;
+}
 
-  *::-webkit-scrollbar-thumb {
-    background-color: #607b96;
-    border-radius: 0px;
-    border: 0px solid #ffffff;
-  }
+*::-webkit-scrollbar-thumb {
+	background-color: #607b96;
+	border-radius: 0px;
+	border: 0px solid #ffffff;
+}

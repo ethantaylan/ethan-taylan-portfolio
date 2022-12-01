@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Generics } from '../Generics';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import React from 'react';
@@ -62,15 +62,6 @@ const ContactBtn = styled.a`
 	}
 `;
 
-const NavUl = styled.ul`
-	height: 100%;
-	display: flex;
-	align-items: center;
-	@media (width < 768px) {
-		display: none;
-	}
-`;
-
 const NavLi = styled.li`
 	display: flex;
 	justify-content: center;
@@ -79,7 +70,13 @@ const NavLi = styled.li`
 	align-items: center;
 	padding-left: 15px;
 	padding-right: 15px;
-	cursor: ${Generics.cursor}; ;
+	cursor: ${Generics.cursor};
+	@media (width < 768px) {
+		width: 100%;
+		border: none;
+		padding: 20px;
+		justify-content: flex-start;
+	}
 `;
 
 const BurgerBtn = styled.span`
@@ -97,39 +94,64 @@ const BurgerBtn = styled.span`
 	}
 `;
 
-const Navbar = ({ setToggleMobileNavbar }: any) => {
+const NavUl = styled('ul')<{ $height: any }>`
+	height: 100%;
+	display: flex;
+	align-items: center;
+	color: ${Generics.primary};
+	@media (width < 768px) {
+		/* display: none; */
+		flex-direction: column;
+		height: auto;
+		align-items: flex-start;
+		width: 100%;
+		background-color: #011e36;
+		border-left: 1px solid ${Generics.secondary};
+		border-right: 1px solid ${Generics.secondary};
+		border-bottom: 1px solid ${Generics.secondary};
+		height: ${(props) => (props.$height ? "auto" : '0px')};
+	}
+`;
+
+const Navbar = () => {
+	const [toggleNavbar, setToggleNavbar] = React.useState<boolean>(false);
+	const toggleHandler = () => {
+		setToggleNavbar(!toggleNavbar);
+	};
 
 	return (
 		<React.Fragment>
 			<Container>
 				<BrandContainer>ethan-taylan</BrandContainer>
-				<NavContainer>
-					<NavUl>
-						<NavLink
-							className='link h-100'
-							to='/'
-						>
-							<NavLi className='m-0'>_home</NavLi>
-						</NavLink>
-						<NavLink
-							className='link h-100'
-							to='/about-me'
-						>
-							<NavLi>_about-me</NavLi>
-						</NavLink>
-						<NavLink
-							className='link h-100'
-							to='/works'
-						>
-							<NavLi>_works</NavLi>
-						</NavLink>
-					</NavUl>
-				</NavContainer>
-				<BurgerBtn onClick={setToggleMobileNavbar}>
+				<NavContainer></NavContainer>
+				<BurgerBtn onClick={toggleHandler}>
 					<GiHamburgerMenu />
 				</BurgerBtn>
 				<ContactBtn>_contact-me</ContactBtn>
 			</Container>
+			<NavUl $height={toggleNavbar}>
+				<NavLink to='/'>
+					<NavLi className='m-0'>_home</NavLi>
+				</NavLink>
+				<NavLink
+					className='link h-100'
+					to='/about-me'
+				>
+					<NavLi>_about-me</NavLi>
+				</NavLink>
+				<NavLink
+					className='link h-100'
+					to='/works'
+				>
+					<NavLi>_works</NavLi>
+				</NavLink>
+				<NavLink
+					className='link h-100'
+					to='/works'
+				>
+					<NavLi>_contact-me</NavLi>
+				</NavLink>
+			</NavUl>
 		</React.Fragment>
 	);
 };
