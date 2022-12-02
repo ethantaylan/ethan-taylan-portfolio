@@ -18,6 +18,12 @@ const FileCloseContainer = styled.div`
 	justify-content: space-between;
 	color: ${Generics.primary};
 	align-items: center;
+	@media (width < 768px) {
+		width: 100%;
+		border-top: 1px solid ${Generics.secondary};
+		margin-top: 20px;
+		border-right: none;
+	}
 `;
 
 const TextBody = styled.span`
@@ -40,7 +46,7 @@ export const AboutMeContent: React.FC<AboutMeContentProps> = ({
 }) => {
 	return (
 		<React.Fragment>
-			<div className='d-flex flex-row w-100 '>
+			<div className='d-flex flex-row w-100 my-border-right '>
 				<div className='d-flex flex-column w-100'>
 					<FileCloseContainer>
 						<span>{tabTitle}</span>

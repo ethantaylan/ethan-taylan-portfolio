@@ -46,10 +46,22 @@ const SideBarLi = styled.li`
 	}
 `;
 
+const Container = styled.div`
+	display: flex;
+	flex-direction: row;
+	@media (width < 768px) {
+		position: relative;
+		border-right: 1px solid ${Generics};
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+`;
+
 const SideBar: React.FC<SideBarProps> = ({ children }) => {
-	
 	return (
-		<div className='position-relative my-border-right h-100 w-100 d-flex flex-md-row'>
+		<Container>
 			<SideBarContainer>
 				<SideBarUl className='d-768-none'>
 					<NavLink to='/home'>
@@ -70,7 +82,7 @@ const SideBar: React.FC<SideBarProps> = ({ children }) => {
 				</SideBarUl>
 			</SideBarContainer>
 			{children}
-		</div>
+		</Container>
 	);
 };
 

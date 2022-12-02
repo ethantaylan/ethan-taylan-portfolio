@@ -79,6 +79,10 @@ const Container = styled.div`
 	flex-direction: column;
 	align-items: center;
 	border-left: 3px solid ${Generics.primary};
+	@media (width < 768px) {
+		border-left: 1px solid ${Generics.secondary};
+		border-right: 1px solid ${Generics.secondary};
+	}
 `;
 
 const FileCloseContainer = styled.div`
@@ -99,6 +103,10 @@ const ClosePlusTxt = styled.div`
 	justify-content: space-between;
 	padding: 6px;
 	border-right: 1px solid ${Generics.secondary};
+	@media (width < 768px) {
+		display: none;
+		border: none;
+	}
 `;
 
 interface CodeSnippetsProps {
@@ -106,7 +114,6 @@ interface CodeSnippetsProps {
 }
 
 export const CodeSnippets: React.FC<CodeSnippetsProps> = ({ onClick }) => {
-
 	return (
 		<Container className='app-bg'>
 			<FileCloseContainer>
@@ -153,7 +160,7 @@ export const CodeSnippets: React.FC<CodeSnippetsProps> = ({ onClick }) => {
 						<IoIosClose
 							size={22}
 							color={Generics.primary}
-							className="cursor-pointer"
+							className='cursor-pointer'
 						/>
 					</CommentsCloseBtn>
 				</div>

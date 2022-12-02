@@ -13,6 +13,9 @@ const FolderContainer = styled.div`
 	width: 250px;
 	height: 100%;
 	border-right: 1px solid ${Generics.secondary};
+	@media (width < 768px){
+		width: 100%;
+	}
 `;
 
 interface AboutMeProps {
@@ -33,7 +36,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 
 	return (
 		<React.Fragment>
-			<div className='d-flex app-bg w-100'>
+			<div className='d-flex my-border-left flex-768-column app-bg w-100'>
 				<FolderContainer>
 					<ItemsTitle itemsTitle='personal-info' />
 					<div>

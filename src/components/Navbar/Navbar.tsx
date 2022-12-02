@@ -94,22 +94,22 @@ const BurgerBtn = styled.span`
 	}
 `;
 
-const NavUl = styled('ul')<{ $height: any }>`
-	height: 100%;
+const NavUl = styled('ul')`
 	display: flex;
 	align-items: center;
 	color: ${Generics.primary};
+	z-index: 999;
 	@media (width < 768px) {
 		/* display: none; */
 		flex-direction: column;
-		height: auto;
 		align-items: flex-start;
 		width: 100%;
 		background-color: #011e36;
-		border-left: 1px solid ${Generics.secondary};
-		border-right: 1px solid ${Generics.secondary};
-		border-bottom: 1px solid ${Generics.secondary};
-		height: ${(props) => (props.$height ? "auto" : '0px')};
+		border: 1px solid ${Generics.secondary};
+		height: auto;
+		position: absolute;
+		top: 58px;
+		border-top: none;
 	}
 `;
 
@@ -129,7 +129,7 @@ const Navbar = () => {
 				</BurgerBtn>
 				<ContactBtn>_contact-me</ContactBtn>
 			</Container>
-			<NavUl $height={toggleNavbar}>
+			<NavUl className={toggleNavbar ? 'd-flex' : 'd-none'}>
 				<NavLink to='/'>
 					<NavLi className='m-0'>_home</NavLi>
 				</NavLink>

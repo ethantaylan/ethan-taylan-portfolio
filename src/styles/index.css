@@ -180,6 +180,10 @@ body,
 	border-right: 1px solid #1e2d3d;
 }
 
+.no-border {
+	border: none;
+}
+
 .icons {
 	margin-left: 10px;
 }
@@ -261,6 +265,7 @@ a:hover {
 .applayout {
 	width: 95%;
 	height: 95%;
+	position: relative;
 }
 
 /* ===== Scrollbar CSS ===== */
