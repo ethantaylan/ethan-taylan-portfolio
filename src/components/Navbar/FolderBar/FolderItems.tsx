@@ -35,6 +35,7 @@ const AboutMeItems: React.FC<ItemsProps> = ({
 	number,
 	mail,
 	children,
+	className,
 }) => {
 	const [isFolderActive, setisFolderActive] = React.useState<boolean>(false);
 
@@ -43,7 +44,7 @@ const AboutMeItems: React.FC<ItemsProps> = ({
 	};
 
 	return (
-		<div>
+		<div className={className}>
 			<TitleContainer>
 				<div
 					onClick={handleActive}

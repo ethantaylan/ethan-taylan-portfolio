@@ -15,6 +15,7 @@ const FolderContainer = styled.div`
 	border-right: 1px solid ${Generics.secondary};
 	@media (width < 768px){
 		width: 100%;
+		height: auto;
 	}
 `;
 
@@ -36,10 +37,10 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 
 	return (
 		<React.Fragment>
-			<div className='d-my-border-left flex-768-column app-bg w-100'>
+			<div className='my-border-left flex-768-column app-bg w-100'>
 				<FolderContainer>
 					<ItemsTitle itemsTitle='personal-info' />
-					{/* <div>
+					<div>
 						<AboutMeItems
 							folderColors={folderColors.salmon}
 							title={'bio'}
@@ -53,8 +54,8 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 								subItemTitle='career.txt'
 							/>
 						</AboutMeItems>
-					</div> */}
-					{/* <AboutMeItems
+					</div>
+					<AboutMeItems
 						folderColors={folderColors.blue}
 						title={'interests'}
 					>
@@ -66,8 +67,8 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 							to='/'
 							subItemTitle={'else.txt'}
 						/>
-					</AboutMeItems> */}
-					{/* <AboutMeItems
+					</AboutMeItems>
+					<AboutMeItems
 						folderColors={folderColors.green}
 						title={'education'}
 					>
@@ -75,8 +76,8 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 							to='/about-me/education'
 							subItemTitle='education.txt'
 						/>
-					</AboutMeItems> */}
-					{/* <div
+					</AboutMeItems>
+					<div
 						className='margin-left-28'
 						onClick={setActiveSnippet}
 					>
@@ -87,13 +88,14 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 							codeIconActive={true}
 							className='no-space'
 						></AboutMeItems>
-					</div> */}
-					{/* <div className='m-2' /> */}
+					</div>
+					<div className='m-2' />
 					<ItemsTitle
-						// className='my-border-top'
+						className='my-border-top'
 						itemsTitle='contacts'
 					/>
 					<AboutMeItems
+						className='p-2'
 						mail='taylanethan@gmail.com'
 						mailIconActive={true}
 						telIconActive={false}
@@ -102,12 +104,14 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 						title={<IoMailSharp size={16} />}
 					/>
 					<AboutMeItems
+						className='p-2'
 						number='+33766704190'
 						telIconActive={true}
 						mailIconActive={false}
 						chevronIconActive={false}
 						folderIconActive={false}
-						title={<BsFillTelephoneFill size={16} />}
+						title={<BsFillTelephoneFill size={16} />
+						}
 					/>
 				</FolderContainer>
 				{children}

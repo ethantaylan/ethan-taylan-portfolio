@@ -13,6 +13,9 @@ const CodeSnippetsContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 	padding: 20px;
+	@media (width < 768px) {
+		width: 100%;
+	}
 `;
 
 const UserContainer = styled.div`
@@ -58,6 +61,9 @@ const CodeContainer = styled.div`
 	border-radius: 12px;
 	border: 1px solid ${Generics.secondary};
 	padding: 15px;
+	@media (width < 768px) {
+		height: auto;
+	}
 `;
 
 const Comments = styled.span`
