@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Generics } from '../../Generics';
-import { TiArrowSortedDown, TiArrowSortedRight  } from 'react-icons/ti';
+import { TiArrowSortedDown, TiArrowRight  } from 'react-icons/ti';
 
 const MainTitleContainer = styled.div`
 	width: 100%;
@@ -32,7 +32,7 @@ const ItemsTitle: React.FC<ItemsTitleProps> = ({ className, itemsTitle }) => {
 		<div>
 			<MainTitleContainer className={className}>
 				<MainTitle>
-					<TiArrowSortedRight className='mx-1' />
+					<TiArrowRight className='mx-1' />
 					{itemsTitle}
 				</MainTitle>
 			</MainTitleContainer>

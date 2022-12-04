@@ -59,6 +59,7 @@ const ContactBtn = styled.a`
 	}
 	@media (width < 768px) {
 		display: none;
+		height: auto;
 	}
 `;
 
@@ -76,6 +77,7 @@ const NavLi = styled.li`
 		border: none;
 		padding: 20px;
 		justify-content: flex-start;
+		height: auto;
 	}
 `;
 
@@ -98,18 +100,16 @@ const NavUl = styled('ul')`
 	display: flex;
 	align-items: center;
 	color: ${Generics.primary};
-	z-index: 999;
 	@media (width < 768px) {
-		/* display: none; */
 		flex-direction: column;
 		align-items: flex-start;
 		width: 100%;
 		background-color: #011e36;
 		border: 1px solid ${Generics.secondary};
-		height: auto;
-		position: absolute;
-		top: 58px;
 		border-top: none;
+		border-right: none;
+
+
 	}
 `;
 
@@ -134,19 +134,19 @@ const Navbar = () => {
 					<NavLi className='m-0'>_home</NavLi>
 				</NavLink>
 				<NavLink
-					className='link h-100'
+					className='link'
 					to='/about-me'
 				>
 					<NavLi>_about-me</NavLi>
 				</NavLink>
 				<NavLink
-					className='link h-100'
+					className='link'
 					to='/works'
 				>
 					<NavLi>_works</NavLi>
 				</NavLink>
 				<NavLink
-					className='link h-100'
+					className='link'
 					to='/works'
 				>
 					<NavLi>_contact-me</NavLi>

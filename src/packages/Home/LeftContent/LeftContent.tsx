@@ -60,7 +60,7 @@ const GithubLink = styled.span`
 function LeftContent() {
 	return (
 		<Container>
-			<div className='d-flex h-75 justify-content-around flex-column'>
+			<div className='d-flex justify-content-around flex-column'>
 				<div className='d-flex justify-content-around flex-column'>
 					<Welcome>_hello ! i'm</Welcome>
 					<Name>Ethan Taylan</Name>

@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
-html,
-body,
-#root {
-	font-family: 'Fira Code', monospace;
-}
-
 /* http://meyerweb.com/eric/tools/css/reset/
 v2.0 | 20110126
 License: none (public domain)
@@ -149,6 +143,7 @@ body,
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	font-family: 'Fira Code', monospace;
 }
 
 .App {

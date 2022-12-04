@@ -36,10 +36,10 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 
 	return (
 		<React.Fragment>
-			<div className='d-flex my-border-left flex-768-column app-bg w-100'>
+			<div className='d-my-border-left flex-768-column app-bg w-100'>
 				<FolderContainer>
 					<ItemsTitle itemsTitle='personal-info' />
-					<div>
+					{/* <div>
 						<AboutMeItems
 							folderColors={folderColors.salmon}
 							title={'bio'}
@@ -53,8 +53,8 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 								subItemTitle='career.txt'
 							/>
 						</AboutMeItems>
-					</div>
-					<AboutMeItems
+					</div> */}
+					{/* <AboutMeItems
 						folderColors={folderColors.blue}
 						title={'interests'}
 					>
@@ -66,8 +66,8 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 							to='/'
 							subItemTitle={'else.txt'}
 						/>
-					</AboutMeItems>
-					<AboutMeItems
+					</AboutMeItems> */}
+					{/* <AboutMeItems
 						folderColors={folderColors.green}
 						title={'education'}
 					>
@@ -75,8 +75,8 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 							to='/about-me/education'
 							subItemTitle='education.txt'
 						/>
-					</AboutMeItems>
-					<div
+					</AboutMeItems> */}
+					{/* <div
 						className='margin-left-28'
 						onClick={setActiveSnippet}
 					>
@@ -87,10 +87,10 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 							codeIconActive={true}
 							className='no-space'
 						></AboutMeItems>
-					</div>
-					<div className='m-2' />
+					</div> */}
+					{/* <div className='m-2' /> */}
 					<ItemsTitle
-						className='my-border-top'
+						// className='my-border-top'
 						itemsTitle='contacts'
 					/>
 					<AboutMeItems
