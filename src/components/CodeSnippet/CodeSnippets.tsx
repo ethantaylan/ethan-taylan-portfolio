@@ -120,8 +120,10 @@ interface CodeSnippetsProps {
 }
 
 export const CodeSnippets: React.FC<CodeSnippetsProps> = ({ onClick }) => {
+	const [isDetailActive, setIsDetailActive] = React.useState<boolean>(false);
+
 	return (
-		<Container className='app-bg'>
+		<Container className='app-bg py-5'>
 			<FileCloseContainer>
 				<ClosePlusTxt>
 					<span>CODESNIPPETS.TXT</span>
@@ -155,7 +157,7 @@ export const CodeSnippets: React.FC<CodeSnippetsProps> = ({ onClick }) => {
 				<CodeContainer>
 					<Code />
 				</CodeContainer>
-				<div className='d-flex w-100 justify-content-between align-items-start mt-3 px-3'>
+				<div className={`d-${isDetailActive ? 'flex' : 'none'} w-100 justify-content-between align-items-start mt-3 px-3`}>
 					<Comments>
 						"My work here was 5 months ago. It was for the project called Enemy. A
 						World of Warcraft guild".

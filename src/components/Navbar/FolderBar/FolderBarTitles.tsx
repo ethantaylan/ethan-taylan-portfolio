@@ -5,7 +5,6 @@ import { TiArrowSortedDown, TiArrowRight  } from 'react-icons/ti';
 
 const MainTitleContainer = styled.div`
 	width: 100%;
-	border-bottom: 1px solid ${Generics.secondary};
 `;
 
 const MainTitle = styled.h1`
@@ -25,14 +24,14 @@ const MainTitle = styled.h1`
 interface ItemsTitleProps {
 	itemsTitle: string;
 	className?: string;
+	onClick: () => any
 }
 
-const ItemsTitle: React.FC<ItemsTitleProps> = ({ className, itemsTitle }) => {
+const ItemsTitle: React.FC<ItemsTitleProps> = ({onClick, className, itemsTitle }) => {
 	return (
-		<div>
+		<div onClick={onClick}>
 			<MainTitleContainer className={className}>
 				<MainTitle>
-					<TiArrowRight className='mx-1' />
 					{itemsTitle}
 				</MainTitle>
 			</MainTitleContainer>
