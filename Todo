@@ -3,6 +3,6 @@
 
 next :
 
-icon on folderbartitles.tsx
+// code snippet detail open close state
 
-open / close ''personal-info'' and ''contacts''
+// and space 
