@@ -123,8 +123,8 @@ export const CodeSnippets: React.FC<CodeSnippetsProps> = ({ onClick }) => {
 	const [isDetailActive, setIsDetailActive] = React.useState<boolean>(false);
 
 	return (
-		<Container className='app-bg py-5'>
-			<FileCloseContainer>
+		<Container className='app-bg'>
+			{/* <FileCloseContainer>
 				<ClosePlusTxt>
 					<span>CODESNIPPETS.TXT</span>
 					<span className='d-flex cursor-pointer'>
@@ -135,7 +135,7 @@ export const CodeSnippets: React.FC<CodeSnippetsProps> = ({ onClick }) => {
 						/>
 					</span>
 				</ClosePlusTxt>
-			</FileCloseContainer>
+			</FileCloseContainer> */}
 			<CodeSnippetsContainer>
 				<span className='mb-4'>Code Snippets showcase</span>
 				<UserContainer>

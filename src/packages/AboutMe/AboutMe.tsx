@@ -8,11 +8,10 @@ import AboutMeSubItems from '../../components/Navbar/FolderBar/FolderSubItems';
 import ItemsTitle from '../../components/Navbar/FolderBar/FolderBarTitles';
 import AboutMeItems from '../../components/Navbar/FolderBar/FolderItems';
 import { folderColors } from '../../components/folder-colors';
+import { IoMdArrowDropdown, IoMdArrowDropright } from 'react-icons/io';
 
 const FolderContainer = styled.div`
 	width: 250px;
-	height: 100%;
-	border-right: 1px solid ${Generics.secondary};
 	@media (width < 768px) {
 		width: 100%;
 		height: auto;
@@ -49,15 +48,29 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 
 	return (
 		<React.Fragment>
-			<div className='my-border-left flex-768-column app-bg w-100'>
+			<div className='my-border-left my-border-bottom my-border-right flex-768-column app-bg w-100'>
 				<FolderContainer>
-					<ItemsTitle
-						className= 'my-border-bottom'
-						onClick={() => {
-							handleBioFolderActive();
-						}}
-						itemsTitle='personal-info'
-					/>
+					<div className='d-flex my-border-bottom align-items-center w-100'>
+						{isFolderMenuActive ? (
+							<IoMdArrowDropdown
+								color={Generics.primary}
+								size={18}
+							/>
+						) : (
+							<IoMdArrowDropright
+								color={Generics.primary}
+								size={18}
+							/>
+						)}
+						<ItemsTitle
+							className='w-100'
+							onClick={() => {
+								handleBioFolderActive();
+							}}
+							itemsTitle='personal-info'
+						/>
+					</div>
+
 					<div className={isFolderMenuActive ? 'd-block' : 'd-none'}>
 						<AboutMeItems
 							folderColors={folderColors.salmon}
@@ -105,19 +118,31 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 								folderIconActive={false}
 								chevronIconActive={false}
 								codeIconActive={true}
-								className='no-space'
+								className='no-space pb-2'
 							/>
 						</div>
-						<div className='m-2' />
+						<div className='my-border-bottom' />
 					</div>
-
-					<ItemsTitle
-						onClick={() => {
-							handleContactMenuActive();
-						}}
-						className={isContactMenuActive ? 'my-border-bottom' : ''}
-						itemsTitle='contacts'
-					/>
+					<div className={`d-flex ${isContactMenuActive ? 'my-border-bottom' : ''} align-items-center w-100`}>
+						{isContactMenuActive ? (
+							<IoMdArrowDropdown
+								color={Generics.primary}
+								size={18}
+							/>
+						) : (
+							<IoMdArrowDropright
+								color={Generics.primary}
+								size={18}
+							/>
+						)}
+						<ItemsTitle
+							className='w-100'
+							onClick={() => {
+								handleContactMenuActive();
+							}}
+							itemsTitle='contact'
+						/>
+					</div>
 					<div className={isContactMenuActive ? 'd-block' : 'd-none'}>
 						<AboutMeItems
 							className='p-2'

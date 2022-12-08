@@ -107,9 +107,6 @@ const NavUl = styled('ul')`
 		background-color: #011e36;
 		border: 1px solid ${Generics.secondary};
 		border-top: none;
-		border-right: none;
-
-
 	}
 `;
 
@@ -117,6 +114,9 @@ const Navbar = () => {
 	const [toggleNavbar, setToggleNavbar] = React.useState<boolean>(false);
 	const toggleHandler = () => {
 		setToggleNavbar(!toggleNavbar);
+	};
+	const onClose = () => {
+		setToggleNavbar(false);
 	};
 
 	return (
@@ -130,24 +130,30 @@ const Navbar = () => {
 				<ContactBtn>_contact-me</ContactBtn>
 			</Container>
 			<NavUl className={toggleNavbar ? 'd-flex' : 'd-none'}>
-				<NavLink to='/'>
+				<NavLink
+					onClick={onClose}
+					to='/'
+				>
 					<NavLi className='m-0'>_home</NavLi>
 				</NavLink>
 				<NavLink
+					onClick={onClose}
 					className='link'
 					to='/about-me'
 				>
 					<NavLi>_about-me</NavLi>
 				</NavLink>
 				<NavLink
+					onClick={onClose}
 					className='link'
 					to='/works'
 				>
 					<NavLi>_works</NavLi>
 				</NavLink>
 				<NavLink
+					onClick={onClose}
 					className='link'
-					to='/works'
+					to='/contact-me'
 				>
 					<NavLi>_contact-me</NavLi>
 				</NavLink>

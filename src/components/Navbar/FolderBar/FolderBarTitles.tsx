@@ -17,7 +17,7 @@ const MainTitle = styled.h1`
 		color: ${Generics.white};
 	}
 	@media (width < 768px) {
-		padding: 15px;
+		padding: 15px 0 15px 0;
 	}
 `;
 
