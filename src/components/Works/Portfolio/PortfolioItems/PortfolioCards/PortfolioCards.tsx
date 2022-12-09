@@ -16,7 +16,7 @@ const PortfolioCards: React.FC<PortfolioCardsProps> = ({
 	img,
 }) => {
 	return (
-		<div className='d-flex align-items-center flex-column'>
+		<div className='d-flex mb-5 align-items-center flex-column'>
 			<div className='h-100 w-100 d-flex flex-row align-items-center'>
 				<div className='d-flex flex-column w-100 m-4'>
 					<span className='mb-3 card-title'>
@@ -25,7 +25,7 @@ const PortfolioCards: React.FC<PortfolioCardsProps> = ({
 					</span>
 					<Card
 						className='primary'
-						style={{ backgroundColor: '#001221', width: '20vw' }}
+						style={{ backgroundColor: '#001221', width: '100%' }}
 					>
 						<Card.Img
 							variant='top'

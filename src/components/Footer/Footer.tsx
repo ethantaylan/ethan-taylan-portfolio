@@ -3,7 +3,7 @@ import { AiFillInstagram } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
 import './footer.scss';
 
-function Footer() {
+export const Footer = () => {
 	return (
 		<div className='global-types footer-container-main'>
 			<div className='footer-container-find-me'>find-me-in</div>
@@ -37,7 +37,7 @@ function Footer() {
 				className=' h-100'
 				href='https://github.com/ethantaylan'
 			>
-				<span className='px-4 btn-github'>
+				<span className='px-4 btn-github hover'>
 					@ethtaylan
 					<Github className='icons' />
 				</span>

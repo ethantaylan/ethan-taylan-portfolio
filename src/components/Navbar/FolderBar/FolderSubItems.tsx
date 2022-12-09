@@ -24,7 +24,7 @@ const AboutMeSubItems: React.FC<AboutMeSubItemsProps> = ({
 		<div>
 			<div className='sub-item-container hover'>
 				<NavLink to={to}>
-					<div className='d-flex margin-top-5 align-items-center padding-bottom-12 justify-content-center'>
+					<div className='d-flex margin-top-5 align-items-center padding-bottom-12'>
 						{fileIconActive && (
 							<AiFillFileText className='margin-left'></AiFillFileText>
 						)}

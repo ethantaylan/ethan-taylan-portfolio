@@ -14,10 +14,10 @@ export const AboutMeContent: React.FC<AboutMeContentProps> = ({
 }) => {
 	return (
 		<React.Fragment>
-			<div className='d-flex flex-row w-100 my-border-right '>
+			<div className='d-flex flex-row w-100'>
 				<div className='d-flex flex-column w-100'>
 					<div className='file-close-container'>
-						<span>{tabTitle}</span>
+						<span className=''>{tabTitle}</span>
 						<span className='d-flex cursor-pointer'>
 							<NavLink to='/about-me'>
 								<IoIosClose

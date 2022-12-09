@@ -1,32 +1,44 @@
+@use "../../../../styles/scss/styles.scss" as m;
+
 .tab- {
     height: auto;
     width: 100%;
-    color: $primary;
-    border-bottom: 1px solid $secondary;
-    &tab-title {
+    &title {
         height: auto;
-        width: 200px;
         display: flex;
         justify-content: space-between;
         flex-direction: row;
         flex-wrap: nowrap;
-        border-right: 1px solid $secondary;
+        border-right: 1px solid m.$secondary;
         align-items: center;
-        padding: 6px;
+        color: m.$primary;
+        padding: 15px;
     }
-    &tab-title-container {
+    &title-container {
         height: auto;
-        width: 200px;
         display: flex;
         justify-content: space-between;
         flex-direction: row;
         flex-wrap: nowrap;
-        border-right: 1px solid $secondary;
         align-items: center;
-        padding: 6px;
+        border-bottom: 1px solid m.$secondary;
+        border-top: 1px solid m.$secondary;
     }
 }
 
 .IoIosClose {
-    color: $primary;
+    color: m.$primary;
+}
+
+.portfolio-title {
+    color: m.$primary;
+}
+
+.go-top {
+    color: m.$primary
+}
+
+.transform-arrow {
+
+    font-size: 20px;
 }

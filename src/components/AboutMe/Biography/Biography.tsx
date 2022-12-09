@@ -1,4 +1,4 @@
-import AboutMeContents from '../Content/AboutMeContent';
+import AboutMeContents from './Content/AboutMeContent';
 
 const aboutMeText = (
 	<span>
@@ -29,7 +29,7 @@ const aboutMeText = (
 	</span>
 );
 
-export const Bio = () => {
+export const Biography = () => {
 	return (
 		<AboutMeContents
 			text={aboutMeText}
@@ -38,4 +38,4 @@ export const Bio = () => {
 	);
 };
 
-export default Bio;
+export default Biography;

@@ -21,12 +21,8 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 	const [isContactMenuActive, setIsContactMenuActive] =
 		React.useState<boolean>(false);
 
-	const handleSnippet = () => {
-		setSnippet(!snippet);
-	};
-
-	const setActiveSnippet = () => {
-		setSnippet(!snippet);
+	const setActiveSnippet = (active: any) => {
+		setSnippet(active);
 	};
 
 	const handleBioFolderActive = () => {
@@ -43,12 +39,12 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 				<div className='folder-container'>
 					<div className='d-flex px-3 my-border-bottom align-items-center w-100'>
 						{isFolderMenuActive ? (
-							<IoMdArrowDropdown
+							<IoMdArrowDropright
 								className='primary-icon'
 								size={18}
 							/>
 						) : (
-							<IoMdArrowDropright
+							<IoMdArrowDropdown
 								className='primary-icon'
 								size={18}
 							/>
@@ -62,7 +58,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 						/>
 					</div>
 
-					<div className={isFolderMenuActive ? 'd-block' : 'd-none'}>
+					<div className={isFolderMenuActive ? 'd-none' : 'd-block'}>
 						<AboutMeItems
 							folderColors={folderColors.salmon}
 							title={'bio'}
@@ -161,9 +157,10 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 				</div>
 				{children}
 			</div>
-			<div className={snippet ? 'd-flex h-100 justify-content-center w-100' : 'd-none'}>
-				<CodeSnippets onClick={handleSnippet} />
-			</div>
+			<CodeSnippets
+				className={snippet ? 'd-flex h-100 justify-content-center w-100' : 'd-none'}
+				onClose={() => setActiveSnippet(false)}
+			/>
 		</React.Fragment>
 	);
 };

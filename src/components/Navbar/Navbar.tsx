@@ -46,7 +46,7 @@
 					<NavLink
 						onClick={onClose}
 						className='link'
-						to='/works'
+						to='/works/portfolio'
 					>
 						<li className='navbar-nav-li'>_works</li>
 					</NavLink>

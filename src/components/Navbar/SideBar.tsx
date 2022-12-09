@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { AiFillHome } from 'react-icons/ai';
 import { RiContactsFill } from 'react-icons/ri';
 import { FaFileCode } from 'react-icons/fa';

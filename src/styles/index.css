@@ -135,17 +135,19 @@ body,
 .App {
 	font-size: 14px;
 	letter-spacing: -0.7px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	height: 100%;
-	width: 100%;
 	font-family: 'Fira Code', monospace;
+	background-color: #011627;
+
+	
 }
 
 .App {
-	background-color: #000f1b;
-	padding: 20px;	
+}
+
+#root {
+height: 100%;
+width: 100%;
 }
 
 .primary {
@@ -236,6 +238,7 @@ a:hover {
 	opacity: 0.6;
 	object-fit: cover;
 	height: 250px;
+	width: 300px;
 }
 
 .portfolio-img-style:hover {
@@ -245,15 +248,10 @@ a:hover {
 
 .scroll-portfolio {
 	overflow-y: scroll;
-	max-height: 600px;
-	padding: 40px;
 }
 
 .applayout {
 	position: relative;
-	border:	1px solid #1e2d3d;
-	border-radius: 12px;
-
 }
 
 /* ===== Scrollbar CSS ===== */
@@ -265,7 +263,7 @@ a:hover {
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-	width: 16px;
+	width: 10px;
 }
 
 *::-webkit-scrollbar-track {
