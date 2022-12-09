@@ -1,0 +1,32 @@
+.tab- {
+    height: auto;
+    width: 100%;
+    color: $primary;
+    border-bottom: 1px solid $secondary;
+    &tab-title {
+        height: auto;
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        border-right: 1px solid $secondary;
+        align-items: center;
+        padding: 6px;
+    }
+    &tab-title-container {
+        height: auto;
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        border-right: 1px solid $secondary;
+        align-items: center;
+        padding: 6px;
+    }
+}
+
+.IoIosClose {
+    color: $primary;
+}

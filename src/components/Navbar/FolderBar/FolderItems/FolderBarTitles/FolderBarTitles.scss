@@ -1,0 +1,15 @@
+@use '../../../../../styles/scss/styles.scss' as m;
+
+.folder-bar-title {
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	color: m.$primary;
+    &:hover {
+        cursor: m.$cursor;
+		color: m.$white;
+    }
+    @media (width < 768px) {
+		padding: 15px 0 15px 0;
+	}
+}

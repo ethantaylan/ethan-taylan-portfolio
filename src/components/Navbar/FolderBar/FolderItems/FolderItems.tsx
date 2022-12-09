@@ -1,16 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Generics } from '../../Generics';
 import { FaChevronDown, FaChevronRight, FaReact } from 'react-icons/fa';
 import { AiFillFolder } from 'react-icons/ai';
-
-const TitleContainer = styled.div`
-	color: ${Generics.primary};
-	display: flex;
-	padding-top: 12px;
-	white-space: nowrap;
-	flex-direction: column;
-`;
+import './folder-items.scss'
 
 interface ItemsProps {
 	title?: any;
@@ -45,7 +36,7 @@ const AboutMeItems: React.FC<ItemsProps> = ({
 
 	return (
 		<div className={className}>
-			<TitleContainer>
+			<div className='title-container'>
 				<div
 					onClick={handleActive}
 					className='cursor-pointer d-flex hover align-items-center mb-1'
@@ -67,7 +58,6 @@ const AboutMeItems: React.FC<ItemsProps> = ({
 					)}
 					{codeIconActive && (
 						<FaReact
-							className=''
 							size={18}
 						/>
 					)}
@@ -76,7 +66,7 @@ const AboutMeItems: React.FC<ItemsProps> = ({
 					{mail && <span className='px-2'>{mail}</span>}
 				</div>
 				{isFolderActive && children}
-			</TitleContainer>
+			</div>
 		</div>
 	);
 };

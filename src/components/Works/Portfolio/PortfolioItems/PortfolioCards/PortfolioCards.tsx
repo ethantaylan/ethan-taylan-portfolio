@@ -1,17 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Generics } from '../../../../Generics';
 import { Button, Card } from 'react-bootstrap';
-
-const CardTitle = styled.span`
-	color: ${Generics.purple};
-	font-weight: bold;
-`;
-
-const SubCardtitle = styled.span`
-	color: ${Generics.primary};
-	font-weight: normal;
-`;
+import './portfolio-cards.scss'
 
 interface PortfolioCardsProps {
 	img: any;
@@ -30,10 +19,10 @@ const PortfolioCards: React.FC<PortfolioCardsProps> = ({
 		<div className='d-flex align-items-center flex-column'>
 			<div className='h-100 w-100 d-flex flex-row align-items-center'>
 				<div className='d-flex flex-column w-100 m-4'>
-					<CardTitle className='mb-3'>
+					<span className='mb-3 card-title'>
 						{`${'Project'} ${projectNumber}`}
-						<SubCardtitle> {`${' //_'}${projectSubName}`}</SubCardtitle>
-					</CardTitle>
+						<span className='subcard-title'> {`${' //_'}${projectSubName}`}</span>
+					</span>
 					<Card
 						className='primary'
 						style={{ backgroundColor: '#001221', width: '20vw' }}

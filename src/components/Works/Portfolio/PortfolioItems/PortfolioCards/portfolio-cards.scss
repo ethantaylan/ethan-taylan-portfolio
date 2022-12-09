@@ -1,0 +1,11 @@
+@use '../../../../../styles/scss/styles.scss' as m;
+
+.card-title {
+    color: m.$purple;
+    font-weight: bold;
+}
+
+.subcard-title {
+    color: m.$primary;
+    font-weight: normal;
+}

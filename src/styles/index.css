@@ -85,8 +85,6 @@ time,
 mark,
 audio,
 video {
-	margin: 0;
-	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
@@ -135,20 +133,19 @@ html,
 body,
 #root,
 .App {
-	margin: 0px;
 	font-size: 14px;
 	letter-spacing: -0.7px;
-	width: 100% !important;
-	height: 100% !important;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	height: 100%;
+	width: 100%;
 	font-family: 'Fira Code', monospace;
 }
 
 .App {
-	padding: 20px;
 	background-color: #000f1b;
+	padding: 20px;	
 }
 
 .primary {
@@ -188,11 +185,6 @@ a:hover {
 	color: unset;
 }
 
-.active {
-	border-top-color: transparent;
-	color: #ebebeb;
-}
-
 .link {
 	border-top-color: 2px solid transparent;
 	width: 100px;
@@ -200,7 +192,6 @@ a:hover {
 
 .link:hover {
 	color: #ebebeb !important;
-	border-bottom: 2px solid orange;
 }
 
 .text-decoration-underline-hover:hover {
@@ -209,6 +200,7 @@ a:hover {
 
 .hover:hover {
 	color: #ebebeb;
+	cursor: pointer;
 }
 
 .cursor-pointer {
@@ -258,9 +250,10 @@ a:hover {
 }
 
 .applayout {
-	width: 95%;
-	height: 95%;
 	position: relative;
+	border:	1px solid #1e2d3d;
+	border-radius: 12px;
+
 }
 
 /* ===== Scrollbar CSS ===== */

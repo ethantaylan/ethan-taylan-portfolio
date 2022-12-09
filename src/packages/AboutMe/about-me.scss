@@ -1,0 +1,12 @@
+.folder-container {
+    width: 250px;
+    @media (width < 768px) {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.IoMdArrowDropdown,
+.IoMdArrowDropright {
+    color: $primary;
+}

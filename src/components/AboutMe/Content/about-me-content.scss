@@ -1,0 +1,35 @@
+@use '../../../styles/scss/styles.scss' as m;
+.left-content {
+    width: 100%;
+    padding: 20px;
+}
+
+.file-close-container {
+    height: 34px;
+    width: 250px;
+    padding: 6px;
+    border-right: 1px solid m.$secondary;
+    display: flex;
+    justify-content: space-between;
+    color: m.$primary;
+    align-items: center;
+    @media (width < 768px) {
+        width: 100%;
+        border-top: 1px solid m.$secondary;
+        margin-top: 20px;
+        border-right: none;
+    }
+}
+
+.text-body {
+    color: m.$primary;
+	width: 100%;
+	border-top: 1px solid m.$secondary;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.close-icon {
+    color: m.$primary;
+}

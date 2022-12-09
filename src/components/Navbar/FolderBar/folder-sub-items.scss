@@ -1,0 +1,14 @@
+@use '../../../styles/scss/styles.scss' as m;
+
+.sub-item-container {
+    display: flex;
+    color: m.$primary;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    cursor: m.$cursor;
+}
+
+.icon-spacing {
+    margin-right: 8px;
+}

@@ -1,22 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Generics } from '../../components/Generics';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { IoMailSharp } from 'react-icons/io5';
 import CodeSnippets from '../../components/CodeSnippet/CodeSnippets';
 import AboutMeSubItems from '../../components/Navbar/FolderBar/FolderSubItems';
-import ItemsTitle from '../../components/Navbar/FolderBar/FolderBarTitles';
-import AboutMeItems from '../../components/Navbar/FolderBar/FolderItems';
+import ItemsTitle from '../../components/Navbar/FolderBar/FolderItems/FolderBarTitles/FolderBarTitles';
+import AboutMeItems from '../../components/Navbar/FolderBar/FolderItems/FolderItems';
 import { folderColors } from '../../components/folder-colors';
 import { IoMdArrowDropdown, IoMdArrowDropright } from 'react-icons/io';
-
-const FolderContainer = styled.div`
-	width: 250px;
-	@media (width < 768px) {
-		width: 100%;
-		height: auto;
-	}
-`;
 
 interface AboutMeProps {
 	children?: any;
@@ -49,16 +40,14 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 	return (
 		<React.Fragment>
 			<div className='my-border-left my-border-bottom my-border-right flex-768-column app-bg w-100'>
-				<FolderContainer>
-					<div className='d-flex my-border-bottom align-items-center w-100'>
+				<div className='folder-container'>
+					<div className='d-flex px-3 my-border-bottom align-items-center w-100'>
 						{isFolderMenuActive ? (
 							<IoMdArrowDropdown
-								color={Generics.primary}
 								size={18}
 							/>
 						) : (
 							<IoMdArrowDropright
-								color={Generics.primary}
 								size={18}
 							/>
 						)}
@@ -123,15 +112,13 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 						</div>
 						<div className='my-border-bottom' />
 					</div>
-					<div className={`d-flex ${isContactMenuActive ? 'my-border-bottom' : ''} align-items-center w-100`}>
+					<div className={`d-flex ${isContactMenuActive ? 'my-border-bottom' : ''} align-items-center px-3 w-100`}>
 						{isContactMenuActive ? (
 							<IoMdArrowDropdown
-								color={Generics.primary}
 								size={18}
 							/>
 						) : (
 							<IoMdArrowDropright
-								color={Generics.primary}
 								size={18}
 							/>
 						)}
@@ -163,7 +150,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 							title={<BsFillTelephoneFill size={16} />}
 						/>
 					</div>
-				</FolderContainer>
+				</div>
 				{children}
 			</div>
 			<div className={snippet ? 'd-flex h-100' : 'd-none'}>

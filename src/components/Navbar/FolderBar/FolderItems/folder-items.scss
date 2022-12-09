@@ -1,0 +1,9 @@
+@use '../../../../styles/scss/styles.scss' as m;
+
+.title-container {
+    color: m.$primary;
+	display: flex;
+	padding-top: 12px;
+	white-space: nowrap;
+	flex-direction: column;
+}
