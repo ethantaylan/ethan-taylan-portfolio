@@ -1,3 +1,5 @@
+@use '../../styles/scss//styles.scss' as m;
+
 .folder-container {
     width: 250px;
     @media (width < 768px) {
@@ -6,7 +8,5 @@
     }
 }
 
-.IoMdArrowDropdown,
-.IoMdArrowDropright {
-    color: $primary;
-}
+.primary-icon {
+color: m.$primary}

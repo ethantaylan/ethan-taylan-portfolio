@@ -37,7 +37,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 		<React.Fragment>
 			<div className='my-border-bottom flex-768-column app-bg w-100'>
 				<div className='folder-container'>
-					<div className='d-flex px-3 align-items-center w-100'>
+					<div className={`${isFolderMenuActive && 'my-border-bottom'} d-flex px-3 align-items-center w-100`}>
 						{isFolderMenuActive ? (
 							<IoMdArrowDropdown
 								className='works-icon-style'
@@ -64,46 +64,10 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 							title={'works'}
 						>
 							<AboutMeSubItems
-								to='/about-me/works'
+								to='/works/portfolio'
 								subItemTitle='works.tsx'
 							/>
 						</AboutMeItems>
-						<AboutMeItems
-							folderColors={folderColors.blue}
-							title={'interests'}
-						>
-							<AboutMeSubItems
-								to='/about-me/hobbies'
-								subItemTitle={'hobbies.txt'}
-							/>
-							<AboutMeSubItems
-								to='/'
-								subItemTitle={'else.txt'}
-							/>
-						</AboutMeItems>
-
-						<AboutMeItems
-							folderColors={folderColors.green}
-							title={'education'}
-						>
-							<AboutMeSubItems
-								to='/about-me/education'
-								subItemTitle='education.txt'
-							/>
-						</AboutMeItems>
-
-						<div
-							className='margin-left-28'
-							onClick={setActiveSnippet}
-						>
-							<AboutMeItems
-								title={'code-snippets.tsx'}
-								folderIconActive={false}
-								chevronIconActive={false}
-								codeIconActive={true}
-								className='no-space pb-2'
-							/>
-						</div>
 					</div>
 					<div className={isContactMenuActive ? 'd-block' : 'd-none'}>
 						<AboutMeItems

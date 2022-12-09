@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { IoMailSharp } from 'react-icons/io5';
 import CodeSnippets from '../../components/CodeSnippet/CodeSnippets';
@@ -8,6 +7,7 @@ import ItemsTitle from '../../components/Navbar/FolderBar/FolderItems/FolderBarT
 import AboutMeItems from '../../components/Navbar/FolderBar/FolderItems/FolderItems';
 import { folderColors } from '../../components/folder-colors';
 import { IoMdArrowDropdown, IoMdArrowDropright } from 'react-icons/io';
+import './about-me.scss';
 
 interface AboutMeProps {
 	children?: any;
@@ -39,15 +39,17 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 
 	return (
 		<React.Fragment>
-			<div className='my-border-left my-border-bottom my-border-right flex-768-column app-bg w-100'>
+			<div className='my-border-bottom flex-768-column app-bg w-100'>
 				<div className='folder-container'>
 					<div className='d-flex px-3 my-border-bottom align-items-center w-100'>
 						{isFolderMenuActive ? (
 							<IoMdArrowDropdown
+								className='primary-icon'
 								size={18}
 							/>
 						) : (
 							<IoMdArrowDropright
+								className='primary-icon'
 								size={18}
 							/>
 						)}
@@ -112,13 +114,19 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 						</div>
 						<div className='my-border-bottom' />
 					</div>
-					<div className={`d-flex ${isContactMenuActive ? 'my-border-bottom' : ''} align-items-center px-3 w-100`}>
+					<div
+						className={`d-flex ${
+							isContactMenuActive ? 'my-border-bottom' : ''
+						} align-items-center px-3 w-100`}
+					>
 						{isContactMenuActive ? (
 							<IoMdArrowDropdown
+								className='primary-icon'
 								size={18}
 							/>
 						) : (
 							<IoMdArrowDropright
+								className='primary-icon'
 								size={18}
 							/>
 						)}
@@ -153,7 +161,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 				</div>
 				{children}
 			</div>
-			<div className={snippet ? 'd-flex h-100' : 'd-none'}>
+			<div className={snippet ? 'd-flex h-100 justify-content-center w-100' : 'd-none'}>
 				<CodeSnippets onClick={handleSnippet} />
 			</div>
 		</React.Fragment>

@@ -20,7 +20,7 @@ export const CodeSnippets: React.FC<CodeSnippetsProps> = ({ onClick }) => {
 		<div className='app-bg all-container'>
 			<div className='snippet-container'>
 				<span className='mb-4'>// Code Snippets showcase</span>
-				<div className=''>
+				<div className='user-container'>
 					<div className='d-flex align-items-center flex-row'>
 						<div className='user-avatar'></div>
 						<div className='d-flex justify-content-between flex-column'>
