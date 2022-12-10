@@ -10,9 +10,12 @@ import OhMyFood from '../../../../assets/ohmyfood.png';
 import EluImg from '../../../../assets/elu.jpg';
 import { BsArrow90DegUp } from 'react-icons/bs';
 
-const Portfolio = () => {
+interface PortfolioProps {
+}
+
+const Portfolio: React.FC<PortfolioProps> = ({}) => {
 	return (
-		<div className='d-flex flex-column w-100 h-100'>
+		<div className='d-flex flex-column w-100'>
 			{/* <div className='tab'>
 				<div className='tab-title-container'>
 					<span className='tab-title'>

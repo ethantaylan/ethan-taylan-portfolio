@@ -6,6 +6,7 @@
     @media (width < 768px) {
         position: relative;
         width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         background-color: m.$appBg;
@@ -46,4 +47,8 @@
             }
         }
     }
+}
+
+.height-unset {
+    height: unset !important;
 }
