@@ -4,7 +4,7 @@ import './FolderBarTitles.scss'
 interface ItemsTitleProps {
 	itemsTitle: string;
 	className?: string;
-	onClick: () => any
+	onClick?: () => any
 }
 
 const ItemsTitle: React.FC<ItemsTitleProps> = ({onClick, className, itemsTitle }) => {

@@ -9,7 +9,7 @@ form {
 
 input {
     width: 100%;
-    padding: 14px;
+    padding: 10px;
     background-color: #011221;
     border: none;
     color: m.$primary;
@@ -18,7 +18,7 @@ input {
 textarea {
     height: 200px;
     background-color: #011221;
-    padding: 20px;
+    padding: 10px;
     border: none;
     color: m.$primary;
 }
@@ -38,8 +38,12 @@ textarea::placeholder {
 form,
 input,
 textarea {
-    border: 1px solid m.$secondary;
     border-radius: 12px;
+}
+
+input,
+textarea {
+    border: 1px solid m.$secondary;
 }
 
 .submit-message {
@@ -54,4 +58,9 @@ textarea {
     color: m.$primary !important;
     margin-bottom: 10px;
     margin-left: 5px;
+}
+
+.contact-me-title {
+    padding: 10px;
+    border-bottom: 1px solid m.$secondary;
 }
