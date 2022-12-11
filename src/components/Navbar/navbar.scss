@@ -71,7 +71,7 @@
 
 .navbar-nav- {
     &ul {
-        color: m.$primary;
+        color: m.$white;
         @media (width < 768px) {
             flex-direction: column;
             align-items: flex-start;

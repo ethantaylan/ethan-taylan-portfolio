@@ -67,7 +67,7 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
 						onClick={() => window.scrollTo(0, 0)}
 						className='p-4 go-top'
 					>
-						<BsArrow90DegUp className='transform-arrow' />
+						<BsArrow90DegUp className='hover transform-arrow' />
 					</span>
 				</div>
 			</div>

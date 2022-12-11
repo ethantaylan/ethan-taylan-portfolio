@@ -26,7 +26,7 @@ const AboutMeSubItems: React.FC<AboutMeSubItemsProps> = ({
 				<NavLink to={to}>
 					<div className='d-flex margin-top-5 align-items-center padding-bottom-12'>
 						{fileIconActive && (
-							<AiFillFileText className='margin-left'></AiFillFileText>
+							<AiFillFileText className='margin-left' />
 						)}
 						{codeIconActive && (
 							<FaReact

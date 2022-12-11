@@ -2,6 +2,7 @@ import AboutMeContents from './Content/AboutMeContent';
 
 const aboutMeText = (
 	<span>
+		<span style={{color: '#ffffff'}}>/personal-info/bio.txt<br /> <br /></span>
 		* About me <br />
 		* I have 5 years of еxperience in web <br />
 		* development lorem ipsum dolor sit amet, <br />

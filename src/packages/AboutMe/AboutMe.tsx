@@ -35,9 +35,10 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 
 	return (
 		<React.Fragment>
+			<h1 className="about-me-title">_about-me</h1>
 			<div className='my-border-bottom flex-768-column app-bg w-100'>
 				<div className='folder-container'>
-					<div className='d-flex px-3 my-border-bottom align-items-center w-100'>
+					<div className='d-flex px-3 folder-menu align-items-center w-100'>
 						{isFolderMenuActive ? (
 							<IoMdArrowDropright
 								className='primary-icon'
@@ -50,7 +51,6 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 							/>
 						)}
 						<ItemsTitle
-							className='w-100'
 							onClick={() => {
 								handleBioFolderActive();
 							}}
@@ -61,7 +61,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 					<div className={isFolderMenuActive ? 'd-none' : 'd-block'}>
 						<AboutMeItems
 							folderColors={folderColors.salmon}
-							title={'bio'}
+							title={'biography'}
 						>
 							<AboutMeSubItems
 								to='/about-me/biography'
@@ -108,12 +108,12 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 								className='no-space pb-2'
 							/>
 						</div>
-						<div className='my-border-bottom' />
+						{/* <div className='my-border-bottom' /> */}
 					</div>
 					<div
 						className={`d-flex ${
-							isContactMenuActive ? 'my-border-bottom' : ''
-						} align-items-center px-3 w-100`}
+							isContactMenuActive ? '' : ''
+						} align-items-center folder-menu px-3 w-100`}
 					>
 						{isContactMenuActive ? (
 							<IoMdArrowDropdown
@@ -127,14 +127,13 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 							/>
 						)}
 						<ItemsTitle
-							className='w-100'
 							onClick={() => {
 								handleContactMenuActive();
 							}}
 							itemsTitle='contact'
 						/>
 					</div>
-					<div className={isContactMenuActive ? 'd-block' : 'd-none'}>
+					<div className={isContactMenuActive ? 'd-block my-border-bottom' : 'd-none'}>
 						<AboutMeItems
 							className='p-2'
 							mail='taylanethan@gmail.com'

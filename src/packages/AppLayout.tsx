@@ -11,6 +11,8 @@ import Hobbies from '../components/AboutMe/Hobbies/Hobbies';
 import Education from '../components/AboutMe/Education/Education';
 import Works from './Works/Works';
 import Portfolio from '../components/Works/Portfolio/PortfolioItems/Portfolio';
+import ContactMe from './ContactMe/ContactMe';
+import Contact from '../components/Contact/Contact';
 
 function App() {
 	return (
@@ -19,7 +21,7 @@ function App() {
 				<Navbar />
 				<SideBar>
 					<Routes>
-					<Route
+						<Route
 							path='/'
 							element={<Home />}
 						/>
@@ -53,6 +55,11 @@ function App() {
 						<Route
 							path='/works/portfolio'
 							element={<Works children={<Portfolio />} />}
+						/>
+						//* ROUTES FOR CONTACT PAGE//
+						<Route
+							path='/contact-me'
+							element={<ContactMe children={<Contact />} />}
 						/>
 					</Routes>
 				</SideBar>

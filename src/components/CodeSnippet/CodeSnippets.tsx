@@ -5,11 +5,14 @@ import Code from './Code';
 import './code-snippet.scss';
 
 interface CodeSnippetsProps {
-	onClose: () => any
+	onClose: () => any;
 	className: string;
 }
 
-export const CodeSnippets: React.FC<CodeSnippetsProps> = ({ className, onClose }) => {
+export const CodeSnippets: React.FC<CodeSnippetsProps> = ({
+	className,
+	onClose,
+}) => {
 	const [isDetailActive, setIsDetailActive] = React.useState<boolean>(false);
 
 	const detailHandler = () => {
@@ -20,7 +23,10 @@ export const CodeSnippets: React.FC<CodeSnippetsProps> = ({ className, onClose }
 		<div className={`${className} app-bg all-container`}>
 			<div className='snippet-container'>
 				<div className='d-flex w-100 mb-4 justify-content-between align-items-center'>
-					<span>// Code Snippets showcase</span>
+					<span style={{ color: '#ffffff' }}>
+						/code-snippets.tsx
+						<br /> <br />
+					</span>
 					<IoIosClose
 						onClick={() => onClose()}
 						size={22}
