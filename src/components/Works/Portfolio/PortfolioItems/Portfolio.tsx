@@ -1,6 +1,4 @@
-import { NavLink } from 'react-router-dom';
 import PortfolioCards from './PortfolioCards/PortfolioCards';
-import { IoIosClose } from 'react-icons/io';
 import './portfolio.scss';
 //IMAGES IMPORT
 import OrinonoImg from '../../../../assets/orinoco.png';
