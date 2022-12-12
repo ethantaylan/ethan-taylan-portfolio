@@ -3,8 +3,7 @@ import React from 'react';
 const ContactForm = () => {
 	return (
 		<div>
-			<h1 className='about-me-title'>_contact-me</h1>
-			<div className='w-100 d-flex flex-column p-5'>
+			<div className='w-100 d-flex flex-column mt-5 p-5'>
 				<form>
 					<span className='input-labels'>_name :</span>
 					<input

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaChevronDown, FaChevronRight, FaReact } from 'react-icons/fa';
 import { AiFillFolder } from 'react-icons/ai';
-import './folder-items.scss'
+import './folder-items.scss';
 
 interface ItemsProps {
 	title?: any;
@@ -15,6 +15,7 @@ interface ItemsProps {
 	number?: string;
 	mail?: string;
 	codeIconActive?: boolean;
+	onClick: () => any;
 }
 
 const AboutMeItems: React.FC<ItemsProps> = ({
@@ -27,6 +28,7 @@ const AboutMeItems: React.FC<ItemsProps> = ({
 	mail,
 	children,
 	className,
+	onClick,
 }) => {
 	const [isFolderActive, setisFolderActive] = React.useState<boolean>(false);
 
@@ -38,7 +40,10 @@ const AboutMeItems: React.FC<ItemsProps> = ({
 		<div className={className}>
 			<div className='title-container'>
 				<div
-					onClick={handleActive}
+					onClick={() => {
+						onClick();
+						handleActive();
+					}}
 					className='cursor-pointer d-flex hover align-items-center mb-1'
 				>
 					{chevronIconActive && (
@@ -56,11 +61,7 @@ const AboutMeItems: React.FC<ItemsProps> = ({
 							color={folderColors}
 						/>
 					)}
-					{codeIconActive && (
-						<FaReact
-							size={18}
-						/>
-					)}
+					{codeIconActive && <FaReact size={18} />}
 					<span className='d-flex px-2'>{title}</span>
 					{number && <span className='px-2'>{number}</span>}
 					{mail && <span className='px-2'>{mail}</span>}
