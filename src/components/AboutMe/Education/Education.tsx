@@ -1,8 +1,9 @@
 import React from 'react';
+import AboutMeContent from '../Biography/Content/AboutMeContent';
 
 export const Bio = () => {
 	return (
-		<AboutMeContents tabTitle='EDUCATION.TXT' />
+		<AboutMeContent tabTitle='EDUCATION.TXT' />
 	);
 };
 

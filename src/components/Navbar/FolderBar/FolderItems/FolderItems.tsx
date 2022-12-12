@@ -15,7 +15,7 @@ interface ItemsProps {
 	number?: string;
 	mail?: string;
 	codeIconActive?: boolean;
-	onClick: () => any;
+	onClick?: () => any;
 }
 
 const AboutMeItems: React.FC<ItemsProps> = ({
@@ -41,7 +41,7 @@ const AboutMeItems: React.FC<ItemsProps> = ({
 			<div className='title-container'>
 				<div
 					onClick={() => {
-						onClick();
+						onClick;
 						handleActive();
 					}}
 					className='cursor-pointer d-flex hover align-items-center mb-1'
