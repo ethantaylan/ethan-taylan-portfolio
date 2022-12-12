@@ -147,6 +147,7 @@ body,
     height: 100%;
     font-family: 'Fira Code', monospace;
     background-color: #011627;
+    max-width: 500px !important;
 }
 
 .App {}
