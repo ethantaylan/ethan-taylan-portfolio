@@ -1,61 +1,54 @@
-@use "../../styles/scss/styles.scss" as m;
-.navbar-container- {
-    &main {
-        width: 100%;
-        min-height: 43px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        background-color: m.$appBg;
-        color: m.$primary;
-        white-space: nowrap;
-        justify-content: space-between;
-        padding: 20px;
-        @media screen and (max-width: 768px) {
+@use '../../styles/scss/styles.scss' as m;
+// mobile
+@media screen and (max-width: 768px) {
+    .navbar-container- {
+        &main {
+            width: 100%;
+            min-height: 43px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: m.$appBg;
+            color: m.$primary;
+            white-space: nowrap;
+            justify-content: space-between;
+            padding: 20px;
             min-height: 60px;
         }
-    }
-    &brand {
-        width: 300px;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        color: m.$primary;
-        padding-left: 20px;
-        padding-right: 20px;
-        cursor: m.$cursor;
-    }
-    &nav {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-    }
-}
-
-.btn- {
-    &contact {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-left: 1px solid m.$primary;
-        text-decoration: none;
-        color: m.$primary;
-        padding: 0 20px 0 20px;
-        cursor: m.$cursor;
-        &:hover {
-            border-bottom: 2px solid orange;
-            color: m.$white;
+        &brand {
+            width: 300px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            color: m.$primary;
+            cursor: m.$cursor;
         }
-        @media screen and (max-width: 768px) {
+        &nav {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .btn- {
+        &contact {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-left: 1px solid m.$primary;
+            text-decoration: none;
+            color: m.$primary;
+            padding: 0 20px 0 20px;
+            cursor: m.$cursor;
             display: none;
             height: auto;
+            &:hover {
+                border-bottom: 2px solid orange;
+                color: m.$white;
+            }
         }
-    }
-    &burger {
-        display: none;
-        @media screen and (max-width: 768px) {
+        &burger {
             height: 100%;
             display: flex;
             justify-content: center;
@@ -66,12 +59,9 @@
             font-size: 20px;
         }
     }
-}
-
-.navbar-nav- {
-    &ul {
-        color: m.$white;
-        @media screen and (max-width: 768px) {
+    .navbar-nav- {
+        &ul {
+            color: m.$white;
             flex-direction: column;
             align-items: flex-start;
             width: 100%;
@@ -79,30 +69,77 @@
             margin: 0px;
             padding: 0px;
         }
-    }
-    &li {
-        display: flex;
-        justify-content: center;
-        height: 100%;
-        border-right: 1px solid m.$secondary;
-        align-items: center;
-        padding-left: 15px;
-        padding-right: 15px;
-        cursor: m.$cursor;
-        @media screen and (max-width: 768px) {
+        &li {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            border-right: 1px solid m.$secondary;
+            align-items: center;
+            padding-left: 15px;
+            padding-right: 15px;
+            cursor: m.$cursor;
             width: 100%;
             border: none;
             padding: 20px;
             justify-content: flex-start;
             height: auto;
+            &:hover {
+                background-color: m.$secondary;
+            }
         }
-        &:hover {
-            background-color: m.$secondary;
-        }
+    }
+    .active {
+        border-top-color: transparent;
+        width: 100%;
+    }
+    .brand-and-contact-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
     }
 }
 
-.active {
-    border-top-color: transparent;
-    width: 100%;
+// desktop
+@media screen and (min-width: 768px) {
+    .navbar-container- {
+        width: 100%;
+        &main {
+            display: flex;
+            color: m.$primary;
+            justify-content: space-between;
+        }
+        &brand {
+            white-space: nowrap;
+            padding: 20px;
+            border-right: 1px solid m.$secondary;
+        }
+        &nav {}
+    }
+    .btn- {
+        &contact {
+            border-left: 1px solid m.$secondary;
+            padding: 20px;
+            white-space: nowrap;
+            &:hover {}
+        }
+        &burger {
+            display: none;
+        }
+    }
+    .navbar-nav- {
+        &ul {
+            display: flex !important;
+            flex-direction: row;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+        &li {
+            white-space: nowrap;
+            width: unset;
+        }
+    }
+    .active {}
 }

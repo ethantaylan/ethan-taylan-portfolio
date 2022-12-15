@@ -40,12 +40,12 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 				<div className='folder-container'>
 					<div className='d-flex px-3 folder-menu align-items-center w-100'>
 						{isFolderMenuActive ? (
-							<IoMdArrowDropright
+							<IoMdArrowDropdown
 								className='primary-icon'
 								size={18}
 							/>
 						) : (
-							<IoMdArrowDropdown
+							<IoMdArrowDropright
 								className='primary-icon'
 								size={18}
 							/>
@@ -58,7 +58,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 						/>
 					</div>
 
-					<div className={isFolderMenuActive ? 'd-none' : 'd-block'}>
+					<div className={isFolderMenuActive ? 'd-block' : 'd-none'}>
 						<AboutMeItems
 							folderColors={folderColors.salmon}
 							title={'biography'}

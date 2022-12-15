@@ -147,10 +147,8 @@ body,
     height: 100%;
     font-family: 'Fira Code', monospace;
     background-color: #011627;
-    max-width: 500px !important;
+    width: 100%;
 }
-
-.App {}
 
 #root {
     height: 100%;
@@ -259,6 +257,7 @@ a:hover {
 
 .applayout {
     position: relative;
+    height: 100%;
 }
 
 
