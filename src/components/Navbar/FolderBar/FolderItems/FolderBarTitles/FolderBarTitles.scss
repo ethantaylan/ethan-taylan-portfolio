@@ -1,17 +1,16 @@
 @use '../../../../../styles/scss/styles.scss' as m;
-
 .folder-bar-title {
-	width: 100%;
-	padding: 10px;
-	display: flex;
-	margin: 0px;
-	color: m.$white;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    margin: 0px;
+    color: m.$white;
     &:hover {
         cursor: pointer;
-		color: m.$white;
+        color: m.$white;
     }
-    @media (width < 768px) {
-		padding: 10px 0 10px 0;
-		margin: 6;
-	}
+    @media screen and (max-width: 768px) {
+        padding: 10px 0 10px 0;
+        margin: 6;
+    }
 }

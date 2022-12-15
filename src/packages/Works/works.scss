@@ -1,11 +1,10 @@
 @use '../../styles/scss/styles.scss' as m;
-
 .container-folder {
-	width: 250px;
-	@media (width < 768px) {
-		width: 100%;
-		height: auto;
-	}
+    width: 250px;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .works-icon-style {
