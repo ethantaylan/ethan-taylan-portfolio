@@ -70,9 +70,10 @@
                 position: absolute;
                 z-index: 999;
                 left: 0px;
-                top: 0px;
+                top: 60px;
                 background-color: m.$appBg;
-                height: 100%;
+                height: auto;
+                border-bottom: 10px solid m.$primary;
             }
             &li {
                 display: flex;

@@ -4,7 +4,6 @@ import React from 'react';
 import './navbar.scss';
 import useMediaQuery from '../../hooks/useMediaQuery';
 import { IoIosClose } from 'react-icons/io';
-import Footer from '../Footer/Footer';
 
 const Navbar = () => {
 	const [toggleNavbar, setToggleNavbar] = React.useState<boolean>(false);
@@ -28,11 +27,7 @@ const Navbar = () => {
 					>
 						{toggleNavbar ? (
 							<div className='close-container d-flex justify-content-center align-items-center'>
-								<IoIosClose
-									// onClick={() => setIsDetailActive(false)}
-									size={30}
-									className='close-btn m-4'
-								/>
+								<IoIosClose size={34} />
 							</div>
 						) : (
 							<GiHamburgerMenu />
@@ -46,32 +41,6 @@ const Navbar = () => {
 							: 'd-768-none navbar-nav-ul'
 					}
 				>
-					{/* structuration error, need to reformat later */}
-					{matches ? (
-						''
-					) : (
-						<div className='navbar-container-main my-border-bottom'>
-							<div className='brand-and-contact-btn'>
-								<div className='navbar-container-brand'>ethan-taylan</div>
-								<span
-									className='btn-burger hover'
-									onClick={toggleHandler}
-								>
-						{toggleNavbar ? (
-							<div className='close-container d-flex justify-content-center align-items-center'>
-								{' '}
-								<IoIosClose
-									// onClick={() => setIsDetailActive(false)}
-									size={34}
-								/>
-							</div>
-						) : (
-							<GiHamburgerMenu />
-						)}
-								</span>
-							</div>
-						</div>
-					)}
 					<NavLink
 						className='link'
 						onClick={onClose}
@@ -100,10 +69,7 @@ const Navbar = () => {
 					>
 						<li className='navbar-nav-li'>_contact-me</li>
 					</NavLink>
-					<div style={{position: 'absolute', bottom: '0', width: '100%'}}>
-					<Footer />
-
-					</div>
+					<div style={{ position: 'absolute', bottom: '0', width: '100%' }}></div>
 				</ul>
 
 				<div className='btn-contact'>

@@ -1,23 +1,22 @@
 import React from 'react';
 import FolderItems from '../Navbar/FolderBar/FolderItems/FolderItems';
-import FolderSubItems from '../Navbar/FolderBar/FolderSubItems';
+// import FolderSubItems from '../Navbar/FolderBar/FolderSubItems';
 import ContactForm from './ContactForm';
 import './contact.scss';
+import FolderSubItems from '../Navbar/FolderBar/FolderSubItems';
 
 const Contact = () => {
 	const [isSocialsActive, setIsSocialsActive] = React.useState<boolean>(false);
-	const [isContactMeActive, setIsContactMeActive] =
-		React.useState<boolean>(false);
+	// const [isContactMeActive, setIsContactMeActive] =
+	// 	React.useState<boolean>(false);
 
 	const onClickHandlerSocials = () => {
 		setIsSocialsActive(!isSocialsActive);
-		console.log('test');
-		
 	};
 
-	const onClickHandlerContactMe = () => {
-		setIsContactMeActive(!isContactMeActive);
-	};
+	// const onClickHandlerContactMe = () => {
+	// 	setIsContactMeActive(!isContactMeActive);
+	// };
 	return (
 		<React.Fragment>
 			{/* <FolderItems
@@ -37,6 +36,28 @@ const Contact = () => {
 				folderColors={'LightSeaGreen'}
 				title={'socials'}
 			/>
+						{isSocialsActive ? (
+				<>
+					<FolderSubItems
+						subItemTitle='instagram.ts'
+						to={'/contact-me'}
+					/>
+					<FolderSubItems
+						subItemTitle='facebook.ts'
+						to={'/contact-me'}
+					/>
+					<FolderSubItems
+						subItemTitle='linkedin.ts'
+						to={'/contact-me'}
+					/>
+					<FolderSubItems
+						subItemTitle='github.ts'
+						to={'/contact-me'}
+					/>{' '}
+				</>
+			) : (
+				''
+			)}
 
 			<ContactForm />
 		</React.Fragment>
