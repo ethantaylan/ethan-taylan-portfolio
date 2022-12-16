@@ -38,10 +38,9 @@ const AboutMeItems: React.FC<ItemsProps> = ({
 
 	return (
 		<div className={className}>
-			<div className='title-container'>
+			<div onClick={onClick} className='title-container'>
 				<div
 					onClick={() => {
-						onClick;
 						handleActive();
 					}}
 					className='cursor-pointer d-flex hover align-items-center mb-1'

@@ -11,6 +11,8 @@ const Contact = () => {
 
 	const onClickHandlerSocials = () => {
 		setIsSocialsActive(!isSocialsActive);
+		console.log('test');
+		
 	};
 
 	const onClickHandlerContactMe = () => {
@@ -36,7 +38,7 @@ const Contact = () => {
 				title={'socials'}
 			/>
 			{isSocialsActive ? (
-				<>
+				<React.Fragment>
 					<FolderSubItems
 						subItemTitle='instagram.ts'
 						to={'/contact-me'}
@@ -52,8 +54,8 @@ const Contact = () => {
 					<FolderSubItems
 						subItemTitle='github.ts'
 						to={'/contact-me'}
-					/>{' '}
-				</>
+					/>
+				</React.Fragment>
 			) : (
 				''
 			)}
