@@ -154,6 +154,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 						/>
 					</div>
 				</div>
+				
 				{children}
 			</div>
 			<CodeSnippets

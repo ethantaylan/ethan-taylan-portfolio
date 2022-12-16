@@ -14,21 +14,6 @@ interface PortfolioProps {
 const Portfolio: React.FC<PortfolioProps> = ({}) => {
 	return (
 		<div className='d-flex flex-column w-100'>
-			{/* <div className='tab'>
-				<div className='tab-title-container'>
-					<span className='tab-title'>
-						portfolio
-						<span className='d-flex cursor-pointer'>
-							<NavLink to='/works'>
-								<IoIosClose
-									className='IoIosClose'
-									size={22}
-								/>
-							</NavLink>
-						</span>
-					</span>
-				</div>
-			</div> */}
 			<div className='d-flex h-100 w-100 align-items-center flex-wrap justify-content-center'>
 				<PortfolioCards
 					img={OrinonoImg}

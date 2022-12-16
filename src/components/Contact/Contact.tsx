@@ -20,7 +20,7 @@ const Contact = () => {
 	};
 	return (
 		<React.Fragment>
-			<FolderItems
+			{/* <FolderItems
 				onClick={() => onClickHandlerContactMe()}
 				folderColors={'Khaki'}
 				title={'contact-me'}
@@ -30,35 +30,13 @@ const Contact = () => {
 					subItemTitle='contact-form.tsx'
 					to={'/contact-me'}
 				/>
-			)}
+			)} */}
 
 			<FolderItems
 				onClick={() => onClickHandlerSocials()}
 				folderColors={'LightSeaGreen'}
 				title={'socials'}
 			/>
-			{isSocialsActive ? (
-				<React.Fragment>
-					<FolderSubItems
-						subItemTitle='instagram.ts'
-						to={'/contact-me'}
-					/>
-					<FolderSubItems
-						subItemTitle='facebook.ts'
-						to={'/contact-me'}
-					/>
-					<FolderSubItems
-						subItemTitle='linkedin.ts'
-						to={'/contact-me'}
-					/>
-					<FolderSubItems
-						subItemTitle='github.ts'
-						to={'/contact-me'}
-					/>
-				</React.Fragment>
-			) : (
-				''
-			)}
 
 			<ContactForm />
 		</React.Fragment>

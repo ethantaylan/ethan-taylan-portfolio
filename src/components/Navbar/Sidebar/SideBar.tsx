@@ -12,11 +12,13 @@ export interface SideBarProps {
 const SideBar: React.FC<SideBarProps> = ({ children }) => {
 	const [isLoading, setIsLoading] = React.useState(true);
 	const [setHeight, setSetHeight] = React.useState<boolean>(false);
-	// const [pathName, setPathName] = React.useState<string>(window.location.pathname)
 
 	const location = useLocation();
 	React.useEffect(() => {
-		if (location.pathname.includes('portfolio')) {
+		if (
+			location.pathname.includes('portfolio') ||
+			location.pathname.includes('contact')
+		) {
 			setSetHeight(true);
 			setIsLoading(false);
 		} else {
