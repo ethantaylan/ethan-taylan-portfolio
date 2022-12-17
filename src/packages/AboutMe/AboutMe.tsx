@@ -8,6 +8,8 @@ import AboutMeItems from '../../components/Navbar/FolderBar/FolderItems/FolderIt
 import { folderColors } from '../../components/folder-colors';
 import { IoMdArrowDropdown, IoMdArrowDropright } from 'react-icons/io';
 import './about-me.scss';
+import FolderItems from '../../components/Navbar/FolderBar/FolderItems/FolderItems';
+import FolderSubItems from '../../components/Navbar/FolderBar/FolderSubItems';
 
 interface AboutMeProps {
 	children?: any;
@@ -33,9 +35,15 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 		setIsContactMenuActive(!isContactMenuActive);
 	};
 
+	const [isSocialsActive, setIsSocialsActive] = React.useState<boolean>(false);
+
+	const onClickHandlerSocials = () => {
+		setIsSocialsActive(!isSocialsActive);
+	};
+
 	return (
 		<React.Fragment>
-			<h1 className="about-me-title">_about-me</h1>
+			<h1 className='about-me-title'>_about-me</h1>
 			<div className='my-border-bottom flex-768-column app-bg w-100'>
 				<div className='folder-container'>
 					<div className='d-flex px-3 folder-menu align-items-center w-100'>
@@ -68,10 +76,11 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 								subItemTitle='biography.txt'
 							/>
 							<AboutMeSubItems
-								to='/'
+								to='/about-me/biography'
 								subItemTitle='career.txt'
 							/>
 						</AboutMeItems>
+
 						<AboutMeItems
 							folderColors={folderColors.blue}
 							title={'interests'}
@@ -80,22 +89,34 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 								to='/about-me/hobbies'
 								subItemTitle={'hobbies.txt'}
 							/>
-							<AboutMeSubItems
-								to='/'
-								subItemTitle={'else.txt'}
-							/>
 						</AboutMeItems>
-
-						<AboutMeItems
-							folderColors={folderColors.green}
-							title={'education'}
-						>
-							<AboutMeSubItems
-								to='/about-me/education'
-								subItemTitle='education.txt'
-							/>
-						</AboutMeItems>
-
+						<FolderItems
+							onClick={() => onClickHandlerSocials()}
+							folderColors={'LightSeaGreen'}
+							title={'socials'}
+						/>
+						{isSocialsActive ? (
+							<>
+								<FolderSubItems
+									subItemTitle='instagram.ts'
+									to={'/contact-me'}
+								/>
+								<FolderSubItems
+									subItemTitle='facebook.ts'
+									to={'/contact-me'}
+								/>
+								<FolderSubItems
+									subItemTitle='linkedin.ts'
+									to={'/contact-me'}
+								/>
+								<FolderSubItems
+									subItemTitle='github.ts'
+									to={'/contact-me'}
+								/>{' '}
+							</>
+						) : (
+							''
+						)}
 						<div
 							className='margin-left-28'
 							onClick={setActiveSnippet}
@@ -108,7 +129,6 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 								className='no-space pb-2'
 							/>
 						</div>
-						{/* <div className='my-border-bottom' /> */}
 					</div>
 					<div
 						className={`d-flex ${
@@ -133,7 +153,9 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 							itemsTitle='contact'
 						/>
 					</div>
-					<div className={isContactMenuActive ? 'd-block my-border-bottom' : 'd-none'}>
+					<div
+						className={isContactMenuActive ? 'd-block my-border-bottom' : 'd-none'}
+					>
 						<AboutMeItems
 							className='p-2'
 							mail='taylanethan@gmail.com'
@@ -154,7 +176,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 						/>
 					</div>
 				</div>
-				
+
 				{children}
 			</div>
 			<CodeSnippets

@@ -1,4 +1,5 @@
-import './left-content.scss'
+import { NavLink } from 'react-router-dom';
+import './left-content.scss';
 
 const LeftContent = () => {
 	return (
@@ -12,13 +13,16 @@ const LeftContent = () => {
 				<div className='d-flex mt-5 justify-content-around flex-column'>
 					<span className='left-content-subtitle'>
 						// You can see my works {'->'}{' '}
-						<span
+						<NavLink
 							style={{ fontWeight: 'bold', fontStyle: 'italic', cursor: 'pointer' }}
+							to='/works/portfolio'
 						>
 							here
-						</span>
+						</NavLink>
 					</span>
-					<span className='left-content-subtitle'>// You can also go to my Github page</span>
+					<span className='left-content-subtitle'>
+						// You can also go to my Github page
+					</span>
 
 					<span className='github-link'>
 						<span style={{ color: '#4d5bce' }}>const</span>{' '}
@@ -39,6 +43,6 @@ const LeftContent = () => {
 			</div>
 		</div>
 	);
-}
+};
 
 export default LeftContent;
