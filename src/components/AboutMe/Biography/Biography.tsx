@@ -2,31 +2,42 @@ import AboutMeContents from './Content/AboutMeContent';
 
 const aboutMeText = (
 	<span>
-		<span style={{color: '#ffffff'}}>/personal-info/bio.txt<br /> <br /></span>
-		* About me <br />
-		* I have 5 years of еxperience in web <br />
-		* development lorem ipsum dolor sit amet, <br />
-		* consectetur adipiscing elit, sed do eiusmod
-		<br />
-		* tempor incididunt ut labore et dolore
-		<br />
-		* magna aliqua. Ut enim ad minim veniam,
-		<br />
-		* quis nostrud exercitation ullamco laboris
-		<br />
-		* nisi ut aliquip ex ea commodo consequat.
-		<br />
-		* Duis aute irure dolor in reprehenderit in
-		<br />
-		*<br />
-		* Duis aute irure dolor in reprehenderit in
-		<br />
-		* voluptate velit esse cillum dolore eu fugiat <br />
-		* nulla pariatur. Excepteur sint occaecat <br />
-		* officia deserunt mollit anim id est laborum.
-		<br />
-		* officia deserunt mollit anim id est laborum */
-		<br />
+		<span style={{ color: '#ffffff' }}>
+			/personal-info/biography.txt
+			<br /> <br />
+		</span>
+		<div className='d-flex'>
+			<div className='d-flex flex-column'>
+				<span>*&nbsp; </span>
+				<span>*&nbsp; </span>
+				<span>*&nbsp; </span>
+				<span>*&nbsp; </span>
+				<span>*&nbsp; </span>
+				<span>*&nbsp; </span>
+				<span>*&nbsp; </span>
+				<span>*&nbsp; </span>
+				<span>*&nbsp; </span>
+				<span>*&nbsp; </span>
+				<span>*&nbsp; </span>
+				<span>*&nbsp; </span>
+				<span>*&nbsp; </span>
+				<span>*&nbsp; </span>
+			</div>
+			About me<br />
+			I'm a junior frontend developer using React and TypeScript. <br />
+			Great understanding of OOP principles, Data Structures, Algorithms, Design
+			Patterns. <br />
+			Experience in responsive and mobile WEB development.
+			<br />
+			Works with client-side and distributed development teams.
+			<br />
+			Experience with web systems running on various OS and browsers, including
+			older versions.
+			<br />
+			Strong understanding of CSS pre-processors (SASS / SCSS). <br />
+			Also, have experience working within a team environment using scrum
+			methodologie
+		</div>
 	</span>
 );
 

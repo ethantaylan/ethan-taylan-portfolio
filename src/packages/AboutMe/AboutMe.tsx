@@ -10,6 +10,7 @@ import { IoMdArrowDropdown, IoMdArrowDropright } from 'react-icons/io';
 import './about-me.scss';
 import FolderItems from '../../components/Navbar/FolderBar/FolderItems/FolderItems';
 import FolderSubItems from '../../components/Navbar/FolderBar/FolderSubItems';
+import { AiFillInstagram } from 'react-icons/ai';
 
 interface AboutMeProps {
 	children?: any;
@@ -96,24 +97,29 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 							title={'socials'}
 						/>
 						{isSocialsActive ? (
-							<>
+							<React.Fragment>
 								<FolderSubItems
-									subItemTitle='instagram.ts'
+									fileIconActive={false}
+									subItemTitle={`${<AiFillInstagram />} 'test'`}
+									// title=''
 									to={'/contact-me'}
 								/>
 								<FolderSubItems
+									fileIconActive={false}
 									subItemTitle='facebook.ts'
 									to={'/contact-me'}
 								/>
 								<FolderSubItems
+									fileIconActive={false}
 									subItemTitle='linkedin.ts'
 									to={'/contact-me'}
 								/>
 								<FolderSubItems
+									fileIconActive={false}
 									subItemTitle='github.ts'
 									to={'/contact-me'}
 								/>{' '}
-							</>
+							</React.Fragment>
 						) : (
 							''
 						)}
