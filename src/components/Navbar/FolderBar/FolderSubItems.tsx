@@ -11,7 +11,7 @@ export interface AboutMeSubItemsProps {
 	mailIconActive?: boolean;
 	children?: any;
 	subItemTitle?: any;
-	to: string;
+	to?: string | any;
 	socialIcon?: any;
 }
 
@@ -27,14 +27,16 @@ const AboutMeSubItems: React.FC<AboutMeSubItemsProps> = ({
 			<div className='sub-item-container hover'>
 				<NavLink to={to}>
 					<div className='d-flex margin-top-5 align-items-center padding-bottom-12'>
-						{fileIconActive && <AiFillFileText className='margin-left' />}
+						{fileIconActive && <AiFillFileText className='margin-left icon-spacing' />}
 						{codeIconActive && (
 							<FaReact
 								className='margin-left margin-right-5'
 								size={18}
 							/>
 						)}
-						<span className='margin-left'>{socialIcon}</span>
+						{socialIcon && (
+							<span className='margin-left icon-spacing'>{socialIcon}</span>
+						)}
 						{subItemTitle}
 					</div>
 				</NavLink>

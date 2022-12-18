@@ -10,7 +10,9 @@ import { IoMdArrowDropdown, IoMdArrowDropright } from 'react-icons/io';
 import './about-me.scss';
 import FolderItems from '../../components/Navbar/FolderBar/FolderItems/FolderItems';
 import FolderSubItems from '../../components/Navbar/FolderBar/FolderSubItems';
-import { AiFillInstagram } from 'react-icons/ai';
+import { AiFillLinkedin } from 'react-icons/ai';
+import { FaGithubSquare } from 'react-icons/fa';
+import { TiSocialInstagram } from 'react-icons/ti';
 
 interface AboutMeProps {
 	children?: any;
@@ -98,26 +100,20 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 						/>
 						{isSocialsActive ? (
 							<React.Fragment>
+									<FolderSubItems
+										fileIconActive={false}
+										socialIcon={<TiSocialInstagram />}
+										subItemTitle={'instagram'}
+									/>
 								<FolderSubItems
 									fileIconActive={false}
-									subItemTitle={`${<AiFillInstagram />} 'test'`}
-									// title=''
-									to={'/contact-me'}
+									socialIcon={<AiFillLinkedin />}
+									subItemTitle='linkedin'
 								/>
 								<FolderSubItems
+									socialIcon={<FaGithubSquare />}
 									fileIconActive={false}
-									subItemTitle='facebook.ts'
-									to={'/contact-me'}
-								/>
-								<FolderSubItems
-									fileIconActive={false}
-									subItemTitle='linkedin.ts'
-									to={'/contact-me'}
-								/>
-								<FolderSubItems
-									fileIconActive={false}
-									subItemTitle='github.ts'
-									to={'/contact-me'}
+									subItemTitle='github'
 								/>{' '}
 							</React.Fragment>
 						) : (

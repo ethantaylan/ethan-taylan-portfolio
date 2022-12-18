@@ -13,6 +13,7 @@ import Portfolio from '../components/Works/Portfolio/PortfolioItems/Portfolio';
 import ContactMe from './ContactMe/ContactMe';
 import Contact from '../components/Contact/Contact';
 import SideBar from '../components/Navbar/Sidebar/SideBar';
+import NotFound from './NotFound';
 
 function App() {
 	return (
@@ -21,10 +22,10 @@ function App() {
 				<Navbar />
 				<SideBar>
 					<Routes>
-						{/* <Route
-							path='/'
+						<Route
+							path='*'
 							element={<NotFound />}
-						/> */}
+						/>
 						<Route
 							path='/'
 							element={<Home />}
