@@ -1,17 +1,29 @@
-import React from 'react';
-import { ProgressBar } from 'react-bootstrap';
+import { AiFillHome, AiOutlineArrowLeft } from 'react-icons/ai';
+import { BiErrorCircle } from 'react-icons/bi';
+import { NavLink } from 'react-router-dom';
 
 const NotFound = () => {
-
 	return (
-		<div className='d-block'>
-			<div className='d-flex justify-content-center flex-column align-items-center container-full-page'>
-				<h1 className='my-text-primary' style={{marginBottom: '30px', fontSize: '25px' }}>404 Page not found</h1>
-				<div className='w-50'>
-				<h6 className='my-text-primary' style={{textAlign: 'end'}}>73%</h6>
-					<ProgressBar now={73} />
-				</div>
-                <h6 className='my-text-primary mt-5'>// reduce your window size until you see the mobile version</h6>
+		<div className='d-block p-5'>
+			<div className='d-flex text-white justify-content-center flex-column align-items-center container-full-page'>
+				<h1 style={{ color: '#607b96', fontSize: '50px' }}>404</h1>
+				<h1
+					className='my-text-primary'
+					style={{
+						color: '#607b96',
+						padding: '40px',
+						marginBottom: '30px',
+						fontSize: '25px',
+					}}
+				>
+					Page not found
+				</h1>
+				<NavLink
+					style={{ position: 'absolute', bottom: '10%', fontSize: '20px', color: '#607b96' }}
+					to='/home'
+				>
+					<AiOutlineArrowLeft />
+				</NavLink>{' '}
 			</div>
 		</div>
 	);
