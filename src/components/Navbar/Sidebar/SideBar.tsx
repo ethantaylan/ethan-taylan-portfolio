@@ -33,7 +33,7 @@ const SideBar: React.FC<SideBarProps> = ({ children }) => {
 				'Loading'
 			) : (
 				<div
-					className={`  ${setHeight ? 'height-unset' : 'sidebar-main-container'}`}
+					className={`${setHeight ? 'height-unset' : 'sidebar-main-container'}`}
 				>
 					<div className='sidebar-container'>
 						<ul className='sidebar-ul d-768-none'>

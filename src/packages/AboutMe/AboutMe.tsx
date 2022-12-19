@@ -101,7 +101,6 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 								<FolderSubItems
 									fileIconActive={false}
 									subItemTitle={`${<AiFillInstagram />} 'test'`}
-									// title=''
 									to={'/contact-me'}
 								/>
 								<FolderSubItems
