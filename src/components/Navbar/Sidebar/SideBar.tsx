@@ -4,16 +4,18 @@ import { RiContactsFill } from 'react-icons/ri';
 import { FaFileCode } from 'react-icons/fa';
 import { NavLink, useLocation } from 'react-router-dom';
 import './sidebar.scss';
+import useMediaQuery from '../../../hooks/useMediaQuery';
 
 export interface SideBarProps {
 	children?: any;
 }
 
 const SideBar: React.FC<SideBarProps> = ({ children }) => {
-	const [isLoading, setIsLoading] = React.useState(true);
-	const [setHeight, setSetHeight] = React.useState<boolean>(false);
+	const [isLoading, setIsLoading] = React.useState<boolean>(true);
+	const [height, setSetHeight] = React.useState<boolean>(false);
 
 	const location = useLocation();
+
 	React.useEffect(() => {
 		if (
 			location.pathname.includes('portfolio') ||
@@ -25,16 +27,14 @@ const SideBar: React.FC<SideBarProps> = ({ children }) => {
 			setSetHeight(false);
 			setIsLoading(false);
 		}
-	}, [location.pathname, setHeight]);
+	}, [location.pathname, height]);
 
 	return (
 		<React.Fragment>
 			{isLoading ? (
 				'Loading'
 			) : (
-				<div
-					className={`${setHeight ? 'height-unset' : 'sidebar-main-container'}`}
-				>
+				<div className={`${height ? 'height-unset d-flex' : 'sidebar-main-container'}`}>
 					<div className='sidebar-container'>
 						<ul className='sidebar-ul d-768-none'>
 							<NavLink to='/home'>

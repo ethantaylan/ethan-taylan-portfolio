@@ -13,6 +13,7 @@ export interface AboutMeSubItemsProps {
 	subItemTitle?: any;
 	to?: string | any;
 	socialIcon?: any;
+	onClick?: () => void
 }
 
 const AboutMeSubItems: React.FC<AboutMeSubItemsProps> = ({
@@ -21,10 +22,11 @@ const AboutMeSubItems: React.FC<AboutMeSubItemsProps> = ({
 	subItemTitle,
 	codeIconActive,
 	to,
+	onClick,
 }) => {
 	return (
 		<div>
-			<div className='sub-item-container hover'>
+			<div onClick={onClick} className='sub-item-container hover'>
 				<NavLink to={to}>
 					<div className='d-flex margin-top-5 align-items-center padding-bottom-12'>
 						{fileIconActive && <AiFillFileText className='margin-left icon-spacing' />}

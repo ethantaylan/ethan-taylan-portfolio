@@ -1,24 +1,48 @@
 @use '../../styles/scss//styles.scss' as m;
-.folder-container {
-    width: 250px;
-    @media screen and (max-width: 768px) {
-        width: 100%;
-        height: auto;
-    }
+@media screen and (max-width: 768px) {
+	.folder-container {
+		width: 250px;
+		width: 100%;
+		height: auto;
+	}
+
+	.primary-icon {
+		color: m.$primary;
+	}
+
+	.about-me-title {
+		color: m.$primary;
+		padding: 20px;
+		margin: 0;
+	}
+
+	.folder-menu {
+		color: m.$white;
+		background-color: m.$secondary;
+		margin: 5px 0 5px 0px;
+	}
 }
 
-.primary-icon {
-    color: m.$primary
-}
+@media screen and (min-width: 768px) {
+    .folder-container {
+		width: 250px;
+		width: 100%;
+		height: auto;
+	}
 
-.about-me-title {
-    color: m.$primary;
-    padding: 20px;
-    margin: 0;
-}
+	.primary-icon {
+		color: m.$primary;
+	}
 
-.folder-menu {
-    color: m.$white;
-    background-color: m.$secondary;
-    margin: 5px 0 5px 0px;
+	.about-me-title {
+		color: m.$primary;
+		padding: 20px;
+		margin: 0;
+	}
+
+	.folder-menu {
+		color: m.$white;
+		background-color: m.$secondary;
+		margin: 5px 0 5px 0px;
+	}
 }

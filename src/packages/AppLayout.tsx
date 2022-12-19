@@ -7,7 +7,6 @@ import Home from './Home/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Bio from '../components/AboutMe/Biography/Biography';
 import Hobbies from '../components/AboutMe/Hobbies/Hobbies';
-import Education from '../components/AboutMe/Education/Education';
 import Works from './Works/Works';
 import Portfolio from '../components/Works/Portfolio/PortfolioItems/Portfolio';
 import ContactMe from './ContactMe/ContactMe';
@@ -46,10 +45,6 @@ function App() {
 						<Route
 							path='/about-me/hobbies'
 							element={<AboutMe children={<Hobbies />} />}
-						/>
-						<Route
-							path='/about-me/education'
-							element={<AboutMe children={<Education />} />}
 						/>
 						//* page WORKS *//
 						<Route

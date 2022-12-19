@@ -21,6 +21,8 @@ export const CodeSnippets: React.FC<CodeSnippetsProps> = ({
 
 	return (
 		<div className={`${className} app-bg all-container`}>
+			<h1 className='p-4'> // Code snippets showcase</h1>
+			
 			<div className='snippet-container'>
 				<div className='d-flex w-100 mb-4 justify-content-between align-items-center'>
 					<span style={{ color: '#ffffff' }}>
@@ -41,13 +43,13 @@ export const CodeSnippets: React.FC<CodeSnippetsProps> = ({
 							<span className='user-name'>@ethantaylan</span>
 						</div>
 					</div>
-					<div className='cursor-pointer hover detail-container'>
+					<div onClick={detailHandler} className='cursor-pointer hover detail-container'>
 						<BiCommentDetail
 							className='mx-2'
 							size={'16px'}
 						/>
 
-						<span onClick={detailHandler}>details</span>
+						<span>details</span>
 					</div>
 				</div>
 				<div className='code-container'>

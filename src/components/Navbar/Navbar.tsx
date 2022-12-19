@@ -78,9 +78,9 @@ const Navbar = () => {
 							<div style={{ position: 'absolute', bottom: '0', width: '100%' }}></div>
 						</ul>
 					</div>
-					<div className='btn-contact'>
-						<span>_contact-me</span>
-					</div>
+
+						<NavLink className='btn-contact' to='/contact-me'>_contact-me</NavLink>
+
 				</div>
 			</div>
 		</React.Fragment>

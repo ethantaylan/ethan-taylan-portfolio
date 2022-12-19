@@ -13,6 +13,8 @@ import FolderSubItems from '../../components/Navbar/FolderBar/FolderSubItems';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { FaGithubSquare } from 'react-icons/fa';
 import { TiSocialInstagram } from 'react-icons/ti';
+import useMediaQuery from '../../hooks/useMediaQuery';
+import { socialLinks } from '../../components/CodeSnippet/social-links';
 
 interface AboutMeProps {
 	children?: any;
@@ -44,145 +46,151 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 		setIsSocialsActive(!isSocialsActive);
 	};
 
+	const matches = useMediaQuery('(min-width: 768px)');
+
 	return (
 		<React.Fragment>
-			<h1 className='about-me-title'>_about-me</h1>
-			<div className='my-border-bottom flex-768-column app-bg w-100'>
-				<div className='folder-container'>
-					<div className='d-flex px-3 folder-menu align-items-center w-100'>
-						{isFolderMenuActive ? (
-							<IoMdArrowDropdown
-								className='primary-icon'
-								size={18}
+			<div className='d-flex flex-column w-100'>
+				<h1 className='about-me-title'>_about-me</h1>
+				<div className='my-border-bottom flex-768-column app-bg w-100'>
+					<div className='folder-container'>
+						<div className='d-flex px-3 folder-menu align-items-center w-100'>
+							{isFolderMenuActive ? (
+								<IoMdArrowDropdown
+									className='primary-icon'
+									size={18}
+								/>
+							) : (
+								<IoMdArrowDropright
+									className='primary-icon'
+									size={18}
+								/>
+							)}
+							<ItemsTitle
+								onClick={() => {
+									handleBioFolderActive();
+								}}
+								itemsTitle='personal-info'
 							/>
-						) : (
-							<IoMdArrowDropright
-								className='primary-icon'
-								size={18}
-							/>
-						)}
-						<ItemsTitle
-							onClick={() => {
-								handleBioFolderActive();
-							}}
-							itemsTitle='personal-info'
-						/>
-					</div>
+						</div>
 
-					<div className={isFolderMenuActive ? 'd-block' : 'd-none'}>
-						<AboutMeItems
-							folderColors={folderColors.salmon}
-							title={'biography'}
-						>
-							<AboutMeSubItems
-								to='/about-me/biography'
-								subItemTitle='biography.txt'
-							/>
-							<AboutMeSubItems
-								to='/about-me/biography'
-								subItemTitle='career.txt'
-							/>
-						</AboutMeItems>
+						<div className={isFolderMenuActive ? 'd-block' : 'd-none'}>
+							<AboutMeItems
+								folderColors={folderColors.salmon}
+								title={'biography'}
+							>
+								<AboutMeSubItems
+									to='/about-me/biography'
+									subItemTitle='biography.txt'
+								/>
+								<AboutMeSubItems
+									to='/about-me/biography'
+									subItemTitle='career.txt'
+								/>
+							</AboutMeItems>
 
-						<AboutMeItems
-							folderColors={folderColors.blue}
-							title={'interests'}
-						>
-							<AboutMeSubItems
-								to='/about-me/hobbies'
-								subItemTitle={'hobbies.txt'}
+							<AboutMeItems
+								folderColors={folderColors.blue}
+								title={'interests'}
+							>
+								<AboutMeSubItems
+									to='/about-me/hobbies'
+									subItemTitle={'hobbies.txt'}
+								/>
+							</AboutMeItems>
+							<FolderItems
+								onClick={() => onClickHandlerSocials()}
+								folderColors={'LightSeaGreen'}
+								title={'socials'}
 							/>
-						</AboutMeItems>
-						<FolderItems
-							onClick={() => onClickHandlerSocials()}
-							folderColors={'LightSeaGreen'}
-							title={'socials'}
-						/>
-						{isSocialsActive ? (
-							<React.Fragment>
+							{isSocialsActive ? (
+								<React.Fragment>
 									<FolderSubItems
 										fileIconActive={false}
 										socialIcon={<TiSocialInstagram />}
 										subItemTitle={'instagram'}
+										onClick={socialLinks.instagram}
 									/>
-								<FolderSubItems
-									fileIconActive={false}
-									socialIcon={<AiFillLinkedin />}
-									subItemTitle='linkedin'
+									<FolderSubItems
+										fileIconActive={false}
+										socialIcon={<AiFillLinkedin />}
+										subItemTitle='linkedin'
+										onClick={socialLinks.linkedin}
+									/>
+									<FolderSubItems
+										socialIcon={<FaGithubSquare />}
+										fileIconActive={false}
+										subItemTitle='github'
+										onClick={socialLinks.github}
+									/>{' '}
+								</React.Fragment>
+							) : (
+								''
+							)}
+							<div
+								className='margin-left-28'
+								onClick={setActiveSnippet}
+							>
+								<AboutMeItems
+									title={'code-snippets.tsx'}
+									folderIconActive={false}
+									chevronIconActive={false}
+									codeIconActive={true}
+									className='no-space pb-2'
 								/>
-								<FolderSubItems
-									socialIcon={<FaGithubSquare />}
-									fileIconActive={false}
-									subItemTitle='github'
-								/>{' '}
-							</React.Fragment>
-						) : (
-							''
-						)}
+							</div>
+						</div>
 						<div
-							className='margin-left-28'
-							onClick={setActiveSnippet}
+							className='d-flex align-items-center folder-menu px-3 w-100'
+						>
+							{isContactMenuActive ? (
+								<IoMdArrowDropdown
+									className='primary-icon'
+									size={18}
+								/>
+							) : (
+								<IoMdArrowDropright
+									className='primary-icon'
+									size={18}
+								/>
+							)}
+							<ItemsTitle
+								onClick={() => {
+									handleContactMenuActive();
+								}}
+								itemsTitle='contact'
+							/>
+						</div>
+						<div
+							className={isContactMenuActive ? 'd-block my-border-bottom' : 'd-none'}
 						>
 							<AboutMeItems
-								title={'code-snippets.tsx'}
-								folderIconActive={false}
+								className='p-2'
+								mail='taylanethan@gmail.com'
+								mailIconActive={true}
+								telIconActive={false}
 								chevronIconActive={false}
-								codeIconActive={true}
-								className='no-space pb-2'
+								folderIconActive={false}
+								title={<IoMailSharp size={16} />}
+							/>
+							<AboutMeItems
+								className='p-2'
+								number='+33766704190'
+								telIconActive={true}
+								mailIconActive={false}
+								chevronIconActive={false}
+								folderIconActive={false}
+								title={<BsFillTelephoneFill size={16} />}
 							/>
 						</div>
 					</div>
-					<div
-						className={`d-flex ${
-							isContactMenuActive ? '' : ''
-						} align-items-center folder-menu px-3 w-100`}
-					>
-						{isContactMenuActive ? (
-							<IoMdArrowDropdown
-								className='primary-icon'
-								size={18}
-							/>
-						) : (
-							<IoMdArrowDropright
-								className='primary-icon'
-								size={18}
-							/>
-						)}
-						<ItemsTitle
-							onClick={() => {
-								handleContactMenuActive();
-							}}
-							itemsTitle='contact'
-						/>
-					</div>
-					<div
-						className={isContactMenuActive ? 'd-block my-border-bottom' : 'd-none'}
-					>
-						<AboutMeItems
-							className='p-2'
-							mail='taylanethan@gmail.com'
-							mailIconActive={true}
-							telIconActive={false}
-							chevronIconActive={false}
-							folderIconActive={false}
-							title={<IoMailSharp size={16} />}
-						/>
-						<AboutMeItems
-							className='p-2'
-							number='+33766704190'
-							telIconActive={true}
-							mailIconActive={false}
-							chevronIconActive={false}
-							folderIconActive={false}
-							title={<BsFillTelephoneFill size={16} />}
-						/>
-					</div>
-				</div>
 
-				{children}
+					{children}
+				</div>
 			</div>
+
 			<CodeSnippets
-				className={snippet ? 'd-flex h-100 justify-content-center w-100' : 'd-none'}
+				className={matches ? 'w-50' : 'w-100'}
 				onClose={() => setActiveSnippet(false)}
 			/>
 		</React.Fragment>
