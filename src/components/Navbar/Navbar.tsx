@@ -2,8 +2,9 @@ import { NavLink } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import React from 'react';
 import './navbar.scss';
-import useMediaQuery from '../../hooks/useMediaQuery';
+
 import { IoIosClose } from 'react-icons/io';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 const Navbar = () => {
 	const [toggleNavbar, setToggleNavbar] = React.useState<boolean>(false);
@@ -14,7 +15,7 @@ const Navbar = () => {
 		setToggleNavbar(false);
 	};
 
-	const matches = useMediaQuery('(min-width: 768px)');
+	const matches = useMediaQuery('(max-width: 768px)');
 
 	return (
 		<React.Fragment>
@@ -34,46 +35,52 @@ const Navbar = () => {
 						)}
 					</span>
 				</div>
-				<ul
-					className={
-						toggleNavbar
-							? 'align-items-center navbar-nav-ul'
-							: 'd-768-none navbar-nav-ul'
-					}
-				>
-					<NavLink
-						className='link'
-						onClick={onClose}
-						to='/'
-					>
-						<li className='navbar-nav-li'>_home</li>
-					</NavLink>
-					<NavLink
-						onClick={onClose}
-						className='link'
-						to='/about-me'
-					>
-						<li className='navbar-nav-li'>_about-me</li>
-					</NavLink>
-					<NavLink
-						onClick={onClose}
-						className='link'
-						to='/works/portfolio'
-					>
-						<li className='navbar-nav-li'>_works</li>
-					</NavLink>
-					<NavLink
-						onClick={onClose}
-						className='link'
-						to='/contact-me'
-					>
-						<li className='navbar-nav-li'>_contact-me</li>
-					</NavLink>
-					<div style={{ position: 'absolute', bottom: '0', width: '100%' }}></div>
-				</ul>
+				<div className={matches ? 'd-flex' : 'd-flex justify-content-between w-100'}>
+					<div className='d-flex flex-row w-100'>
+						<ul
+							className={
+								toggleNavbar
+									? 'align-items-center navbar-nav-ul'
+									: 'd-768-none navbar-nav-ul'
+							}
+						>
+							<NavLink
+								className='link'
+								onClick={onClose}
+								to='/'
+							>
+								<li className='navbar-nav-li'>_home</li>
+							</NavLink>
+							<NavLink
+								onClick={onClose}
+								className='link'
+								to='/about-me'
+							>
+								<li className='navbar-nav-li'>_about-me</li>
+							</NavLink>
+							<NavLink
+								onClick={onClose}
+								className='link'
+								to='/works/portfolio'
+							>
+								<li className='navbar-nav-li'>_works</li>
+							</NavLink>
+							{matches && (
+								<NavLink
+									onClick={onClose}
+									className='link'
+									to='/contact-me'
+								>
+									<li className='navbar-nav-li'>_contact-me</li>
+								</NavLink>
+							)}
 
-				<div className='btn-contact'>
-					<span>_contact-me</span>
+							<div style={{ position: 'absolute', bottom: '0', width: '100%' }}></div>
+						</ul>
+					</div>
+					<div className='btn-contact'>
+						<span>_contact-me</span>
+					</div>
 				</div>
 			</div>
 		</React.Fragment>

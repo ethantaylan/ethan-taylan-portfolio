@@ -192,15 +192,6 @@ a:hover {
     color: unset;
 }
 
-.link {
-    border-top-color: 2px solid transparent;
-    width: 100px;
-}
-
-.link:hover {
-    color: #ebebeb !important;
-}
-
 .text-decoration-underline-hover:hover {
     text-decoration: underline;
 }

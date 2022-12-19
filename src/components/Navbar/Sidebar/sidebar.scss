@@ -62,7 +62,7 @@
 			width: auto;
 			height: 100%;
 			background-color: m.$appBg;
-			border: 1px solid m.$secondary;
+			border-right: 1px solid m.$secondary;;
 			border-bottom: none;
 			border-top: none;
 			display: flex;
@@ -70,15 +70,15 @@
 			flex-direction: row;
 		}
 		&ul {
-			height: auto;
+			height: 100%;
 			width: 100%;
-			color: m.$primary;
+			color: #607b96;
 			display: flex;
-			justify-content: space-around;
 			font-size: 18px;
 			flex-direction: column;
 			align-items: center;
             padding: 0px;
+			padding-top: 20px;
 		}
 		&li {
 			padding: 15px;
