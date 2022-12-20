@@ -112,13 +112,14 @@
 		&main {
 			display: flex;
 			color: m.$primary;
+			background-color: m.$appBg;
+			border-top-left-radius: 12px;
+			border-top-right-radius: 12px;
 		}
 		&brand {
 			white-space: nowrap;
 			padding: 20px;
 			border-right: 1px solid m.$secondary;
-		}
-		&nav {
 		}
 	}
 	.btn- {
@@ -161,8 +162,6 @@
 				background-color: m.$secondary;
 			}
 		}
-	}
-	.active {
 	}
 	.link {
 		height: 100%;

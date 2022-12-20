@@ -73,6 +73,8 @@
 			border-top: 1px solid m.$secondary;
 			justify-content: space-between;
 			min-height: 54px;
+			border-bottom-left-radius: 12px;
+			border-bottom-right-radius: 12px;
 		}
 		&find-me {
 			height: 100%;
@@ -111,6 +113,7 @@
 			cursor: m.$cursor;
 			padding-left: 20px;
 			padding-right: 20px;
+			border-right: 1px solid m.$secondary;
 		}
 	}
 

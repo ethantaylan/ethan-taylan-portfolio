@@ -10,7 +10,8 @@ function App() {
 
 	return (
 		<React.Fragment>
-			{matches ? <DesktopNotReady /> : <AppLayout />}
+			{/* {matches && <DesktopNotReady /> : <AppLayout />} */}
+			<AppLayout />
 		</React.Fragment>
 	);
 }

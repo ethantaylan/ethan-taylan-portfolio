@@ -4,7 +4,6 @@ import { RiContactsFill } from 'react-icons/ri';
 import { FaFileCode } from 'react-icons/fa';
 import { NavLink, useLocation } from 'react-router-dom';
 import './sidebar.scss';
-import useMediaQuery from '../../../hooks/useMediaQuery';
 
 export interface SideBarProps {
 	children?: any;
@@ -13,8 +12,14 @@ export interface SideBarProps {
 const SideBar: React.FC<SideBarProps> = ({ children }) => {
 	const [isLoading, setIsLoading] = React.useState<boolean>(true);
 	const [height, setSetHeight] = React.useState<boolean>(false);
+	const [contactPage, setContactPage] = React.useState<boolean>(false);
 
-	const location = useLocation();
+	React.useEffect(() => {
+	
+		if(location.pathname.includes('contact')) {
+		setContactPage
+		}
+	}, []);
 
 	React.useEffect(() => {
 		if (
@@ -29,12 +34,26 @@ const SideBar: React.FC<SideBarProps> = ({ children }) => {
 		}
 	}, [location.pathname, height]);
 
+	React.useEffect(() => {
+		if (location.pathname.includes('contact')) {
+			document.body.className = 'h-100';
+		}
+	}, [location.pathname, height]);
+
+	React.useEffect(() => {
+		if (location.pathname.includes('portfolio')) {
+			document.body.className = 'height-auto';
+		}
+	}, [location.pathname, height]);
+
 	return (
 		<React.Fragment>
 			{isLoading ? (
 				'Loading'
 			) : (
-				<div className={`${height ? 'height-unset d-flex' : 'sidebar-main-container'}`}>
+				<div
+					className={`${height ? 'height-unset d-flex' : 'sidebar-main-container'}`}
+				>
 					<div className='sidebar-container'>
 						<ul className='sidebar-ul d-768-none'>
 							<NavLink to='/home'>

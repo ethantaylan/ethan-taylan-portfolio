@@ -13,7 +13,7 @@ interface PortfolioProps {
 
 const Portfolio: React.FC<PortfolioProps> = ({}) => {
 	return (
-		<div className='d-flex flex-column p-5 w-100'>
+		<div className='d-flex app-bg flex-column p-5 w-100'>
 			<div className='d-flex h-100 w-100 align-items-center flex-wrap justify-content-center'>
 				<PortfolioCards
 					img={OrinonoImg}
