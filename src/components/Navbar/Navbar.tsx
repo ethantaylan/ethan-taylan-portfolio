@@ -35,7 +35,9 @@ const Navbar = () => {
 						)}
 					</span>
 				</div>
-				<div className={matches ? 'd-flex' : 'd-flex justify-content-between w-100'}>
+				<div
+					className={matches ? 'd-flex' : 'd-flex justify-content-between w-100'}
+				>
 					<div className='d-flex flex-row w-100'>
 						<ul
 							className={
@@ -46,20 +48,26 @@ const Navbar = () => {
 						>
 							<NavLink
 								className='link'
-								onClick={onClose}
+								onClick={() => {
+									onClose;
+								}}
 								to='/'
 							>
 								<li className='navbar-nav-li'>_home</li>
 							</NavLink>
 							<NavLink
-								onClick={onClose}
+								onClick={() => {
+									onClose;
+								}}
 								className='link'
 								to='/about-me'
 							>
 								<li className='navbar-nav-li'>_about-me</li>
 							</NavLink>
 							<NavLink
-								onClick={onClose}
+								onClick={() => {
+									onClose;
+								}}
 								className='link'
 								to='/works/portfolio'
 							>
@@ -67,7 +75,9 @@ const Navbar = () => {
 							</NavLink>
 							{matches && (
 								<NavLink
-									onClick={onClose}
+									onClick={() => {
+										onClose;
+									}}
 									className='link'
 									to='/contact-me'
 								>
@@ -79,8 +89,12 @@ const Navbar = () => {
 						</ul>
 					</div>
 
-						<NavLink className='btn-contact' to='/contact-me'>_contact-me</NavLink>
-
+					<NavLink
+						className='btn-contact'
+						to='/contact-me'
+					>
+						_contact-me
+					</NavLink>
 				</div>
 			</div>
 		</React.Fragment>
