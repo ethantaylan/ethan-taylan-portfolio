@@ -249,16 +249,17 @@ a:hover {
 }
 
 .portfolio-img-style {
-	filter: saturate(0);
-	opacity: 0.6;
 	object-fit: cover;
 	height: 250px;
 	width: 300px;
+	opacity: 0.8;
+;
 }
 
 .portfolio-img-style:hover {
 	filter: saturate(0.8);
-	opacity: 0.8;
+	opacity: 1;
+	cursor: pointer;
 }
 
 .scroll-portfolio {

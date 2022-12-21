@@ -5,6 +5,7 @@ import './navbar.scss';
 
 import { IoIosClose } from 'react-icons/io';
 import useMediaQuery from '../../hooks/useMediaQuery';
+import { bodyHeight100, bodyHeightAuto } from './Sidebar/SideBar';
 
 const Navbar = () => {
 	const [toggleNavbar, setToggleNavbar] = React.useState<boolean>(false);
@@ -49,6 +50,7 @@ const Navbar = () => {
 							<NavLink
 								className='link'
 								onClick={() => {
+									bodyHeight100()
 									onClose;
 								}}
 								to='/'
@@ -57,6 +59,7 @@ const Navbar = () => {
 							</NavLink>
 							<NavLink
 								onClick={() => {
+									bodyHeight100()
 									onClose;
 								}}
 								className='link'
@@ -66,16 +69,18 @@ const Navbar = () => {
 							</NavLink>
 							<NavLink
 								onClick={() => {
+									bodyHeightAuto()
 									onClose;
 								}}
 								className='link'
-								to='/works/portfolio'
+								to='/works'
 							>
 								<li className='navbar-nav-li'>_works</li>
 							</NavLink>
 							{matches && (
 								<NavLink
 									onClick={() => {
+										bodyHeight100()
 										onClose;
 									}}
 									className='link'

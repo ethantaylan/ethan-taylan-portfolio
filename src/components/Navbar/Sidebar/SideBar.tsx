@@ -9,13 +9,22 @@ export interface SideBarProps {
 	children?: any;
 }
 
+export function bodyHeightAuto() {
+	document.body.className = 'height-auto';
+}
+
+export function bodyHeight100() {
+	document.body.className = 'h-100';
+}
+
 const SideBar: React.FC<SideBarProps> = ({ children }) => {
 	return (
 		<React.Fragment>
-			<div className='sidebar-main-container'>
+			<div className={`sidebar-main-container`}>
 				<div className='sidebar-container'>
 					<ul className='sidebar-ul d-768-none'>
 						<NavLink
+							onClick={() => bodyHeight100()}
 							to='/home'
 						>
 							<li className='sidebar-li'>
@@ -23,6 +32,7 @@ const SideBar: React.FC<SideBarProps> = ({ children }) => {
 							</li>
 						</NavLink>
 						<NavLink
+							onClick={() => bodyHeight100()}
 							to='/about-me'
 						>
 							<li className='sidebar-li'>
@@ -30,7 +40,8 @@ const SideBar: React.FC<SideBarProps> = ({ children }) => {
 							</li>
 						</NavLink>
 						<NavLink
-							to='/works/portfolio'
+							onClick={() => bodyHeightAuto()}
+							to='/works'
 						>
 							<li className='sidebar-li'>
 								<FaFileCode />

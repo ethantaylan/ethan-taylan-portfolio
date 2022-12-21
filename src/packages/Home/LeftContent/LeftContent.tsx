@@ -15,7 +15,7 @@ const LeftContent = () => {
 						// You can see my works {'->'}{' '}
 						<NavLink
 							style={{ fontWeight: 'bold', fontStyle: 'italic', cursor: 'pointer' }}
-							to='/works/portfolio'
+							to='/works'
 						>
 							here
 						</NavLink>

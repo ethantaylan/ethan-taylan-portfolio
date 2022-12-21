@@ -7,7 +7,6 @@ import Home from './Home/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Bio from '../components/AboutMe/Biography/Biography';
 import Hobbies from '../components/AboutMe/Hobbies/Hobbies';
-import Works from './Works/Works';
 import Portfolio from '../components/Works/Portfolio/PortfolioItems/Portfolio';
 import ContactMe from './ContactMe/ContactMe';
 import Contact from '../components/Contact/Contact';
@@ -49,12 +48,7 @@ function App() {
 						//* page WORKS *//
 						<Route
 							path='/works'
-							element={<Works />}
-						/>
-						//* ROUTES FOR PORTFOLIO ITEMS *//
-						<Route
-							path='/works/portfolio'
-							element={<Works children={<Portfolio />} />}
+							element={<Portfolio />}
 						/>
 						//* ROUTES FOR CONTACT PAGE//
 						<Route
