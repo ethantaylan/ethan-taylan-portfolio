@@ -10,7 +10,7 @@ function App() {
 
 	return (
 		<React.Fragment>
-			<ApplicationStarting />
+			{/* <ApplicationStarting /> */}
 			<AppLayout />
 		</React.Fragment>
 	);
