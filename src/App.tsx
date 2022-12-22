@@ -1,7 +1,7 @@
 // import Home from './packages/Home/Home';
 import 'bootstrap/dist/css/bootstrap.css';
 import React from 'react';
-import DesktopNotReady from './components/DesktopNotReady/DesktopNotReady';
+import ApplicationStarting from './components/ApplicationStarting/ApplicationStarting';
 import useMediaQuery from './hooks/useMediaQuery';
 import AppLayout from './packages/AppLayout';
 
@@ -10,7 +10,7 @@ function App() {
 
 	return (
 		<React.Fragment>
-			{/* {matches && <DesktopNotReady /> : <AppLayout />} */}
+			<ApplicationStarting />
 			<AppLayout />
 		</React.Fragment>
 	);
