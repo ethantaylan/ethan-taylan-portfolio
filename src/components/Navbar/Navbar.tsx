@@ -50,7 +50,7 @@ const Navbar = () => {
 							<NavLink
 								className='link'
 								onClick={() => {
-									bodyHeight100()
+									bodyHeight100();
 									onClose;
 								}}
 								to='/'
@@ -59,7 +59,7 @@ const Navbar = () => {
 							</NavLink>
 							<NavLink
 								onClick={() => {
-									bodyHeight100()
+									bodyHeight100();
 									onClose;
 								}}
 								className='link'
@@ -69,7 +69,7 @@ const Navbar = () => {
 							</NavLink>
 							<NavLink
 								onClick={() => {
-									bodyHeightAuto()
+									bodyHeightAuto();
 									onClose;
 								}}
 								className='link'
@@ -80,7 +80,7 @@ const Navbar = () => {
 							{matches && (
 								<NavLink
 									onClick={() => {
-										bodyHeight100()
+										bodyHeight100();
 										onClose;
 									}}
 									className='link'
@@ -95,6 +95,10 @@ const Navbar = () => {
 					</div>
 
 					<NavLink
+						onClick={() => {
+							bodyHeight100();
+							onClose;
+						}}
 						className='btn-contact'
 						to='/contact-me'
 					>

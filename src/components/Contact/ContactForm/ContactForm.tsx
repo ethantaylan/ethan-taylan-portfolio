@@ -1,4 +1,5 @@
 import React from 'react';
+import useMediaQuery from '../../../hooks/useMediaQuery';
 import ContactSnippet from '../ContactSnippet/ContactSnippet';
 
 const ContactForm = () => {
@@ -25,11 +26,13 @@ const ContactForm = () => {
 		setMessage(message);
 	}, []);
 
+	const matches = useMediaQuery('(max-width: 768px)')
+
 	return (
 		<div className='d-flex flex-row h-100 w-100'>
 			<div className='w-100 d-flex'>
 				<div className='p-5 d-flex justify-content-center align-items-center w-100'>
-					<form className='w-75'>
+					<form className={matches ? 'w-100' : 'w-75'}>
 						<span className='input-labels'>_name : </span>
 						<input
 							name='name'
@@ -62,6 +65,7 @@ const ContactForm = () => {
 					email={email}
 					message={message}
 					name={name}
+					showContactSnippet={matches ? true : false}
 				/>
 			</div>
 		</div>

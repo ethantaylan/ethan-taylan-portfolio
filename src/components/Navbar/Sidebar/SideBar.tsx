@@ -5,6 +5,7 @@ import { FaFileCode } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import './sidebar.scss';
 import useMediaQuery from '../../../hooks/useMediaQuery';
+import { IoMdMail } from 'react-icons/io';
 
 export interface SideBarProps {
 	children?: any;
@@ -47,6 +48,14 @@ const SideBar: React.FC<SideBarProps> = ({ children }) => {
 						>
 							<li className='sidebar-li'>
 								<FaFileCode />
+							</li>
+						</NavLink>
+						<NavLink
+							onClick={() => bodyHeight100()}
+							to='/contact-me'
+						>
+							<li className='sidebar-li'>
+								<IoMdMail />
 							</li>
 						</NavLink>
 					</ul>

@@ -28,7 +28,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 	const [isContactMenuActive, setIsContactMenuActive] =
 		React.useState<boolean>(false);
 
-	const setActiveSnippet = (active: any) => {
+	const handleCodeSnippet = (active: any) => {
 		setSnippet(active);
 	};
 
@@ -129,7 +129,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 							)}
 							<div
 								className='margin-left-28'
-								onClick={setActiveSnippet}
+								onClick={() => handleCodeSnippet(true)}
 							>
 								<AboutMeItems
 									title={'code-snippets.tsx'}
@@ -140,9 +140,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 								/>
 							</div>
 						</div>
-						<div
-							className='d-flex align-items-center folder-menu px-3 w-100'
-						>
+						<div className='d-flex align-items-center folder-menu px-3 w-100'>
 							{isContactMenuActive ? (
 								<IoMdArrowDropdown
 									className='primary-icon'
@@ -188,11 +186,11 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 					{children}
 				</div>
 			</div>
-
-			<CodeSnippets
-				className={matches ? 'w-50' : 'w-100'}
-				onClose={() => setActiveSnippet(false)}
-			/>
+				<CodeSnippets
+					showCodeSnippet={snippet ? true : false}
+					className={matches ? 'w-50' : 'w-100'}
+					onClose={() => handleCodeSnippet(false)}
+				/>
 		</React.Fragment>
 	);
 };

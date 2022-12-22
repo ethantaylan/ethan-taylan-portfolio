@@ -7,11 +7,13 @@ import './code-snippet.scss';
 interface CodeSnippetsProps {
 	onClose: () => any;
 	className: string;
+	showCodeSnippet: boolean;
 }
 
 export const CodeSnippets: React.FC<CodeSnippetsProps> = ({
 	className,
 	onClose,
+	showCodeSnippet
 }) => {
 	const [isDetailActive, setIsDetailActive] = React.useState<boolean>(false);
 
@@ -20,7 +22,7 @@ export const CodeSnippets: React.FC<CodeSnippetsProps> = ({
 	};
 
 	return (
-		<div className={`${className} app-bg all-container`}>
+		<div className={`${className} ${showCodeSnippet ? '' : 'd-none'} app-bg all-container`}>
 			<h1 className='p-4'> // Code snippets showcase</h1>
 			
 			<div className='snippet-container'>

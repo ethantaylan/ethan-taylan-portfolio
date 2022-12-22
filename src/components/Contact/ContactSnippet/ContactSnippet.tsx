@@ -4,16 +4,28 @@ export interface ContactSnippetProps {
 	email: string;
 	message: string;
 	name: string;
+	showContactSnippet: boolean;
 }
 
-const ContactSnippet: React.FC<ContactSnippetProps> = ({email, message, name}) => {
+const ContactSnippet: React.FC<ContactSnippetProps> = ({
+	showContactSnippet,
+	email,
+	message,
+	name,
+}) => {
 	const day = new Date().getDate();
 	const month = new Date().getMonth();
 	const year = new Date().getFullYear();
 
 	return (
-		<div className='my-border-left align-items-center flex-column line-height-20 w-100 h-100 p-5 d-flex justify-content-center'>
-                    <h1 className='primary'>// live contact form</h1>
+		<div
+			className={
+				showContactSnippet
+					? 'd-none'
+					: 'my-border-left align-items-center flex-column line-height-20 w-100 h-100 p-5 d-flex justify-content-center'
+			}
+		>
+			<h1 className='primary'>// live contact form</h1>
 
 			<div className='d-flex contact-snippet-bg flex-column justify-content-center'>
 				<h1>
@@ -39,21 +51,24 @@ const ContactSnippet: React.FC<ContactSnippetProps> = ({email, message, name}) =
 						<span className='white-code'>name</span>
 						<span className='cyan-code'>: </span>
 						<span className='green-code'>
-							<span className='cyan-code'>"</span>{name}
+							<span className='cyan-code'>"</span>
+							{name}
 							<span className='cyan-code'>",</span>
 						</span>
 						<br />
 						<span className='white-code'>email</span>
 						<span className='cyan-code'>: </span>
 						<span className='green-code'>
-							<span className='cyan-code'>"</span>{email}
+							<span className='cyan-code'>"</span>
+							{email}
 							<span className='cyan-code'>",</span>
 						</span>
 						<br />
 						<span className='white-code'>message</span>
 						<span className='cyan-code'>: </span>
 						<span className='green-code'>
-							<span className='cyan-code'>"</span>{message}
+							<span className='cyan-code'>"</span>
+							{message}
 							<span className='cyan-code'>",</span>
 						</span>
 						<br />
