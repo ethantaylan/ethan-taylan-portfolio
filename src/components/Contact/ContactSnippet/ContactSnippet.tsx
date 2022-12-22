@@ -25,7 +25,7 @@ const ContactSnippet: React.FC<ContactSnippetProps> = ({
 					: 'my-border-left align-items-center flex-column line-height-20 w-100 h-100 p-5 d-flex justify-content-center'
 			}
 		>
-			<h1 className='primary'>// live contact form</h1>
+			<h1 className='primary mb-4'>// Live contact form</h1>
 
 			<div className='d-flex contact-snippet-bg flex-column justify-content-center'>
 				<h1>
