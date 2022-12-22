@@ -51,9 +51,11 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 	return (
 		<React.Fragment>
 			<div className='d-flex flex-column w-100'>
-				<h1 className='about-me-title'>_about-me</h1>
-				<div className='my-border-bottom flex-768-column app-bg w-100'>
+				<div className='h-100 folder-main-container app-bg w-100'>
+					
 					<div className='folder-container'>
+					<h1 className='about-me-title'>_about-me</h1>
+
 						<div className='d-flex px-3 folder-menu align-items-center w-100'>
 							{isFolderMenuActive ? (
 								<IoMdArrowDropdown
@@ -182,15 +184,14 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 							/>
 						</div>
 					</div>
-
 					{children}
 				</div>
 			</div>
-				<CodeSnippets
-					showCodeSnippet={snippet ? true : false}
-					className={matches ? 'w-50' : 'w-100'}
-					onClose={() => handleCodeSnippet(false)}
-				/>
+			<CodeSnippets
+				showCodeSnippet={snippet ? true : false}
+				className={matches ? 'w-50' : 'w-100'}
+				onClose={() => handleCodeSnippet(false)}
+			/>
 		</React.Fragment>
 	);
 };

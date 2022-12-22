@@ -24,10 +24,10 @@
 }
 
 @media screen and (min-width: 768px) {
-    .folder-container {
+	.folder-container {
 		width: 250px;
-		width: 100%;
 		height: auto;
+		border-right: 1px solid m.$secondary;
 	}
 
 	.primary-icon {
@@ -45,4 +45,8 @@
 		background-color: m.$secondary;
 		margin: 5px 0 5px 0px;
 	}
+	.folder-main-container {
+		display: flex;
+	}
 }
+
