@@ -4,6 +4,7 @@ import { RiContactsFill } from 'react-icons/ri';
 import { FaFileCode } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import './sidebar.scss';
+import useMediaQuery from '../../../hooks/useMediaQuery';
 
 export interface SideBarProps {
 	children?: any;
@@ -18,9 +19,10 @@ export function bodyHeight100() {
 }
 
 const SideBar: React.FC<SideBarProps> = ({ children }) => {
+	const matches = useMediaQuery('(min-width: 768px)');
+
 	return (
-		<React.Fragment>
-			<div className={`sidebar-main-container`}>
+			<div className='sidebar-main-container'>
 				<div className='sidebar-container'>
 					<ul className='sidebar-ul d-768-none'>
 						<NavLink
@@ -49,9 +51,8 @@ const SideBar: React.FC<SideBarProps> = ({ children }) => {
 						</NavLink>
 					</ul>
 				</div>
-				{children}
-			</div>{' '}
-		</React.Fragment>
+				<div className={`h-100 ${matches ? 'd-flex w-100' : ''}`}>{children}</div>
+			</div>
 	);
 };
 

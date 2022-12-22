@@ -1,6 +1,6 @@
 const ContactForm = () => {
+
 	return (
-		<div>
 			<div className='w-100 d-flex flex-column p-5'>
 				<form>
 					<span className='input-labels'>_name :</span>
@@ -26,7 +26,6 @@ const ContactForm = () => {
 					/>
 				</form>
 			</div>
-		</div>
 	);
 };
 

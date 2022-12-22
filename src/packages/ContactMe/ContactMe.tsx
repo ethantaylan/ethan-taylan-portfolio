@@ -5,7 +5,7 @@ interface ContactMeProps {
 }
 
 const ContactMe: React.FC<ContactMeProps> = ({ children }) => {
-	return <div>{children}</div>;
+	return <div className='w-100'>{children}</div>;
 };
 
 export default ContactMe;

@@ -1,0 +1,49 @@
+@use '../../../styles/scss/styles.scss' as m;
+
+// CONTACT SNIPPET TEXT COLORS
+
+.rose-code {
+	color: rgb(191, 148, 228);
+}
+
+.white-code {
+	color: white;
+}
+
+.blue-code {
+	color: rgb(125, 152, 222);
+}
+
+.green-code {
+	color: rgb(182, 207, 137);
+}
+
+.fushia-code {
+	color: rgb(204, 118, 209);
+}
+
+.orange-code {
+	color: orange;
+}
+
+.grey-code {
+	color: rgb(123, 123, 123);
+}
+
+.text-space-left {
+	margin-left: 20px;
+}
+
+.line-height-20 {
+	line-height: 20px;
+}
+
+.cyan-code {
+	color: rgb(121, 206, 206);
+}
+
+.acc-code {
+
+    color: yellow
+	// color: rgb(204, 118, 209);
+}

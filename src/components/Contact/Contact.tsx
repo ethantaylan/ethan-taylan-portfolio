@@ -1,12 +1,14 @@
 import React from 'react';
-import ContactForm from './ContactForm';
+import ContactForm from './ContactForm/ContactForm';
 import './contact.scss';
+import ContactSnippet from './ContactSnippet/ContactSnippet';
 
 const Contact = () => {
 	return (
-		<React.Fragment>
+		<div className='d-flex h-100 w-100'>
 			<ContactForm />
-		</React.Fragment>
+			<ContactSnippet />
+		</div>
 	);
 };
 export default Contact;
