@@ -3,30 +3,30 @@ import useMediaQuery from '../../../hooks/useMediaQuery';
 import ContactSnippet from '../ContactSnippet/ContactSnippet';
 
 const ContactForm = () => {
-	const [message, setMessage] = React.useState<string>('');
-	const [email, setEmail] = React.useState<string>('');
 	const [name, setName] = React.useState<string>('');
-
-	const getMessageInputValue = (event: any) => {
-		event.preventDefault();
-		setMessage(event.target.value);
-	};
-
-	const getEmailInputValue = (event: any) => {
-		event.preventDefault();
-		setEmail(event.target.value);
-	};
+	const [email, setEmail] = React.useState<string>('');
+	const [message, setMessage] = React.useState<string>('');
 
 	const getNameInputValue = (event: any) => {
 		event.preventDefault();
 		setName(event.target.value);
 	};
+	const getEmailInputValue = (event: any) => {
+		event.preventDefault();
+		setEmail(event.target.value);
+	};
+	const getMessageInputValue = (event: any) => {
+		event.preventDefault();
+		setMessage(event.target.value);
+	};
 
 	React.useEffect(() => {
+		setName(name);
+		setEmail(email);
 		setMessage(message);
-	}, []);
+	}, [name, email, message]);
 
-	const matches = useMediaQuery('(max-width: 768px)')
+	const matches = useMediaQuery('(max-width: 768px)');
 
 	return (
 		<div className='d-flex flex-row h-100 w-100'>

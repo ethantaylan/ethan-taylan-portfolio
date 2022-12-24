@@ -19,49 +19,53 @@ export function bodyHeight100() {
 	document.body.className = 'h-100';
 }
 
+if (location.pathname.includes('works')) {
+	document.body.className = 'h-auto';
+}
+
 const SideBar: React.FC<SideBarProps> = ({ children }) => {
 	const matches = useMediaQuery('(min-width: 768px)');
 
 	return (
-			<div className='sidebar-main-container'>
-				<div className='sidebar-container'>
-					<ul className='sidebar-ul d-768-none'>
-						<NavLink
-							onClick={() => bodyHeight100()}
-							to='/home'
-						>
-							<li className='sidebar-li'>
-								<AiFillHome />
-							</li>
-						</NavLink>
-						<NavLink
-							onClick={() => bodyHeight100()}
-							to='/about-me'
-						>
-							<li className='sidebar-li'>
-								<RiContactsFill />
-							</li>
-						</NavLink>
-						<NavLink
-							onClick={() => bodyHeightAuto()}
-							to='/works'
-						>
-							<li className='sidebar-li'>
-								<FaFileCode />
-							</li>
-						</NavLink>
-						<NavLink
-							onClick={() => bodyHeight100()}
-							to='/contact-me'
-						>
-							<li className='sidebar-li'>
-								<IoMdMail />
-							</li>
-						</NavLink>
-					</ul>
-				</div>
-				<div className={`h-100 ${matches ? 'd-flex w-100' : ''}`}>{children}</div>
+		<div className='sidebar-main-container'>
+			<div className='sidebar-container'>
+				<ul className='sidebar-ul d-768-none'>
+					<NavLink
+						onClick={() => bodyHeight100()}
+						to='/home'
+					>
+						<li className='sidebar-li'>
+							<AiFillHome />
+						</li>
+					</NavLink>
+					<NavLink
+						onClick={() => bodyHeight100()}
+						to='/about-me'
+					>
+						<li className='sidebar-li'>
+							<RiContactsFill />
+						</li>
+					</NavLink>
+					<NavLink
+						onClick={() => bodyHeightAuto()}
+						to='/works'
+					>
+						<li className='sidebar-li'>
+							<FaFileCode />
+						</li>
+					</NavLink>
+					<NavLink
+						onClick={() => bodyHeight100()}
+						to='/contact-me'
+					>
+						<li className='sidebar-li'>
+							<IoMdMail />
+						</li>
+					</NavLink>
+				</ul>
 			</div>
+			<div className={`h-100 ${matches ? 'd-flex w-100' : ''}`}>{children}</div>
+		</div>
 	);
 };
 

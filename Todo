@@ -1,7 +1,4 @@
-- refactoring
-- NavLinks (do a map on Links)
-- app border
+page works : 
 
-next :
-
-faire un composant pour la partie contacte car il est réutilisé deux fois
+problème avec le height
+ajoutez une folder bar avec : 'training projects' et 'professional projects'

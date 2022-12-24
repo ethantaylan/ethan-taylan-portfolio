@@ -1,12 +1,13 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
-import './portfolio-cards.scss'
+import './portfolio-cards.scss';
 
 interface PortfolioCardsProps {
 	img: any;
 	projectNumber: string;
 	projectSubName: string;
 	projectText: string;
+	href: string;
 }
 
 const PortfolioCards: React.FC<PortfolioCardsProps> = ({
@@ -14,6 +15,7 @@ const PortfolioCards: React.FC<PortfolioCardsProps> = ({
 	projectNumber,
 	projectSubName,
 	img,
+	href,
 }) => {
 	return (
 		<div className='d-flex mb-5 align-items-center flex-column'>
@@ -34,17 +36,23 @@ const PortfolioCards: React.FC<PortfolioCardsProps> = ({
 						/>
 						<Card.Body style={{ padding: '20px', backgroundColor: '#001221' }}>
 							<Card.Text className='mb-4'>{projectText}</Card.Text>
-							<Button
-								className='p-2'
-								style={{
-									color: '#607b96',
-									borderRadius: '3px',
-									border: 'none',
-									backgroundColor: '#1C2B3A',
-								}}
+							<a
+								href={href}
+								target='_blank'
+								rel='noopener noreferrer'
 							>
-								view project
-							</Button>
+								<Button
+									className='p-2'
+									style={{
+										color: '#607b96',
+										borderRadius: '3px',
+										border: 'none',
+										backgroundColor: '#1C2B3A',
+									}}
+								>
+									view project
+								</Button>
+							</a>
 						</Card.Body>
 					</Card>
 				</div>

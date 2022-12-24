@@ -14,9 +14,9 @@ const ContactSnippet: React.FC<ContactSnippetProps> = ({
 	name,
 }) => {
 	const day = new Date().getDate();
-	const month = new Date().getMonth();
+	const month = new Date().getMonth() + 1;
 	const year = new Date().getFullYear();
-
+	
 	return (
 		<div
 			className={

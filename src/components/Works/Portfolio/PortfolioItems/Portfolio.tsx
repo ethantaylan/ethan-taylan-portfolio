@@ -8,36 +8,39 @@ import OhMyFood from '../../../../assets/ohmyfood.png';
 // import EluImg from '../../../../assets/elu.jpg';
 import { BsArrow90DegUp } from 'react-icons/bs';
 
-interface PortfolioProps {
-}
+interface PortfolioProps {}
 
 const Portfolio: React.FC<PortfolioProps> = ({}) => {
 	return (
 		<div className='d-flex app-bg flex-column p-5 w-100'>
 			<div className='d-flex h-100 w-100 align-items-center flex-wrap justify-content-center'>
 				<PortfolioCards
-					img={OrinonoImg}
-					projectNumber={'1'}
-					projectSubName={'orinoco'}
-					projectText={'Lorem'}
-				/>
-				<PortfolioCards
 					img={ReserviaImg}
 					projectNumber={'2'}
 					projectSubName={'reservia'}
-					projectText={'Lorem'}
+					projectText={'HTML & CSS project'}
+					href={'https://ethantaylan.github.io/Reservia/'}
 				/>
 				<PortfolioCards
 					img={LaChouette}
 					projectNumber={'3'}
 					projectSubName={'La chouette agence'}
-					projectText={'Lorem'}
+					projectText={'CEO refactoring'}
+					href={''}
+				/>
+				<PortfolioCards
+					img={OrinonoImg}
+					projectNumber={'1'}
+					projectSubName={'orinoco'}
+					projectText={'Javascript project using Teddybears API'}
+					href={''}
 				/>
 				<PortfolioCards
 					img={OhMyFood}
 					projectNumber={'4'}
 					projectSubName={'oh my food'}
-					projectText={'Lorem'}
+					projectText={'mobile first project'}
+					href={''}
 				/>
 				{/* <PortfolioCards
 					img={EluImg}
