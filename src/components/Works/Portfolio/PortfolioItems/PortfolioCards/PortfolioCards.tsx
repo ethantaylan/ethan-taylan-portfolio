@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import StaticModal from '../../../../static-modal/StaticModal';
 import './portfolio-cards.scss';
 
 interface PortfolioCardsProps {
@@ -7,7 +8,8 @@ interface PortfolioCardsProps {
 	projectNumber: string;
 	projectSubName: string;
 	projectText: string;
-	href: string;
+	href?: string;
+	isModalActive?: boolean;
 }
 
 const PortfolioCards: React.FC<PortfolioCardsProps> = ({
@@ -16,9 +18,25 @@ const PortfolioCards: React.FC<PortfolioCardsProps> = ({
 	projectSubName,
 	img,
 	href,
+	isModalActive,
 }) => {
+	const [showModal, setShowModal] = React.useState(false);
+
+	const handleClose = () => setShowModal(false);
+	const handleShow = () => setShowModal(true);
+
 	return (
 		<div className='d-flex mb-5 align-items-center flex-column'>
+			{isModalActive && (
+				<StaticModal
+					modalTitle={projectSubName}
+					modalButtonActive={false}
+					handleClose={handleClose}
+					handleShow={handleShow}
+					showModal={showModal}
+					modalText={'This project is unavailable'}
+				/>
+			)}
 			<div className='h-100 w-100 d-flex flex-row align-items-center'>
 				<div className='d-flex flex-column w-100 m-4'>
 					<span className='mb-3 card-title'>
@@ -35,13 +53,14 @@ const PortfolioCards: React.FC<PortfolioCardsProps> = ({
 							className='my-border portfolio-img-style'
 						/>
 						<Card.Body style={{ padding: '20px', backgroundColor: '#001221' }}>
-							<Card.Text className='mb-4'>{projectText}</Card.Text>
+							<Card.Text className='mb-4 line-height-20'>{projectText}</Card.Text>
 							<a
 								href={href}
 								target='_blank'
 								rel='noopener noreferrer'
 							>
 								<Button
+									onClick={handleShow}
 									className='p-2'
 									style={{
 										color: '#607b96',

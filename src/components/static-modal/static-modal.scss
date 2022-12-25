@@ -1,0 +1,27 @@
+@use '../../styles/scss/styles.scss' as m;
+
+.modal-content {
+	background-color: #011627;
+	border: 1px solid m.$primary;
+	color: m.$primary;
+	border: 1px solid m.$secondary;
+}
+
+.modal-header {
+	border: none;
+    color: white;
+}
+
+.modal-footer {
+	border: none;
+}
+
+.modal-btn {
+	background-color: m.$secondary;
+	border: none;
+	color: m.$primary;
+	border-radius: 0px;
+    &:hover {
+    background-color: m.$primary;
+    }
+}

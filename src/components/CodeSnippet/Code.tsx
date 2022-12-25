@@ -1,4 +1,3 @@
-import React from 'react';
 import { codeSnippetsColors } from './code-snippets-colors';
 import CodeSnippetSpan from './CodeSnippetSpan';
 
@@ -83,17 +82,20 @@ const Code = () => {
 			</div>
 			<div className='mt-2'>
 				{space}
+				<CodeSnippetSpan color={codeSnippetsColors.cyan}>{'</'}</CodeSnippetSpan>
+				<CodeSnippetSpan color={codeSnippetsColors.red}>{'span'}</CodeSnippetSpan>
+				<CodeSnippetSpan color={codeSnippetsColors.cyan}>{'>'}</CodeSnippetSpan>
+			</div>
+			<div className='mt-2'>
+				{space}
 				{space}
 				<CodeSnippetSpan color={codeSnippetsColors.cyan}>{')'}</CodeSnippetSpan>
 				<CodeSnippetSpan color={codeSnippetsColors.purple}>{'}'}</CodeSnippetSpan>
 				<br />
 			</div>
-			<div className='mt-2'>
-				{space}
-				<CodeSnippetSpan color={codeSnippetsColors.cyan}>{'<'}</CodeSnippetSpan>
-				<CodeSnippetSpan color={codeSnippetsColors.red}>{'span'}</CodeSnippetSpan>
-        <CodeSnippetSpan color={codeSnippetsColors.cyan}>{'/>'}</CodeSnippetSpan>
-			</div>
+			<CodeSnippetSpan color={codeSnippetsColors.cyan}>{'}'}</CodeSnippetSpan>
+
+
 		</>
 	);
 };

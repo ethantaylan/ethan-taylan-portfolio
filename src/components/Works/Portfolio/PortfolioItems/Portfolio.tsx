@@ -8,39 +8,39 @@ import OhMyFood from '../../../../assets/ohmyfood.png';
 // import EluImg from '../../../../assets/elu.jpg';
 import { BsArrow90DegUp } from 'react-icons/bs';
 
-interface PortfolioProps {}
-
-const Portfolio: React.FC<PortfolioProps> = ({}) => {
+const Portfolio = ({}) => {
 	return (
 		<div className='d-flex app-bg flex-column p-5 w-100'>
 			<div className='d-flex h-100 w-100 align-items-center flex-wrap justify-content-center'>
 				<PortfolioCards
 					img={ReserviaImg}
-					projectNumber={'2'}
+					projectNumber={'1'}
 					projectSubName={'reservia'}
 					projectText={'HTML & CSS project'}
 					href={'https://ethantaylan.github.io/Reservia/'}
 				/>
 				<PortfolioCards
 					img={LaChouette}
-					projectNumber={'3'}
-					projectSubName={'La chouette agence'}
+					projectNumber={'2'}
+					projectSubName={'la-chouette-agence'}
 					projectText={'CEO refactoring'}
-					href={''}
+					href={'https://ethantaylan.github.io/La_chouette_agence/'}
 				/>
 				<PortfolioCards
 					img={OrinonoImg}
-					projectNumber={'1'}
+					projectNumber={'3'}
 					projectSubName={'orinoco'}
 					projectText={'Javascript project using Teddybears API'}
-					href={''}
+					isModalActive={true}
 				/>
 				<PortfolioCards
 					img={OhMyFood}
 					projectNumber={'4'}
-					projectSubName={'oh my food'}
-					projectText={'mobile first project'}
-					href={''}
+					projectSubName={'oh-my-food'}
+					projectText={'Mobile first project'}
+					href={'https://ethantaylan.github.io/Ohmyfood/'}
+					isModalActive={false}
+
 				/>
 				{/* <PortfolioCards
 					img={EluImg}
