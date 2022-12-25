@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { AiFillFileText } from 'react-icons/ai';
 import { FaReact } from 'react-icons/fa';
-import './folder-sub-items.scss';
+import './FolderBarSubItems.scss';
 
 export interface AboutMeSubItemsProps {
 	fileIconActive?: boolean;
@@ -13,7 +13,8 @@ export interface AboutMeSubItemsProps {
 	subItemTitle?: any;
 	to?: string | any;
 	socialIcon?: any;
-	onClick?: () => void
+	onClick?: () => void;
+	article?: any;
 }
 
 const AboutMeSubItems: React.FC<AboutMeSubItemsProps> = ({
@@ -26,10 +27,18 @@ const AboutMeSubItems: React.FC<AboutMeSubItemsProps> = ({
 }) => {
 	return (
 		<div>
-			<div onClick={onClick} className='sub-item-container hover'>
+			<div
+				onClick={onClick}
+				className='sub-item-container hover'
+			>
 				<NavLink to={to}>
 					<div className='d-flex margin-top-5 align-items-center padding-bottom-12'>
-						{fileIconActive && <AiFillFileText className='margin-left icon-spacing' />}
+						{fileIconActive && (
+							<AiFillFileText
+								className='margin-left icon-spacing'
+								size={16}
+							/>
+						)}
 						{codeIconActive && (
 							<FaReact
 								className='margin-left margin-right-5'

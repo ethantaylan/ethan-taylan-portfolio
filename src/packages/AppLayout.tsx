@@ -7,7 +7,7 @@ import Home from './Home/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Bio from '../components/AboutMe/Biography/Biography';
 import Hobbies from '../components/AboutMe/Hobbies/Hobbies';
-import Portfolio from '../components/Works/Portfolio/PortfolioItems/Portfolio';
+import Portfolio from '../components/Works/Portfolio/PortfolioItems/Works';
 import ContactMe from './ContactMe/ContactMe';
 import Contact from '../components/Contact/Contact';
 import SideBar from '../components/Navbar/Sidebar/SideBar';

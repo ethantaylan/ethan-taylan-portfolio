@@ -5,11 +5,12 @@
 	border: 1px solid m.$primary;
 	color: m.$primary;
 	border: 1px solid m.$secondary;
+	border-radius: 0px;
 }
 
 .modal-header {
 	border: none;
-    color: white;
+	color: white;
 }
 
 .modal-footer {
@@ -21,7 +22,9 @@
 	border: none;
 	color: m.$primary;
 	border-radius: 0px;
-    &:hover {
-    background-color: m.$primary;
-    }
+	border: 1px solid m.$primary;
+	&:hover {
+		background-color: m.$primary;
+		border: 1px solid transparent;
+	}
 }

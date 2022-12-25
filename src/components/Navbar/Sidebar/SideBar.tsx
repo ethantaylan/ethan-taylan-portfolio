@@ -19,9 +19,9 @@ export function bodyHeight100() {
 	document.body.className = 'h-100';
 }
 
-if (location.pathname.includes('works')) {
-	document.body.className = 'h-auto';
-}
+// if (location.pathname.includes('works')) {
+// 	document.body.className = 'h-auto';
+// }
 
 const SideBar: React.FC<SideBarProps> = ({ children }) => {
 	const matches = useMediaQuery('(min-width: 768px)');
@@ -47,7 +47,7 @@ const SideBar: React.FC<SideBarProps> = ({ children }) => {
 						</li>
 					</NavLink>
 					<NavLink
-						onClick={() => bodyHeightAuto()}
+						onClick={() => bodyHeight100()}
 						to='/works'
 					>
 						<li className='sidebar-li'>

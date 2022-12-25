@@ -1,5 +1,5 @@
-import { codeSnippetsColors } from './code-snippets-colors';
-import CodeSnippetSpan from './CodeSnippetSpan';
+import { codeSnippetsColors } from '../code-snippets-colors';
+import CodeSnippetSpan from '../CodeSnippetSpan';
 
 const space = <span style={{ color: '#010D15' }}>{'__'}</span>;
 

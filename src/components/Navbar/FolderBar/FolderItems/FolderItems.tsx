@@ -3,7 +3,7 @@ import { FaChevronDown, FaChevronRight, FaReact } from 'react-icons/fa';
 import { AiFillFolder } from 'react-icons/ai';
 import './folder-items.scss';
 
-interface ItemsProps {
+interface FolderBarItemsProps {
 	title?: any;
 	children?: any;
 	folderColors?: any;
@@ -18,7 +18,7 @@ interface ItemsProps {
 	onClick?: () => any;
 }
 
-const AboutMeItems: React.FC<ItemsProps> = ({
+const FolderBarItems: React.FC<FolderBarItemsProps> = ({
 	chevronIconActive = true,
 	folderIconActive = true,
 	codeIconActive = false,
@@ -71,4 +71,4 @@ const AboutMeItems: React.FC<ItemsProps> = ({
 	);
 };
 
-export default AboutMeItems;
+export default FolderBarItems;

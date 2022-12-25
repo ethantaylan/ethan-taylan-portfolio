@@ -1,7 +1,7 @@
 import React from 'react';
 import { BiCommentDetail } from 'react-icons/bi';
 import { IoIosClose } from 'react-icons/io';
-import Code from './Code';
+import Code from './Code/Code';
 import './code-snippet.scss';
 
 interface CodeSnippetsProps {

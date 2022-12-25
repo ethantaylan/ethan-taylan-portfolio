@@ -2,3 +2,10 @@ page works :
 
 problème avec le height
 ajoutez une folder bar avec : 'training projects' et 'professional projects'
+
+
+
+remove {children} add ReactPropsWithChildren instead of {children}
+
+
+chevron avec props = active

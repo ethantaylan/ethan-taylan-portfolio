@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
-import StaticModal from '../../../../static-modal/StaticModal';
+import StaticModal from '../../../../StaticModal/StaticModal';
 import './portfolio-cards.scss';
 
 interface PortfolioCardsProps {
