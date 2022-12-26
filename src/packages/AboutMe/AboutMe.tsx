@@ -25,6 +25,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 					title: 'biography',
 					iconColor: 'red',
 					articles: [{ title: 'biography.txt' }],
+					cutomIcon: 'test'
 				},
 				{
 					title: 'hobbies',
@@ -57,7 +58,8 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 				<div className='h-100 folder-main-container app-bg w-100'>
 					<FolderBar
 						tabs={tabs}
-						title={'about-me'} iconColor={''}					/>
+						title={'about-me'}
+					/>
 					{children}
 				</div>
 			</div>

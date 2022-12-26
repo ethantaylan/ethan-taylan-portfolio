@@ -8,7 +8,6 @@ export interface FolderBarTab {
 }
 
 export interface FolderBarFolder {
-	iconColor?: string;
 	title?: string;
 	articles?: FolderBarArticle[];
 }
@@ -21,14 +20,9 @@ interface FolderBarProps {
 	children?: any;
 	title: string;
 	tabs?: FolderBarTab[];
-	iconColor: string;
 }
 
-const FolderBar: React.FC<FolderBarProps> = ({
-	tabs,
-    title,
-}) => {
-
+const FolderBar: React.FC<FolderBarProps> = ({ tabs, title }) => {
 	return (
 		<div className='d-flex flex-column w-100'>
 			<div className='h-100 folder-main-container app-bg w-100'>
@@ -38,7 +32,6 @@ const FolderBar: React.FC<FolderBarProps> = ({
 						<FolderBarTab
 							key={index}
 							tab={tab}
-							customIcon={<AiFillFolder color={''} size={16} />}
 						/>
 					))}
 				</div>

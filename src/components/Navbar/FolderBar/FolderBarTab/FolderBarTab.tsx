@@ -5,10 +5,9 @@ import { FolderBarFolder } from '../FolderBarFolder/FolderBarFolder';
 
 interface FolderBarTabProps {
 	tab: FolderBarTabModel;
-	customIcon: any
 }
 
-export const FolderBarTab: React.FC<FolderBarTabProps> = ({ tab, customIcon }) => {
+export const FolderBarTab: React.FC<FolderBarTabProps> = ({ tab }) => {
 	const [isMenuActive, setMenuActive] = React.useState<boolean>(false);
 
 	return (
@@ -36,7 +35,6 @@ export const FolderBarTab: React.FC<FolderBarTabProps> = ({ tab, customIcon }) =
 				<FolderBarFolder
 					key={index}
 					folder={folder}
-					customIcon={customIcon}
 				/>
 			))}
 		</React.Fragment>
