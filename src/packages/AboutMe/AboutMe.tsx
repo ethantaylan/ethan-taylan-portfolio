@@ -25,7 +25,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 					title: 'biography',
 					iconColor: 'red',
 					articles: [{ title: 'biography.txt' }],
-					cutomIcon: 'test'
+					cutomIcon: 'test from about-me',
 				},
 				{
 					title: 'hobbies',
