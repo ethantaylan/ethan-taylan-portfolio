@@ -5,9 +5,10 @@ import { FolderBarFolder } from '../FolderBarFolder/FolderBarFolder';
 
 interface FolderBarTabProps {
 	tab: FolderBarTabModel;
+	customIcon: any
 }
 
-export const FolderBarTab: React.FC<FolderBarTabProps> = ({ tab }) => {
+export const FolderBarTab: React.FC<FolderBarTabProps> = ({ tab, customIcon }) => {
 	const [isMenuActive, setMenuActive] = React.useState<boolean>(false);
 
 	return (
@@ -19,23 +20,23 @@ export const FolderBarTab: React.FC<FolderBarTabProps> = ({ tab }) => {
 				{isMenuActive ? (
 					<IoMdArrowDropdown
 						className='primary-icon'
-						size={18}
+						size={20}
 					/>
 				) : (
 					<IoMdArrowDropright
 						className='primary-icon'
-						size={18}
+						size={20}
 					/>
 				)}
 				<div className='w-100'>
-					<h1 className='folder-bar-title'>{tab.title}</h1>
+					<h1 className='d-flex align-items-center m-0 p-2 hover'>{tab.title}</h1>
 				</div>
 			</div>
 			{tab.folders?.map((folder, index) => (
 				<FolderBarFolder
 					key={index}
 					folder={folder}
-					customIcon={undefined}
+					customIcon={customIcon}
 				/>
 			))}
 		</React.Fragment>

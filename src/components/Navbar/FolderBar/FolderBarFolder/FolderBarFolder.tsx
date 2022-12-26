@@ -1,10 +1,10 @@
 import React from 'react';
-import { AiFillFolder } from 'react-icons/ai';
+import { AiFillFileText } from 'react-icons/ai';
 import {
 	FolderBarFolder as FolderBarFolderModel,
 	FolderBarArticle as FolderBarArticleModel,
 } from '../FolderBar';
-import FolderBarSubItems from '../FolderItems/FolderSubItems/FolderBarSubItems';
+import FolderBarSubItems from '../FolderBarSubItems/FolderBarSubItems';
 
 export interface FolderBarFolderProps {
 	folder: FolderBarFolderModel;
@@ -16,11 +16,14 @@ export const FolderBarFolder: React.FC<FolderBarFolderProps> = ({
 	customIcon,
 }) => {
 	return (
-		<div className='p-4 primary'>
+		<div className='p-2 primary'>
 			{customIcon}
 			<span>{folder.title}</span>
 			{folder.articles?.map((article: FolderBarArticleModel) => (
-				<FolderBarSubItems article={article} />
+				<FolderBarSubItems
+					article={article}
+					customIcon={<AiFillFileText />}
+				/>
 			))}
 		</div>
 	);

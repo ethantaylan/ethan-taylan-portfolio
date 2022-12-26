@@ -17,67 +17,47 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 
 	const matches = useMediaQuery('(min-width: 768px)');
 
+	const tabs = [
+		{
+			title: 'personnal-info',
+			folders: [
+				{
+					title: 'biography',
+					iconColor: 'red',
+					articles: [{ title: 'biography.txt' }],
+				},
+				{
+					title: 'hobbies',
+					iconColor: 'orange',
+					articles: [{ title: 'test' }],
+				},
+				{
+					title: 'interests',
+					iconColor: 'red',
+					articles: [{ title: '' }],
+				},
+			],
+		},
+		{
+			title: 'contact',
+			folders: [
+				{
+					title: '0766704190',
+				},
+				{
+					title: 'taylanethan@gmail.com',
+				},
+			],
+		},
+	];
+
 	return (
 		<React.Fragment>
-			{/* <div
-						className={isContactMenuActive ? 'd-block my-border-bottom' : 'd-none'}
-					>
-						<FolderBarItems
-							className='p-2'
-							mail='taylanethan@gmail.com'
-							mailIconActive={true}
-							telIconActive={false}
-							chevronIconActive={false}
-							folderIconActive={false}
-							title={<IoMailSharp size={16} />}
-						/>
-						<FolderBarItems
-							className='p-2'
-							number='+33766704190'
-							telIconActive={true}
-							mailIconActive={false}
-							chevronIconActive={false}
-							folderIconActive={false}
-							title={<BsFillTelephoneFill size={16} />}
-						/>
-					</div> */}
 			<div className='d-flex flex-column w-100'>
 				<div className='h-100 folder-main-container app-bg w-100'>
 					<FolderBar
-						tabs={[
-							{
-								title: 'personnal-info',
-								folders: [
-									{
-										title: 'test',
-										iconColor: 'orange',
-										articles: [{ title: 'test' }],
-									},
-									{
-										title: 'test',
-										iconColor: 'orange',
-										articles: [{ title: 'test' }],
-									},
-								],
-							},
-							{
-								title: 'contact',
-								folders: [
-									{
-										title: '0766704190',
-										iconColor: 'blue',
-										articles: [{ title: 'test' }],
-									},
-									{
-										title: 'test',
-										iconColor: 'orange',
-										articles: [{ title: 'test' }],
-									},
-								],
-							},
-						]}
-						title={'about-me'}
-					/>
+						tabs={tabs}
+						title={'about-me'} iconColor={''}					/>
 					{children}
 				</div>
 			</div>

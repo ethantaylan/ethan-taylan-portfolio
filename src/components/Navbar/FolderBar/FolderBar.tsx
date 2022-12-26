@@ -1,4 +1,5 @@
 import React from 'react';
+import { AiFillFolder } from 'react-icons/ai';
 import { FolderBarTab } from './FolderBarTab/FolderBarTab';
 
 export interface FolderBarTab {
@@ -20,11 +21,12 @@ interface FolderBarProps {
 	children?: any;
 	title: string;
 	tabs?: FolderBarTab[];
+	iconColor: string;
 }
 
 const FolderBar: React.FC<FolderBarProps> = ({
 	tabs,
-    title
+    title,
 }) => {
 
 	return (
@@ -36,6 +38,7 @@ const FolderBar: React.FC<FolderBarProps> = ({
 						<FolderBarTab
 							key={index}
 							tab={tab}
+							customIcon={<AiFillFolder color={''} size={16} />}
 						/>
 					))}
 				</div>
