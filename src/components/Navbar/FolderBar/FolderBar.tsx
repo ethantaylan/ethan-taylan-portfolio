@@ -1,5 +1,4 @@
 import React from 'react';
-import { AiFillFolder } from 'react-icons/ai';
 import { FolderBarTab } from './FolderBarTab/FolderBarTab';
 
 export interface FolderBarTab {
@@ -9,10 +8,11 @@ export interface FolderBarTab {
 
 export interface FolderBarFolder {
 	title?: string;
-	articles?: FolderBarArticle[];
+	items?: FolderBarItems[];
 }
 
-export interface FolderBarArticle {
+export interface FolderBarItems {
+	icon: any;
 	title: string;
 }
 

@@ -23,19 +23,12 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
 			folders: [
 				{
 					title: 'biography',
-					iconColor: 'red',
-					articles: [{ title: 'biography.txt' }],
-					cutomIcon: 'test'
 				},
 				{
 					title: 'hobbies',
-					iconColor: 'orange',
-					articles: [{ title: 'test' }],
 				},
 				{
 					title: 'interests',
-					iconColor: 'red',
-					articles: [{ title: '' }],
 				},
 			],
 		},

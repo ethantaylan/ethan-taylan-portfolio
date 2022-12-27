@@ -1,24 +1,20 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { FolderBarItems as FolderBarItemsModel } from '../FolderBar';
 import './FolderBarItems.scss';
 
 export interface FolderBarItemsProps {
-	children?: any;
-	itemTitle?: any;
-	to?: string | any;
-	article?: any;
+	to?: any;
+	item: FolderBarItemsModel | any ;
 }
 
-const FolderBarItems: React.FC<FolderBarItemsProps> = ({ itemTitle, to }) => {
+const FolderBarItems: React.FC<FolderBarItemsProps> = ({ item, to }) => {
 	return (
-		<div>
-			<div className='sub-item-container hover'>
-				<NavLink to={to}>
-					<div className='d-flex margin-top-5 align-items-center padding-bottom-12'>
-						{itemTitle}
+		<div className='sub-item-container hover'>
+			<NavLink to={to}>
+				<div className='d-flex margin-top-5 align-items-center padding-bottom-12'>
 					</div>
-				</NavLink>
-			</div>
+			</NavLink>
 		</div>
 	);
 };
