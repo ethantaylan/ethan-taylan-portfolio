@@ -16,6 +16,9 @@ export const FolderBarFolder: React.FC<FolderBarFolderProps> = ({ folder }) => {
         <span className='icon-spacing'>{folder.icon}</span>
         <span>{folder.title}</span>
       </div>
+      {folder.articles?.map((article: FolderBarArticleModel, index: number) => (
+        <FolderBarArticle key={index} article={article} />
+      ))}
     </div>
   );
 };
