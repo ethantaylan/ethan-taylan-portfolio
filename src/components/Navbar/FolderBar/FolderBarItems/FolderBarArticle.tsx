@@ -12,7 +12,7 @@ export const FolderBarArticle: React.FC<FolderBarArticleProps> = ({
 }) => {
   return (
     <div>
-      <div className="sub-item-container hover">
+      <div className="ms-2 sub-item-container hover">
         <NavLink to={article.href}>
           <div className="d-flex article-container hover">
             <span className="d-flex icon-spacing">{article.icon}</span>

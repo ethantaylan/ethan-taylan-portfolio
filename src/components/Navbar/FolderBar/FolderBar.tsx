@@ -10,6 +10,7 @@ export interface FolderBarFolder {
   title?: string;
   articles?: FolderBarArticle[];
   icon: React.ReactElement;
+  chevron: boolean;
 }
 
 export interface FolderBarArticle {

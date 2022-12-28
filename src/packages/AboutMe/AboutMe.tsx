@@ -4,7 +4,12 @@ import './about-me.scss';
 import useMediaQuery from '../../hooks/useMediaQuery';
 import FolderBar from '../../components/Navbar/FolderBar/FolderBar';
 import { FaGithubSquare } from 'react-icons/fa';
-import { AiFillFileText, AiFillFolder, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
+import {
+  AiFillFileText,
+  AiFillFolder,
+  AiFillInstagram,
+  AiFillLinkedin
+} from 'react-icons/ai';
 import { IoMdMail } from 'react-icons/io';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 
@@ -26,39 +31,48 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
       title: 'personnal-info',
       folders: [
         {
+          chevron: true,
           title: 'about-me',
           icon: <AiFillFolder size={18} color="mediumslateblue" />,
           articles: [
-            { title: 'biography.txt', icon: <AiFillFileText size={14} />, href: '/about-me/biography' },
-            { title: 'education.txt', icon: <AiFillFileText size={14} />, href: '/about-me/carreer'},
+            {
+              title: 'biography.txt',
+              icon: <AiFillFileText size={14} />,
+              href: '/about-me/biography'
+            },
+            {
+              title: 'education.txt',
+              icon: <AiFillFileText size={14} />,
+              href: '/about-me/carreer'
+            },
             { title: 'hobbies.txt', icon: <AiFillFileText size={14} /> }
           ]
         },
         {
+          chevron: true,
           title: 'pro-carreer',
           icon: <AiFillFolder size={18} color="teal" />,
           articles: [
             { title: 'army.txt', icon: <AiFillFileText size={14} /> },
             { title: 'mecanician.txt', icon: <AiFillFileText size={14} /> },
             { title: 'developer.txt', icon: <AiFillFileText size={14} /> },
-            { title: 'resume.pdf', icon: <AiFillFileText size={14} /> },
-
-
+            { title: 'resume.pdf', icon: <AiFillFileText size={14} /> }
           ]
         },
         {
+          chevron: true,
           title: 'socials',
           icon: <AiFillFolder size={18} color="tan" />,
           articles: [
-            { title: 'instagram', icon: <AiFillInstagram size={14} />, },
+            { title: 'instagram', icon: <AiFillInstagram size={14} /> },
             { title: 'github', icon: <FaGithubSquare size={14} /> },
             { title: 'linkedin', icon: <AiFillLinkedin size={14} /> }
-
           ]
         }
       ]
     },
     {
+      chevron: false,
       title: 'contact',
       folders: [
         {
@@ -66,6 +80,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
           title: '0766704190'
         },
         {
+          chevron: false,
           title: 'taylanethan@gmail.com',
           icon: <IoMdMail size={14} />
         }
