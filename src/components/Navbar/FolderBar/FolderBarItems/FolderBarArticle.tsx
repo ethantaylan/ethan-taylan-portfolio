@@ -4,21 +4,19 @@ import { FolderBarArticle as FolderBarArticleModel } from '../FolderBar';
 import './FolderBarArticle.scss';
 
 export interface FolderBarArticleProps {
-  to?: any;
   article: FolderBarArticleModel;
 }
 
 export const FolderBarArticle: React.FC<FolderBarArticleProps> = ({
-  to,
   article
 }) => {
   return (
     <div>
       <div className="sub-item-container hover">
-        <NavLink to={to}>
-          <div className="d-flex margin-left">
-            <span className="d-flex">{article.icon}</span>
-            <div className="d-flex align-items-center padding-bottom-12">
+        <NavLink to={article.href}>
+          <div className="d-flex article-container hover">
+            <span className="d-flex icon-spacing">{article.icon}</span>
+            <div className="d-flex align-items-center">
               {article.title}
             </div>
           </div>

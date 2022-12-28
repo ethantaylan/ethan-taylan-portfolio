@@ -36,7 +36,7 @@ const aboutMeText = (
 			<br />
 			Strong understanding of CSS pre-processors (SASS / SCSS). <br />
 			Also, have experience working within a team environment using scrum
-			methodologie
+			methodologie.
 		</div>
 	</span>
 );
