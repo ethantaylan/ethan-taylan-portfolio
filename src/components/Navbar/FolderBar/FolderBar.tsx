@@ -7,6 +7,7 @@ export interface FolderBarTab {
 }
 
 export interface FolderBarFolder {
+<<<<<<< HEAD
   title?: string;
   articles?: FolderBarArticle[];
   icon: React.ReactElement;
@@ -15,6 +16,15 @@ export interface FolderBarFolder {
 export interface FolderBarArticle {
   title: string;
   icon: React.ReactElement;
+=======
+	title?: string;
+	items?: FolderBarItems[];
+}
+
+export interface FolderBarItems {
+	icon: any;
+	title: string;
+>>>>>>> fb89b9f1f74d1887d0a57bd5f9061740e77a3653
 }
 
 interface FolderBarProps {
