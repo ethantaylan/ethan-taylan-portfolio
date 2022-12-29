@@ -25,9 +25,9 @@ interface FolderBarProps {
   tabs: FolderBarTab[] | any;
 }
 
-const FolderBar: React.FC<FolderBarProps> = ({ tabs, title }) => {
+const FolderBar: React.FC<FolderBarProps> = ({ children, tabs, title }) => {
   return (
-    <div className="d-flex w-100 flex-column">
+    <div className="d-flex flex-column">
       <div className="h-100 folder-main-container app-bg">
         <div className="folder-container">
           <h1 className="about-me-title">{title}</h1>
@@ -35,8 +35,11 @@ const FolderBar: React.FC<FolderBarProps> = ({ tabs, title }) => {
               <FolderBarTab key={index} tab={tab} />
           ))}
         </div>
+        {children}
+
       </div>
     </div>
+    
   );
 };
 

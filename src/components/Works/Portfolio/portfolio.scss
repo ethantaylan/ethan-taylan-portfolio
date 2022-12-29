@@ -1,0 +1,8 @@
+@use '../../../styles/scss/styles.scss' as m;
+
+.portfolio-container {
+    padding: 20px;
+    max-height: 500px;;
+    overflow-y: scroll;
+    border-bottom: 1px solid m.$secondary;
+}
