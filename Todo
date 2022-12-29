@@ -1,11 +1,7 @@
-page works : 
+remove: {children} add ReactPropsWithChildren instead of {children}
 
-problème avec le height
-ajoutez une folder bar avec : 'training projects' et 'professional projects'
+refactor: component PortfolioCards
 
-
-
-remove {children} add ReactPropsWithChildren instead of {children}
+works page : try to find a solution to 
 
 
-chevron avec props = active

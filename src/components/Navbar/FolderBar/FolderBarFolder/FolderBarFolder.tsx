@@ -13,6 +13,12 @@ export interface FolderBarFolderProps {
 export const FolderBarFolder: React.FC<FolderBarFolderProps> = ({ folder }) => {
   const [isArticleActive, setArticleActive] = React.useState(false);
 
+  React.useEffect(() => {
+    if (location.pathname.includes('works')) {
+      setArticleActive(true);
+    }
+  }, [location.pathname]);
+
   return (
     <div className="py-1 primary">
       <div
@@ -35,14 +41,12 @@ export const FolderBarFolder: React.FC<FolderBarFolderProps> = ({ folder }) => {
         <span className="icon-spacing">{folder.icon}</span>
         <span>{folder.title}</span>
       </div>
-      <div className={isArticleActive ? 'd-none' : 'd-block'}>
-        {isArticleActive &&
-          folder.articles?.map(
-            (article: FolderBarArticleModel, index: number) => (
-              <FolderBarArticle key={index} article={article} />
-            )
-          )}
-      </div>
+      {isArticleActive &&
+        folder.articles?.map(
+          (article: FolderBarArticleModel, index: number) => (
+            <FolderBarArticle key={index} article={article} />
+          )
+        )}
     </div>
   );
 };
