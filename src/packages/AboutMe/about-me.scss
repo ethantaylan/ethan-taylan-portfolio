@@ -14,6 +14,8 @@
 		color: m.$primary;
 		padding: 20px;
 		margin: 0;
+		border-bottom: 1px solid m.$secondary;
+
 	}
 
 	.folder-menu {
@@ -38,6 +40,8 @@
 		color: m.$primary;
 		padding: 20px;
 		margin: 0;
+		border-bottom: 1px solid m.$secondary;
+
 	}
 
 	.folder-menu {
@@ -47,6 +51,7 @@
 	}
 	.folder-main-container {
 		display: flex;
+		width: 100%;
 	}
 }
 

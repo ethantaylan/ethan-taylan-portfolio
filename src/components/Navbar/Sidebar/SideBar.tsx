@@ -11,18 +11,6 @@ export interface SideBarProps {
 	children?: any;
 }
 
-export function bodyHeightAuto() {
-	document.body.className = 'height-auto';
-}
-
-export function bodyHeight100() {
-	document.body.className = 'h-100';
-}
-
-// if (location.pathname.includes('works')) {
-// 	document.body.className = 'h-auto';
-// }
-
 const SideBar: React.FC<SideBarProps> = ({ children }) => {
 	const matches = useMediaQuery('(min-width: 768px)');
 
@@ -31,7 +19,6 @@ const SideBar: React.FC<SideBarProps> = ({ children }) => {
 			<div className='sidebar-container'>
 				<ul className='sidebar-ul d-768-none'>
 					<NavLink
-						onClick={() => bodyHeight100()}
 						to='/home'
 					>
 						<li className='sidebar-li'>
@@ -39,7 +26,6 @@ const SideBar: React.FC<SideBarProps> = ({ children }) => {
 						</li>
 					</NavLink>
 					<NavLink
-						onClick={() => bodyHeight100()}
 						to='/about-me'
 					>
 						<li className='sidebar-li'>
@@ -47,7 +33,6 @@ const SideBar: React.FC<SideBarProps> = ({ children }) => {
 						</li>
 					</NavLink>
 					<NavLink
-						onClick={() => bodyHeight100()}
 						to='/works'
 					>
 						<li className='sidebar-li'>
@@ -55,7 +40,6 @@ const SideBar: React.FC<SideBarProps> = ({ children }) => {
 						</li>
 					</NavLink>
 					<NavLink
-						onClick={() => bodyHeight100()}
 						to='/contact-me'
 					>
 						<li className='sidebar-li'>

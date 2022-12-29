@@ -13,8 +13,6 @@ export interface FolderBarFolderProps {
 export const FolderBarFolder: React.FC<FolderBarFolderProps> = ({ folder }) => {
   const [isArticleActive, setArticleActive] = React.useState(false);
 
-  console.log(folder.chevron, isArticleActive);
-  
   return (
     <div className="p-2 primary">
       <div
@@ -23,7 +21,17 @@ export const FolderBarFolder: React.FC<FolderBarFolderProps> = ({ folder }) => {
           isArticleActive && 'mb-2'
         }`}
       >
-        {folder.chevron && isArticleActive ? <BiChevronDown size={18} /> : <BiChevronRight size={18} />}
+        {isArticleActive ? (
+          <BiChevronDown
+            className={folder.chevron ? 'd-block' : 'd-none'}
+            size={18}
+          />
+        ) : (
+          <BiChevronRight
+            className={folder.chevron ? 'd-block' : 'd-none'}
+            size={18}
+          />
+        )}
         <span className="icon-spacing">{folder.icon}</span>
         <span>{folder.title}</span>
       </div>

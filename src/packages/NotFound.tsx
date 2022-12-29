@@ -1,10 +1,9 @@
-import { AiFillHome, AiOutlineArrowLeft } from 'react-icons/ai';
-import { BiErrorCircle } from 'react-icons/bi';
+import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { NavLink } from 'react-router-dom';
 
 const NotFound = () => {
 	return (
-		<div className='d-block p-5'>
+		<div className='d-block w-100 p-5'>
 			<div className='d-flex text-white justify-content-center flex-column align-items-center container-full-page'>
 				<h1 style={{ color: '#607b96', fontSize: '50px' }}>404</h1>
 				<h1

@@ -1,12 +1,13 @@
 import React from 'react';
+import Portfolio from '../../components/Works/Portfolio/Portfolio';
 import './works.scss';
 
-interface WorksProps {
-	children?: any;
-}
-
-const Works: React.FC<WorksProps> = ({ children }) => {
-	return <React.Fragment>{children}</React.Fragment>;
+const Works = () => {
+  return (
+    <React.Fragment>
+		<Portfolio />
+    </React.Fragment>
+  );
 };
 
 export default Works;
