@@ -1,8 +1,7 @@
 // import Home from './packages/Home/Home';
 import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Bio from '../components/AboutMe/Biography/Biography';
-import Hobbies from '../components/AboutMe/Hobbies/Hobbies';
+import Biography from '../components/AboutMe/AboutMe/Biography/Biography';
 import Contact from '../components/Contact/Contact';
 import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar/Navbar';
@@ -27,11 +26,11 @@ function App() {
             <Route path="/about-me" element={<AboutMe />} />
             <Route
               path="/about-me/biography"
-              element={<AboutMe children={<Bio />} />}
+              element={<AboutMe children={<Biography />} />}
             />
-            <Route
-              path="/about-me/hobbies"
-              element={<AboutMe children={<Hobbies />} />}
+                        <Route
+              path="/about-me/carreer"
+              // element={<AboutMe children={<Carrer />} />}
             />
             //* page WORKS *//
             <Route path="/works" element={<Works />} />
