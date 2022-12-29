@@ -69,7 +69,7 @@ const PortfolioCards: React.FC<PortfolioCardsProps> = ({
 										backgroundColor: '#1C2B3A',
 									}}
 								>
-									view project
+									view code
 								</Button>
 							</a>
 						</Card.Body>

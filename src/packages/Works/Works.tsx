@@ -5,7 +5,7 @@ import './works.scss';
 const Works = () => {
   return (
     <React.Fragment>
-		<Portfolio />
+      <Portfolio />
     </React.Fragment>
   );
 };

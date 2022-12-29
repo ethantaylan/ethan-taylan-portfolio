@@ -16,11 +16,9 @@ export const FolderBarArticle: React.FC<FolderBarArticleProps> = ({
         <NavLink to={article.href}>
           <div className="d-flex ms-4 mb-2 hover">
             <span className="d-flex icon-spacing">{article.icon}</span>
-            <div className="d-flex align-items-center">
-              {article.title}
-            </div>
+            <div className="d-flex align-items-center">{article.title}</div>
           </div>
-        </NavLink>
+          </NavLink>
       </div>
     </div>
   );

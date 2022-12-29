@@ -1,9 +1,9 @@
 import {
-  AiFillFolder,
+  AiFillFilePdf,
   AiFillFileText,
+  AiFillFolder,
   AiFillInstagram,
-  AiFillLinkedin,
-  AiFillFilePdf
+  AiFillLinkedin
 } from 'react-icons/ai';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { FaGithubSquare } from 'react-icons/fa';
@@ -45,9 +45,21 @@ const AboutMeTabs = [
         title: 'socials',
         icon: <AiFillFolder size={18} color="tan" />,
         articles: [
-          { title: 'instagram', icon: <AiFillInstagram size={16} /> },
-          { title: 'github', icon: <FaGithubSquare size={16} /> },
-          { title: 'linkedin', icon: <AiFillLinkedin size={16} /> }
+          {
+            title: 'instagram',
+            icon: <AiFillInstagram size={16} />,
+            href: '//www.instagram.com/et.tln/?hl=fr'
+          },
+          {
+            title: 'github',
+            icon: <FaGithubSquare size={16} />,
+            href: '//github.com/ethantaylan'
+          },
+          {
+            title: 'linkedin',
+            icon: <AiFillLinkedin size={16} />,
+            href: '//www.linkedin.com/in/ethan-taylan-697831199/'
+          }
         ]
       }
     ]

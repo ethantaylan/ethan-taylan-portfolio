@@ -1,6 +1,4 @@
-import {
-  AiFillFolder,
-} from 'react-icons/ai';
+import { AiFillFolder } from 'react-icons/ai';
 import { FaReact } from 'react-icons/fa';
 
 const WorksTabs = [
@@ -15,32 +13,27 @@ const WorksTabs = [
           {
             title: 'orinoco.tsx',
             icon: <FaReact size={16} />,
-            href: '/about-me/biography'
+            href: '//github.com/ethantaylan/orinoco'
           },
           {
             title: 'reservia.tsx',
             icon: <FaReact size={16} />,
-            href: '/about-me/biography'
-          },
-          {
-            title: 'enemy.tsx',
-            icon: <FaReact size={16} />,
-            href: '/about-me/biography'
+            href: '//github.com/ethantaylan/Reservia'
           },
           {
             title: 'la-chouette-agence.tsx',
             icon: <FaReact size={16} />,
-            href: '/about-me/biography'
+            href: '//github.com/ethantaylan/La_chouette_agence'
           },
           {
             title: 'oh-my-food.tsx',
             icon: <FaReact size={16} />,
-            href: '/about-me/biography'
-          },
+            href: '//github.com/ethantaylan/Ohmyfood'
+          }
         ]
-      },
+      }
     ]
-  },
+  }
 ];
 
 export default WorksTabs;
