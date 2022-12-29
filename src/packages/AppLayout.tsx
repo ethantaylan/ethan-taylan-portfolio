@@ -7,7 +7,6 @@ import Contact from '../components/Contact/Contact';
 import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar/Navbar';
 import SideBar from '../components/Navbar/Sidebar/SideBar';
-import Portfolio from '../components/Works/Portfolio/Portfolio';
 import AboutMe from './AboutMe/AboutMe';
 import ContactMe from './ContactMe/ContactMe';
 import Home from './Home/Home';
@@ -35,7 +34,7 @@ function App() {
               element={<AboutMe children={<Hobbies />} />}
             />
             //* page WORKS *//
-            <Route path="/works" element={<Works/>} />
+            <Route path="/works" element={<Works />} />
             //* ROUTES FOR CONTACT PAGE//
             <Route
               path="/contact-me"
