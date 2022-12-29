@@ -14,7 +14,7 @@ export const FolderBarFolder: React.FC<FolderBarFolderProps> = ({ folder }) => {
   const [isArticleActive, setArticleActive] = React.useState(false);
 
   return (
-    <div className="p-2 primary">
+    <div className="py-1 primary">
       <div
         onClick={() => setArticleActive(!isArticleActive)}
         className={`d-flex hover align-items-center ${
@@ -35,12 +35,14 @@ export const FolderBarFolder: React.FC<FolderBarFolderProps> = ({ folder }) => {
         <span className="icon-spacing">{folder.icon}</span>
         <span>{folder.title}</span>
       </div>
-      {isArticleActive &&
-        folder.articles?.map(
-          (article: FolderBarArticleModel, index: number) => (
-            <FolderBarArticle key={index} article={article} />
-          )
-        )}
+      <div className={isArticleActive ? 'd-none' : 'd-block'}>
+        {isArticleActive &&
+          folder.articles?.map(
+            (article: FolderBarArticleModel, index: number) => (
+              <FolderBarArticle key={index} article={article} />
+            )
+          )}
+      </div>
     </div>
   );
 };
