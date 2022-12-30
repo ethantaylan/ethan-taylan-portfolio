@@ -26,9 +26,9 @@ const AboutMeTabs = [
           {
             title: 'education.txt',
             icon: <AiFillFileText size={16} />,
-            href: '/about-me/carreer'
+            href: '/about-me/education'
           },
-          { title: 'hobbies.txt', icon: <AiFillFileText size={16} /> }
+          { title: 'hobbies.txt', icon: <AiFillFileText size={16} />, href: '/about-me/hobbies' }
         ]
       },
       {
@@ -36,7 +36,11 @@ const AboutMeTabs = [
         title: 'pro-carreer',
         icon: <AiFillFolder size={18} color="teal" />,
         articles: [
-          { title: 'developer.txt', icon: <AiFillFileText size={16} /> },
+          {
+            title: 'developer.txt',
+            icon: <AiFillFileText size={16} />,
+            href: '/about-me/developer'
+          },
           { title: 'resume.pdf', icon: <AiFillFilePdf size={16} /> }
         ]
       },
