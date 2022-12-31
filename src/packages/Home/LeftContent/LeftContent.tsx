@@ -1,8 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import './left-content.scss';
 
-import Typed from 'react-typed';
-
 const LeftContent = () => {
   return (
     <div className="left-content-main-container">
@@ -10,12 +8,7 @@ const LeftContent = () => {
         <div className="d-flex justify-content-around flex-column">
           <span className="welcome">_hello ! i'm</span>
           <span className="name">Ethan Taylan</span>
-          <Typed
-            className="front-end"
-            strings={['> Frontend developer']}
-            typeSpeed={100}
-            backSpeed={100}
-          />{' '}
+<span className='front-end'>{'>'} Frontend developer</span>
         </div>
         <div className="d-flex mt-5 justify-content-around flex-column">
           <span className="left-content-subtitle">
