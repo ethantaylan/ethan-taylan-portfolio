@@ -20,19 +20,15 @@
         "react-icons": "^4.6.0",
         "react-router-dom": "^6.4.3",
         "react-typed": "^1.2.0",
-        "react-typewriter-effect": "^1.1.0",
-        "sass": "^1.56.1",
-        "typewriter-effect": "^2.19.0"
+        "sass": "^1.56.1"
     },
     "devDependencies": {
         "@types/file-saver": "^2.0.5",
         "@types/react": "^18.0.24",
         "@types/react-dom": "^18.0.8",
-        "@types/styled-components": "^5.1.26",
         "@typescript-eslint/eslint-plugin": "^5.47.1",
         "@typescript-eslint/parser": "^5.47.1",
         "@vitejs/plugin-react": "^2.2.0",
-        "babel-plugin-styled-components": "^2.0.7",
         "eslint": "^8.30.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-jest": "^27.1.7",
