@@ -2,14 +2,15 @@ import React from 'react';
 import TextEmplacement from './TextEmplacement';
 
 export const Developer = ({}) => {
-  
   const text = (
     <span>
-      About me
+      // About me
+      <br />
       <br />
       I'm a junior frontend developer using React and TypeScript. <br />
       Great understanding of OOP principles, Data Structures, Algorithms, Design
       Patterns. <br />
+      <br />
       Experience in responsive and mobile WEB development.
       <br />
       Works with client-side and distributed development teams.
@@ -25,7 +26,7 @@ export const Developer = ({}) => {
 
   return (
     <React.Fragment>
-      <TextEmplacement text={text} pathTitle={'developer-bio.txt'} />
+      <TextEmplacement text={text} pathTitle={'developer-bio.txt'} fileName={'developer.txt'} />
     </React.Fragment>
   );
 };

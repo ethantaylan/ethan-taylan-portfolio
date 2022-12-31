@@ -1,8 +1,6 @@
 // import Home from './packages/Home/Home';
 import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Biography from '../components/TexteEmplacement/Biography';
-
 import Contact from '../components/Contact/Contact';
 import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar/Navbar';
@@ -15,6 +13,8 @@ import Works from './Works/Works';
 import Hobbies from '../components/TexteEmplacement/Hobbies';
 import Education from '../components/TexteEmplacement/Education';
 import Developer from '../components/TexteEmplacement/Developer';
+import Skills from '../components/TexteEmplacement/Skills';
+import Tools from '../components/TexteEmplacement/Tools';
 
 function App() {
   return (
@@ -29,12 +29,16 @@ function App() {
             //* page ABOUTME *//
             <Route path="/about-me" element={<AboutMe />} />
             <Route
-              path="/about-me/biography"
-              element={<AboutMe children={<Biography />} />}
-            />
-            <Route
               path="/about-me/education"
               element={<AboutMe children={<Education />} />}
+            />
+            <Route
+              path="/about-me/skills"
+              element={<AboutMe children={<Skills />} />}
+            />
+            <Route
+              path="/about-me/tools"
+              element={<AboutMe children={<Tools />} />}
             />
             <Route
               path="/about-me/hobbies"

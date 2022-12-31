@@ -2,30 +2,24 @@ import React from 'react';
 import TextEmplacement from './TextEmplacement';
 
 export const Education = ({}) => {
-  
   const text = (
     <span>
-      About me
+      // Education
       <br />
-      I'm a junior frontend developer using React and TypeScript. <br />
-      Great understanding of OOP principles, Data Structures, Algorithms, Design
-      Patterns. <br />
-      Experience in responsive and mobile WEB development.
+      <br />2022 : full-stack development degree
       <br />
-      Works with client-side and distributed development teams.
+      <br />2020 : front-end development degree
       <br />
-      Experience with web systems running on various OS and browsers, including
-      older versions.
+      <br />2015 : motor vehicles degree
       <br />
-      Strong understanding of CSS pre-processors (SASS / SCSS). <br />
-      Also, have experience working within a team environment using scrum
-      methodologie.
+      <br />2013 : infographics degree
+
     </span>
   );
 
   return (
     <React.Fragment>
-      <TextEmplacement text={text} pathTitle={'education.txt'} />
+      <TextEmplacement text={text} pathTitle={'education.txt'} fileName={'education.txt'} />
     </React.Fragment>
   );
 };

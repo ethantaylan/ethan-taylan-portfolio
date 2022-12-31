@@ -17,6 +17,8 @@ export interface FolderBarArticle {
   title: string;
   icon: React.ReactElement;
   href: string;
+  resume: string
+  onClick: () => void
 }
 
 interface FolderBarProps {

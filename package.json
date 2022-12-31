@@ -11,6 +11,7 @@
     "dependencies": {
         "bootstrap": "^5.2.3",
         "bootstrap-icons": "^1.10.2",
+        "file-saver": "^2.0.5",
         "netlify": "^13.0.2",
         "react": "^18.2.0",
         "react-bootstrap": "^2.6.0",
@@ -18,9 +19,13 @@
         "react-dom": "^18.2.0",
         "react-icons": "^4.6.0",
         "react-router-dom": "^6.4.3",
-        "sass": "^1.56.1"
+        "react-typed": "^1.2.0",
+        "react-typewriter-effect": "^1.1.0",
+        "sass": "^1.56.1",
+        "typewriter-effect": "^2.19.0"
     },
     "devDependencies": {
+        "@types/file-saver": "^2.0.5",
         "@types/react": "^18.0.24",
         "@types/react-dom": "^18.0.8",
         "@types/styled-components": "^5.1.26",

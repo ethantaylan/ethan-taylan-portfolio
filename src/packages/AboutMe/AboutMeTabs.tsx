@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   AiFillFilePdf,
   AiFillFileText,
@@ -19,29 +20,41 @@ const AboutMeTabs = [
         icon: <AiFillFolder size={18} color="mediumslateblue" />,
         articles: [
           {
-            title: 'biography.txt',
+            title: 'developer.txt',
             icon: <AiFillFileText size={16} />,
-            href: '/about-me/biography'
+            href: '/about-me/developer'
           },
           {
             title: 'education.txt',
             icon: <AiFillFileText size={16} />,
             href: '/about-me/education'
           },
-          { title: 'hobbies.txt', icon: <AiFillFileText size={16} />, href: '/about-me/hobbies' }
+          {
+            title: 'hobbies.txt',
+            icon: <AiFillFileText size={16} />,
+            href: '/about-me/hobbies'
+          },
+          {
+            icon: <AiFillFilePdf size={16} />,
+            resume: 'resume.pdf'
+          }
         ]
       },
       {
         chevron: true,
-        title: 'pro-carreer',
+        title: 'skills-and-tools',
         icon: <AiFillFolder size={18} color="teal" />,
         articles: [
           {
-            title: 'developer.txt',
+            title: 'skills.txt',
             icon: <AiFillFileText size={16} />,
-            href: '/about-me/developer'
+            href: '/about-me/skills'
           },
-          { title: 'resume.pdf', icon: <AiFillFilePdf size={16} /> }
+          {
+            title: 'tools.txt',
+            icon: <AiFillFileText size={16} />,
+            href: '/about-me/tools'
+          }
         ]
       },
       {
