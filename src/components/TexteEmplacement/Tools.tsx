@@ -8,7 +8,7 @@ export const Tools = () => {
       <br />
       <br />
       <h1>
-        I use Cypress for my frontend tests,
+        I use Jest for my frontend tests,
         <br />
         <br />
         Photoshop & FIGMA for my design tools,
@@ -17,7 +17,7 @@ export const Tools = () => {
         Git & GitHub for versioning,
         <br />
         <br />
-        Netlify for deployement.
+        Netlify for deployment.
       </h1>
     </span>
   );
