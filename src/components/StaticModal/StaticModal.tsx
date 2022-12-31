@@ -38,7 +38,7 @@ const StaticModal: React.FC<StaticModalProps> = ({
         <Modal.Footer>
           {downloadBtn && (
             <Button
-              onClick={() => saveAs('/src/assets/cv.jpg', 'cv-ethan-taylan')}
+              onClick={() => saveAs('/assets/cv.jpg', 'cv-ethan-taylan.jpg')}
               className="modal-btn"
             >
               {downloadResume}
