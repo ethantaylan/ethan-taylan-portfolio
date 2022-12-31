@@ -8,7 +8,7 @@ const LeftContent = () => {
         <div className="d-flex justify-content-around flex-column">
           <span className="welcome">_hello ! i'm</span>
           <span className="name">Ethan Taylan</span>
-<span className='front-end'>{'>'} Frontend developer</span>
+          <span className="front-end">{'>'} Frontend developer</span>
         </div>
         <div className="d-flex mt-5 justify-content-around flex-column">
           <span className="left-content-subtitle">

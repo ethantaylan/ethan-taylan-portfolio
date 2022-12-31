@@ -7,6 +7,9 @@
     overflow-y: scroll;
     border-bottom: 1px solid m.$secondary;
   }
+  .scroll-to-top-btn {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -16,5 +19,10 @@
     display: flex;
     justify-content: center;
     width: 100%;
+  }
+  .scroll-to-top-btn {
+    background-color: m.$secondary;
+    color: m.$primary;
+    border: none;
   }
 }

@@ -1,5 +1,6 @@
 import React, { Children } from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { BsCode, BsCodeSlash } from 'react-icons/bs';
 import StaticModal from '../../../../StaticModal/StaticModal';
 import './portfolio-cards.scss';
 
@@ -70,7 +71,7 @@ const PortfolioCards: React.FC<PortfolioCardsProps> = ({
                     backgroundColor: '#1C2B3A'
                   }}
                 >
-                  view code
+                  <BsCode size={18} />
                 </Button>
               </a>
             </Card.Body>

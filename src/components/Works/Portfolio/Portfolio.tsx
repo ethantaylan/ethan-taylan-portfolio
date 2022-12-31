@@ -7,6 +7,7 @@ import LaChouetteAgence from '../../../assets/Projects/lachouetteagence.png';
 import Reservia from '../../../assets/Projects/reservia.png';
 import OhMyFood from '../../../assets/Projects/ohmyfood.png';
 import useMediaQuery from '../../../hooks/useMediaQuery';
+import { AiOutlineArrowUp } from 'react-icons/ai';
 
 const Portfolio = () => {
   const matches = useMediaQuery('(max-width: 768px)');
@@ -71,6 +72,14 @@ const Portfolio = () => {
             <img className="w-75" src={OhMyFood} alt="OhMyFood image" />
           }
         />
+        <div className="d-flex justify-content-center align-items-center">
+          <button
+            onClick={() => scrollTo(0, 0)}
+            className="scroll-to-top-btn w-100 p-2 m-4"
+          >
+            <AiOutlineArrowUp size={18} />
+          </button>
+        </div>
       </div>
     </div>
   );
