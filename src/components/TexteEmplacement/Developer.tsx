@@ -26,7 +26,7 @@ export const Developer = ({}) => {
 
   return (
     <React.Fragment>
-      <TextEmplacement text={text} pathTitle={'developer-bio.txt'} fileName={'developer.txt'} />
+      <TextEmplacement text={text} pathTitle={'developer.txt'} fileName={'developer.txt'} />
     </React.Fragment>
   );
 };
