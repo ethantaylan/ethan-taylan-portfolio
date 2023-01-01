@@ -6,7 +6,7 @@ import useMediaQuery from './hooks/useMediaQuery';
 import AppLayout from './packages/AppLayout';
 
 function App() {
-  const matches = useMediaQuery('(max-width:768px)');
+  const matches = useMediaQuery('(max-width:992px)');
 
   return (
     <React.Fragment>

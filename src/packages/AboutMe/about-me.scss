@@ -1,57 +1,54 @@
 @use '../../styles/scss//styles.scss' as m;
-@media screen and (max-width: 768px) {
-	.folder-container {
-		min-width: 250px;
-		width: 100%;
-		height: auto;
-	}
+@media screen and (max-width: 992px) {
+  .folder-container {
+    min-width: 250px;
+    width: 100%;
+    height: auto;
+  }
 
-	.primary-icon {
-		color: m.$primary;
-	}
+  .primary-icon {
+    color: m.$primary;
+  }
 
-	.about-me-title {
-		color: m.$primary;
-		padding: 20px;
-		margin: 0;
-		border-bottom: 1px solid m.$secondary;
+  .about-me-title {
+    color: m.$primary;
+    padding: 20px;
+    margin: 0;
+    border-bottom: 1px solid m.$secondary;
+  }
 
-	}
-
-	.folder-menu {
-		color: m.$white;
-		background-color: m.$secondary;
-		margin: 5px 0 5px 0px;
-	}
+  .folder-menu {
+    color: m.$white;
+    background-color: m.$secondary;
+    margin: 5px 0 5px 0px;
+  }
 }
 
-@media screen and (min-width: 768px) {
-	.folder-container {
-		min-width: 250px;
-		height: auto;
-		border-right: 1px solid m.$secondary;
-	}
+@media screen and (min-width: 992px) {
+  .folder-container {
+    min-width: 250px;
+    height: auto;
+    border-right: 1px solid m.$secondary;
+  }
 
-	.primary-icon {
-		color: m.$primary;
-	}
+  .primary-icon {
+    color: m.$primary;
+  }
 
-	.about-me-title {
-		color: m.$primary;
-		padding: 20px;
-		margin: 0;
-		border-bottom: 1px solid m.$secondary;
+  .about-me-title {
+    color: m.$primary;
+    padding: 20px;
+    margin: 0;
+    border-bottom: 1px solid m.$secondary;
+  }
 
-	}
-
-	.folder-menu {
-		color: m.$white;
-		background-color: m.$secondary;
-		margin: 5px 0 5px 0px;
-	}
-	.folder-main-container {
-		display: flex;
-		width: 100%;
-	}
+  .folder-menu {
+    color: m.$white;
+    background-color: m.$secondary;
+    margin: 5px 0 5px 0px;
+  }
+  .folder-main-container {
+    display: flex;
+    width: 100%;
+  }
 }
-

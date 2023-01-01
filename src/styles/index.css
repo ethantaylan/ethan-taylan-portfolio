@@ -86,12 +86,12 @@ time,
 mark,
 audio,
 video {
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-	color: unset;
-	text-decoration: none;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  color: unset;
+  text-decoration: none;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -107,164 +107,146 @@ hgroup,
 menu,
 nav,
 section {
-	display: block;
+  display: block;
 }
 
 body {
-	line-height: 1;
+  line-height: 1;
 }
 
 ol,
 ul {
-	list-style: none;
+  list-style: none;
 }
 
 blockquote,
 q {
-	quotes: none;
+  quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 html,
 body,
 #root,
 .App {
-	height: 100%;
-	font-size: 14px;
-	letter-spacing: -0.7px;
-	height: 100%;
-	font-family: 'Fira Code', monospace;
-	background-color: #011627;
-	width: 100%;
+  height: 100%;
+  font-size: 14px;
+  letter-spacing: -0.7px;
+  height: 100%;
+  font-family: 'Fira Code', monospace;
+  background-color: #011627;
+  width: 100%;
 }
 
-@media screen and (min-width: 768px) {
-	#root {
-		border: 1px solid #1e2d3d;
-		padding: 0px !important;
-		border-radius: 12px;
-	}
+@media screen and (min-width: 992px) {
+  #root {
+    border: 1px solid #1e2d3d;
+    padding: 0px !important;
+    border-radius: 12px;
+  }
 
-	html,
-	body,
-	#root,
-	.App {
-		padding: 20px;
-		background-color: #010c15;
-	}
+  html,
+  body,
+  #root,
+  .App {
+    padding: 20px;
+    background-color: #010c15;
+  }
 }
 .height-auto {
-	height: auto;
+  height: auto;
 }
 
 #root {
-	height: 100%;
-	width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .primary {
-	color: #607b96 !important;
+  color: #607b96 !important;
 }
 
 .app-bg {
-	background-color: #011627;
+  background-color: #011627;
 }
 
 .my-border-top {
-	border-top: 1px solid #1e2d3d;
+  border-top: 1px solid #1e2d3d;
 }
 
 .my-border-bottom {
-	border-bottom: 1px solid #1e2d3d;
+  border-bottom: 1px solid #1e2d3d;
 }
 
 .my-border-left {
-	border-left: 1px solid #1e2d3d;
+  border-left: 1px solid #1e2d3d;
 }
 
 .my-border-right {
-	border-right: 1px solid #1e2d3d;
+  border-right: 1px solid #1e2d3d;
 }
 
 .no-border {
-	border: none;
+  border: none;
 }
 
 .icons {
-	margin-left: 10px;
+  margin-left: 10px;
 }
 
 a:hover {
-	text-decoration: none;
-	color: unset;
+  text-decoration: none;
+  color: unset;
 }
 
 .text-decoration-underline-hover:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .hover:hover {
-	color: #ebebeb;
-	cursor: pointer;
+  color: #ebebeb;
+  cursor: pointer;
 }
 
 .cursor-pointer {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .margin-top-5 {
-	margin-top: 5px;
+  margin-top: 5px;
 }
 
 .padding-bottom-12 {
-	padding-bottom: 12px;
+  padding-bottom: 12px;
 }
 
 .line-height-20 {
-	line-height: 20px;
+  line-height: 20px;
 }
 
 .margin-left-28 {
-	margin-left: 28px;
+  margin-left: 28px;
 }
 
 .margin-right-5 {
-	margin-right: 5px;
-}
-
-.portfolio-img-style {
-	object-fit: cover;
-	height: 250px;
-	width: 300px;
-	opacity: 0.8;
-;
-}
-
-.portfolio-img-style:hover {
-	filter: saturate(0.8);
-	opacity: 1;
-	cursor: pointer;
-}
-
-.scroll-portfolio {
-	overflow-y: scroll;
+  margin-right: 5px;
 }
 
 .applayout {
-	position: relative;
-	height: 100%;
+  position: relative;
+  height: 100%;
 }
 
 /* ===== Scrollbar CSS ===== */
@@ -272,22 +254,22 @@ a:hover {
 /* Firefox */
 
 * {
-	scrollbar-width: auto;
-	scrollbar-color: #273e47 #ffffff;
+  scrollbar-width: auto;
+  scrollbar-color: #273e47 #ffffff;
 }
 
 /* Chrome, Edge, and Safari */
 
 *::-webkit-scrollbar {
-	width: 10px;
+  width: 10px;
 }
 
 *::-webkit-scrollbar-track {
-	background: #1e2d3d;
+  background: #1e2d3d;
 }
 
 *::-webkit-scrollbar-thumb {
-	background-color: #607b96;
-	border-radius: 0px;
-	border: 0px solid #ffffff;
+  background-color: #607b96;
+  border-radius: 0px;
+  border: 0px solid #ffffff;
 }

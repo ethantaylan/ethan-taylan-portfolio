@@ -1,19 +1,18 @@
 import React from 'react';
 import CodeSnippets from '../../components/CodeSnippets/CodeSnippets';
-import './about-me.scss';
-import useMediaQuery from '../../hooks/useMediaQuery';
 import FolderBar from '../../components/Navbar/FolderBar/FolderBar';
-import AboutMeTabs from './AboutMeTabs'
+import useMediaQuery from '../../hooks/useMediaQuery';
+import './about-me.scss';
+import AboutMeTabs from './AboutMeTabs';
 
 interface AboutMeProps {
   children?: any;
 }
 
 const AboutMe: React.FC<AboutMeProps> = ({ children }) => {
-
   const [snippet, setSnippet] = React.useState<boolean>(true);
 
-  const matches = useMediaQuery('(min-width: 768px)');
+  const matches = useMediaQuery('(min-width: 992px)');
 
   return (
     <React.Fragment>

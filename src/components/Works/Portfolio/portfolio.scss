@@ -1,6 +1,6 @@
 @use '../../../styles/scss/styles.scss' as m;
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .portfolio-container {
     padding: 20px;
     max-height: 600px;
@@ -12,7 +12,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .portfolio-container {
     max-height: 600;
     overflow-y: scroll;

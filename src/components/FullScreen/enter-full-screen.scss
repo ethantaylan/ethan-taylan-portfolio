@@ -1,6 +1,6 @@
 @use '../../styles/scss/styles.scss' as m;
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .enter-full-screen-container {
     display: flex;
     position: absolute;
@@ -12,6 +12,7 @@
     font-size: 15px;
     color: white;
     z-index: 999;
+    border-radius: 12px;
   }
   .fullscreen-btn {
     background-color: m.$primary;
@@ -38,10 +39,11 @@
     z-index: 999;
     top: 10%;
     background-color: m.$primary;
+    border-radius: 12px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .enter-full-sreen-container {
     display: none;
   }

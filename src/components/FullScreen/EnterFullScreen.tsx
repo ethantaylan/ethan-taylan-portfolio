@@ -67,7 +67,7 @@ export const EnterFullScreen: React.FC<EnterFullScreen> = ({ className }) => {
       <div className="another-modal">
         {fullScreenModeSelected && (
           <h1 className="fullscreenselected">
-            To close the full screen mode press F11
+            To close the full screen mode press F11 or ESC
           </h1>
         )}
       </div>

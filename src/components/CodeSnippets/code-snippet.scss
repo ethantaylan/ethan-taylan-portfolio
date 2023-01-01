@@ -1,87 +1,87 @@
 @use '../../styles/scss/styles.scss' as m;
 .snippet-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 20px;
-    @media screen and (min-width: 768px) {
-        justify-content: flex-start;
-    }
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px;
+  @media screen and (min-width: 992px) {
+    justify-content: flex-start;
+  }
 }
 
 .user- {
-    &container {
-        width: 100%;
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        margin-bottom: 10px;
-    }
-    &avatar {
-        height: 35px;
-        width: 35px;
-        background-image: url('../../assets/avatar.png');
-        background-size: contain;
-        border-radius: 100%;
-        margin-right: 8px;
-        border: 1px solid #5b87ff8f;
-    }
-    &name {
-        display: flex;
-        width: 50%;
-        flex-direction: column;
-        color: #5b86ff;
-        font-weight: bold;
-    }
+  &container {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  &avatar {
+    height: 35px;
+    width: 35px;
+    background-image: url('../../assets/avatar.png');
+    background-size: contain;
+    border-radius: 100%;
+    margin-right: 8px;
+    border: 1px solid #5b87ff8f;
+  }
+  &name {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    color: #5b86ff;
+    font-weight: bold;
+  }
 }
 
 .created-at {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .code-container {
-    width: 100%;
-    background-color: #010c15;
-    border-radius: 12px;
-    border: 1px solid m.$secondary;
-    padding: 15px;
-    @media screen and (max-width: 768px) {
-        height: auto;
-    }
+  width: 100%;
+  background-color: #010c15;
+  border-radius: 12px;
+  border: 1px solid m.$secondary;
+  padding: 15px;
+  @media screen and (max-width: 992px) {
+    height: auto;
+  }
 }
 
 .detail-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    align-self: end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-self: end;
 }
 
 .detail {
-    width: 85%;
-    display: flex;
-    justify-content: space-between;
-    line-height: 20px;
-    flex-direction: column;
-    font-size: 14px;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  line-height: 20px;
+  flex-direction: column;
+  font-size: 14px;
 }
 
 .all-container {
-    display: flex;
-    color: m.$primary;
-    flex-direction: column;
-    align-items: center;
-    border-left: 3px solid m.$primary;
-    width: 100%;
-    @media screen and (max-width: 768px) {
-        border: none;
-    }
+  display: flex;
+  color: m.$primary;
+  flex-direction: column;
+  align-items: center;
+  border-left: 3px solid m.$primary;
+  width: 100%;
+  @media screen and (max-width: 992px) {
+    border: none;
+  }
 }
 
 .IoIosClose {
-    color: m.$primary;
-    cursor: m.$cursor;
+  color: m.$primary;
+  cursor: m.$cursor;
 }

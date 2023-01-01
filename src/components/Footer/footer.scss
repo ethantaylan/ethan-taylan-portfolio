@@ -1,131 +1,131 @@
 @use '../../styles/scss/styles.scss' as m;
 
-@media screen and (max-width: 768px) {
-	.footer-container- {
-		&main {
-			width: 100%;
-			display: flex;
-			align-items: center;
-			background-color: m.$appBg;
-			color: m.$primary;
-			white-space: nowrap;
-			border-top: 1px solid m.$secondary;
-			justify-content: space-between;
-		}
-		&find-me {
-			height: 100%;
-			display: flex;
-			align-items: center;
-			color: m.$primary;
-			cursor: m.$cursor;
-			border-right: 1px solid m.$secondary;
-			display: none;
-		}
-		&nav {
-			width: 100%;
-			height: 100%;
-			display: flex;
-		}
-	}
+@media screen and (max-width: 992px) {
+  .footer-container- {
+    &main {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      background-color: m.$appBg;
+      color: m.$primary;
+      white-space: nowrap;
+      border-top: 1px solid m.$secondary;
+      justify-content: space-between;
+    }
+    &find-me {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      color: m.$primary;
+      cursor: m.$cursor;
+      border-right: 1px solid m.$secondary;
+      display: none;
+    }
+    &nav {
+      width: 100%;
+      height: 100%;
+      display: flex;
+    }
+  }
 
-	.footer-nav- {
-		&ul {
-			height: 100%;
-			display: flex;
-			align-items: center;
-			flex-direction: row;
-			padding: 0;
-			margin: 0;
-			justify-content: space-between;
-			width: 50%;
-		}
-		&li {
-			display: flex;
-			justify-content: center;
-			height: 100%;
-			align-items: center;
-			width: 100%;
-			font-size: 16px;
-			cursor: m.$cursor;
-			padding: 14px;
-		}
-	}
+  .footer-nav- {
+    &ul {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      padding: 0;
+      margin: 0;
+      justify-content: space-between;
+      width: 50%;
+    }
+    &li {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      align-items: center;
+      width: 100%;
+      font-size: 16px;
+      cursor: m.$cursor;
+      padding: 14px;
+    }
+  }
 
-	.btn-github {
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-decoration: none;
-		color: m.$primary;
-	}
+  .btn-github {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: m.$primary;
+  }
 }
 
-@media screen and (min-width: 768px) {
-	.footer-container- {
-		&main {
-			width: 100%;
-			display: flex;
-			align-items: center;
-			background-color: m.$appBg;
-			color: m.$primary;
-			white-space: nowrap;
-			border-top: 1px solid m.$secondary;
-			justify-content: space-between;
-			min-height: 54px;
-			border-bottom-left-radius: 12px;
-			border-bottom-right-radius: 12px;
-		}
-		&find-me {
-			height: 100%;
-			display: flex;
-			align-items: center;
-			color: m.$primary;
-			cursor: m.$cursor;
-			border-right: 1px solid m.$secondary;
-			padding-left: 20px;
-			padding-right: 20px;
-		}
-		&nav {
-			height: 100%;
-			display: flex;
-			justify-content: flex-start;
-		}
-	}
+@media screen and (min-width: 992px) {
+  .footer-container- {
+    &main {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      background-color: m.$appBg;
+      color: m.$primary;
+      white-space: nowrap;
+      border-top: 1px solid m.$secondary;
+      justify-content: space-between;
+      min-height: 54px;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+    &find-me {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      color: m.$primary;
+      cursor: m.$cursor;
+      border-right: 1px solid m.$secondary;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &nav {
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
 
-	.footer-nav- {
-		&ul {
-			height: 100%;
-			display: flex;
-			align-items: center;
-			flex-direction: row;
-			padding: 0;
-			margin: 0;
-			justify-content: space-between;
-		}
-		&li {
-			display: flex;
-			justify-content: center;
-			height: 100%;
-			align-items: center;
-			width: 100%;
-			font-size: 16px;
-			cursor: m.$cursor;
-			padding-left: 20px;
-			padding-right: 20px;
-			border-right: 1px solid m.$secondary;
-		}
-	}
+  .footer-nav- {
+    &ul {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      padding: 0;
+      margin: 0;
+      justify-content: space-between;
+    }
+    &li {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      align-items: center;
+      width: 100%;
+      font-size: 16px;
+      cursor: m.$cursor;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-right: 1px solid m.$secondary;
+    }
+  }
 
-	.btn-github {
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-decoration: none;
-		color: m.$primary;
-	}
-	.version {
-		border-right: 1px solid m.$secondary;
-	}
+  .btn-github {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: m.$primary;
+  }
+  .version {
+    border-right: 1px solid m.$secondary;
+  }
 }

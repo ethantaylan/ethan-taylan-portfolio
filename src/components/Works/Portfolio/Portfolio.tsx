@@ -1,16 +1,16 @@
+import { AiOutlineArrowUp } from 'react-icons/ai';
+import LaChouetteAgence from '../../../assets/Projects/lachouetteagence.png';
+import OhMyFood from '../../../assets/Projects/ohmyfood.png';
+import Orinoco from '../../../assets/Projects/orinoco.png';
+import Reservia from '../../../assets/Projects/reservia.png';
+import useMediaQuery from '../../../hooks/useMediaQuery';
 import WorksTabs from '../../../packages/Works/WorksTabs';
 import FolderBar from '../../Navbar/FolderBar/FolderBar';
-import PortfolioCards from './PortfolioItems/PortfolioCards/PortfolioCards';
 import './portfolio.scss';
-import Orinoco from '../../../assets/Projects/orinoco.png';
-import LaChouetteAgence from '../../../assets/Projects/lachouetteagence.png';
-import Reservia from '../../../assets/Projects/reservia.png';
-import OhMyFood from '../../../assets/Projects/ohmyfood.png';
-import useMediaQuery from '../../../hooks/useMediaQuery';
-import { AiOutlineArrowUp } from 'react-icons/ai';
+import PortfolioCards from './PortfolioItems/PortfolioCards/PortfolioCards';
 
 const Portfolio = () => {
-  const matches = useMediaQuery('(max-width: 768px)');
+  const matches = useMediaQuery('(max-width: 992px)');
 
   return (
     <div

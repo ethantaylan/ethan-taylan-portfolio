@@ -1,94 +1,94 @@
 @use '../../../styles/scss/styles.scss' as m;
 
-@media screen and (max-width: 768px) {
-	.sidebar-main-container {
-		display: flex;
-		flex-direction: row;
-		position: relative;
-		width: 100%;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		background-color: m.$appBg;
-	}
-	.sidebar- {
-		&container {
-			width: auto;
-			background-color: m.$appBg;
-			border: 1px solid m.$secondary;
-			border-bottom: none;
-			border-top: none;
-			display: flex;
-			align-items: center;
-			flex-direction: column;
-			display: none;
-			&ul {
-				height: auto;
-				width: 100%;
-				color: m.$primary;
-				display: flex;
-				justify-content: space-around;
-				padding-top: 20px;
-				font-size: 18px;
-				flex-direction: column;
-				align-items: center;
-			}
-			&li {
-				padding: 15px;
-				&:hover {
-					cursor: m.$cursor;
-					color: m.$white;
-					background-color: m.$secondary;
-				}
-			}
-		}
-	}
+@media screen and (max-width: 992px) {
+  .sidebar-main-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: m.$appBg;
+  }
+  .sidebar- {
+    &container {
+      width: auto;
+      background-color: m.$appBg;
+      border: 1px solid m.$secondary;
+      border-bottom: none;
+      border-top: none;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      display: none;
+      &ul {
+        height: auto;
+        width: 100%;
+        color: m.$primary;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 20px;
+        font-size: 18px;
+        flex-direction: column;
+        align-items: center;
+      }
+      &li {
+        padding: 15px;
+        &:hover {
+          cursor: m.$cursor;
+          color: m.$white;
+          background-color: m.$secondary;
+        }
+      }
+    }
+  }
 }
 
-@media screen and (min-width: 768px) {
-	.sidebar-main-container {
-		display: flex;
-		flex-direction: row;
-		position: relative;
-		width: 100%;
-		height: 100%;
-		display: flex;
-		flex-direction: row;
-		background-color: m.$appBg;
-	}
-	.sidebar- {
-		&container {
-			width: auto;
-			background-color: m.$appBg;
-			border-right: 1px solid m.$secondary;;
-			border-bottom: none;
-			border-top: none;
-			display: flex;
-			align-items: center;
-			flex-direction: row;
-		}
-		&ul {
-			height: 100%;
-			width: 100%;
-			color: #607b96;
-			display: flex;
-			font-size: 18px;
-			flex-direction: column;
-			align-items: center;
-            padding: 0px;
-			padding-top: 20px;
-		}
-		&li {
-			padding: 15px;
-			&:hover {
-				cursor: m.$cursor;
-				color: m.$white;
-				background-color: m.$secondary;
-			}
-		}
-	}
+@media screen and (min-width: 992px) {
+  .sidebar-main-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: m.$appBg;
+  }
+  .sidebar- {
+    &container {
+      width: auto;
+      background-color: m.$appBg;
+      border-right: 1px solid m.$secondary;
+      border-bottom: none;
+      border-top: none;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+    }
+    &ul {
+      height: 100%;
+      width: 100%;
+      color: #607b96;
+      display: flex;
+      font-size: 18px;
+      flex-direction: column;
+      align-items: center;
+      padding: 0px;
+      padding-top: 20px;
+    }
+    &li {
+      padding: 15px;
+      &:hover {
+        cursor: m.$cursor;
+        color: m.$white;
+        background-color: m.$secondary;
+      }
+    }
+  }
 
-	.height-unset {
-		height: unset !important;
-	}
+  .height-unset {
+    height: unset !important;
+  }
 }

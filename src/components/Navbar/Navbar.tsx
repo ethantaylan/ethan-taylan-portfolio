@@ -1,6 +1,6 @@
-import { NavLink } from 'react-router-dom';
-import { GiHamburgerMenu } from 'react-icons/gi';
 import React from 'react';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { NavLink } from 'react-router-dom';
 import './navbar.scss';
 
 import { IoIosClose } from 'react-icons/io';
@@ -15,7 +15,7 @@ const Navbar = () => {
     setToggleNavbar(false);
   };
 
-  const matches = useMediaQuery('(max-width: 768px)');
+  const matches = useMediaQuery('(max-width: 992px)');
 
   return (
     <React.Fragment>
@@ -42,7 +42,7 @@ const Navbar = () => {
               className={
                 toggleNavbar
                   ? 'align-items-center navbar-nav-ul'
-                  : 'd-768-none navbar-nav-ul'
+                  : 'd-none navbar-nav-ul'
               }
             >
               <NavLink

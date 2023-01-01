@@ -1,9 +1,9 @@
 import React from 'react';
 import { BiCommentDetail } from 'react-icons/bi';
 import { IoIosClose } from 'react-icons/io';
-import Code from './Code/Code';
-import './code-snippet.scss';
 import useMediaQuery from '../../hooks/useMediaQuery';
+import './code-snippet.scss';
+import Code from './Code/Code';
 
 interface CodeSnippetsProps {
   onClose: () => any;
@@ -22,7 +22,7 @@ export const CodeSnippets: React.FC<CodeSnippetsProps> = ({
     setIsDetailActive(!isDetailActive);
   };
 
-  const matches = useMediaQuery('(max-width:768px)');
+  const matches = useMediaQuery('(max-width:992px)');
 
   return (
     <div

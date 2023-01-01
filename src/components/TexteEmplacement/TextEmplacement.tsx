@@ -15,7 +15,7 @@ export const TextEmplacement: React.FC<TextEmplacementProps> = ({
   text,
   fileName
 }) => {
-  const matches = useMediaQuery('(max-width: 768px)');
+  const matches = useMediaQuery('(max-width: 992px)');
 
   return (
     <React.Fragment>

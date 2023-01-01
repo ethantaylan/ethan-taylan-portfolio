@@ -1,6 +1,6 @@
 @use '../../styles/scss/styles.scss' as m;
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .modal-content {
     background-color: #011627;
     border: 1px solid m.$primary;
@@ -34,7 +34,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .modal-dialog {
     max-width: 100%;
   }

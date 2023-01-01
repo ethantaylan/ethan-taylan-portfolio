@@ -1,6 +1,6 @@
 @use '../../styles/scss/styles.scss' as m;
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .article-btn {
     background-color: unset;
     border: none;
@@ -9,9 +9,8 @@
     border-bottom: 1px solid m.$secondary;
     border-right: 1px solid m.$secondary;
   }
-
 }
 
 .tab-padding {
-    padding: 17px !important;
-  }
+  padding: 17px !important;
+}

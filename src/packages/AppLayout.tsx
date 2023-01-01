@@ -19,7 +19,7 @@ import Tools from '../components/TexteEmplacement/Tools';
 function App() {
   return (
     <BrowserRouter>
-      <div className="applayout d-flex justify-content-between flex-column">
+      <div className="h-100 w-100 d-flex justify-content-between flex-column">
         <Navbar />
         <SideBar>
           <Routes>
