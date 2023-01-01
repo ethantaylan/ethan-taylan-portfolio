@@ -4,6 +4,10 @@ import { FaLinkedinIn } from 'react-icons/fa';
 import './footer.scss';
 
 export const Footer = () => {
+  function exitFullScreenMode() {
+    document.exitFullscreen();
+  }
+
   return (
     <div className="global-types footer-container-main">
       <div className="d-flex h-100">
@@ -32,6 +36,12 @@ export const Footer = () => {
         </div>
       </div>
       <div className="d-flex h-100">
+        <span
+          onClick={() => exitFullScreenMode()}
+          className="h-100 d-flex d-992-none justify-content-center align-items-center my-border-left px-4"
+        >
+          NORMAL MODE
+        </span>
         <span className="version h-100 d-flex d-992-none justify-content-center align-items-center my-border-left px-4">
           v1.0.0
         </span>
