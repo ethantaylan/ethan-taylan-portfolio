@@ -4,7 +4,7 @@ import './left-content.scss';
 const LeftContent = () => {
   return (
     <div className="left-content-main-container">
-      <div className="d-flex p-3W justify-content-around flex-column">
+      <div className="d-flex p-3 justify-content-around flex-column">
         <div className="d-flex justify-content-around flex-column">
           <span className="welcome">_hello ! i'm</span>
           <span className="name">Ethan Taylan</span>

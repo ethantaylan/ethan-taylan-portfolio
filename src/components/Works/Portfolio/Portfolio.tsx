@@ -10,6 +10,7 @@ import './portfolio.scss';
 import PortfolioCards from './PortfolioItems/PortfolioCards/PortfolioCards';
 
 const Portfolio = () => {
+  
   const matches = useMediaQuery('(max-width: 992px)');
 
   return (

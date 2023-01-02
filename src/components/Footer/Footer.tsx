@@ -1,12 +1,15 @@
 import { Github } from 'react-bootstrap-icons';
 import { AiFillInstagram } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
+import useMediaQuery from '../../hooks/useMediaQuery';
 import './footer.scss';
 
 export const Footer = () => {
   function exitFullScreenMode() {
     document.exitFullscreen();
   }
+
+  const matches = useMediaQuery('(min-width:768px)');
 
   return (
     <div className="global-types footer-container-main">
@@ -36,15 +39,20 @@ export const Footer = () => {
         </div>
       </div>
       <div className="d-flex h-100">
-        <span
-          onClick={() => exitFullScreenMode()}
-          className="h-100 d-flex d-992-none justify-content-center align-items-center my-border-left px-4"
-        >
-          NORMAL MODE
-        </span>
-        <span className="version h-100 d-flex d-992-none justify-content-center align-items-center my-border-left px-4">
-          v1.0.0
-        </span>
+        {matches && (
+          <span
+            onClick={() => exitFullScreenMode()}
+            className="h-100 d-flex d-992-none justify-content-center align-items-center my-border-left px-4"
+          >
+            NORMAL MODE
+          </span>
+        )}
+
+        {matches && (
+          <span className="version h-100 d-flex d-992-none justify-content-center align-items-center my-border-left my-border-right px-4">
+            v1.0.0
+          </span>
+        )}
         <a
           target="_blank"
           className=" h-100"

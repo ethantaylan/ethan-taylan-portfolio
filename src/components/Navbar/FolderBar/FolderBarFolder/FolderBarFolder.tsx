@@ -15,7 +15,7 @@ export const FolderBarFolder: React.FC<FolderBarFolderProps> = ({ folder }) => {
 
   React.useEffect(() => {
     if (location.pathname.includes('works')) {
-      setArticleActive(true);
+      setArticleActive(false);
     }
   }, [location.pathname]);
 
