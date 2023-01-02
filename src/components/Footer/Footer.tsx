@@ -7,6 +7,7 @@ import './footer.scss';
 export const Footer = () => {
   function exitFullScreenMode() {
     document.exitFullscreen();
+    if(document.bidy)
   }
 
   const matches = useMediaQuery('(min-width:768px)');
@@ -44,7 +45,7 @@ export const Footer = () => {
             onClick={() => exitFullScreenMode()}
             className="h-100 d-flex d-992-none justify-content-center align-items-center my-border-left px-4"
           >
-            NORMAL MODE
+            WINDOWED MODE
           </span>
         )}
 
