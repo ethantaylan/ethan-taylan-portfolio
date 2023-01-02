@@ -7,7 +7,6 @@ import './footer.scss';
 export const Footer = () => {
   function exitFullScreenMode() {
     document.exitFullscreen();
-    if(document.bidy)
   }
 
   const matches = useMediaQuery('(min-width:768px)');
