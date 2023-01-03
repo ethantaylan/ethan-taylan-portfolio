@@ -19,9 +19,10 @@ export const Hobbies = () => {
     </span>
   );
 
-  return (  
+  return (
     <React.Fragment>
       <TextEmplacement
+        path="/about-me"
         text={text}
         pathTitle={'hobbies.txt'}
         fileName={'hobbies.txt'}

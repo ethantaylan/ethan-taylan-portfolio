@@ -5,15 +5,21 @@ import useMediaQuery from '../../hooks/useMediaQuery';
 import './text-emplacement.scss';
 
 interface TextEmplacementProps {
-  text: React.ReactElement;
-  pathTitle: string;
+  text?: React.ReactElement;
+  pathTitle?: string;
   fileName: string;
+  children?: any;
+  path: string;
+  onClick?: () => void;
 }
 
 export const TextEmplacement: React.FC<TextEmplacementProps> = ({
   pathTitle,
   text,
-  fileName
+  fileName,
+  children,
+  path,
+  onClick
 }) => {
   const matches = useMediaQuery('(max-width: 992px)');
 
@@ -24,21 +30,26 @@ export const TextEmplacement: React.FC<TextEmplacementProps> = ({
           matches && 'my-border-top mt-5 padding-17'
         } line-height-20 flex-column`}
       >
-        <NavLink to="/about-me">
-          <div className="d-flex align-items-center ps-3 primary w-100 article-btn my-border-bottom">
-            <span className={` ${matches ? 'w-100' : 'w-25'} me-4`}>
-              {fileName}
-            </span>
-            <span className="tab-padding my-border-right">
-              <IoMdClose className="p-0" />
-            </span>
-          </div>
+        <NavLink onClick={onClick} to={path}>
+          {fileName && (
+            <div className="d-flex align-items-center ps-3 primary w-100 article-btn my-border-bottom">
+              <span className={` ${matches ? 'w-100' : 'w-25'} me-4`}>
+                {fileName}
+              </span>
+              <span className="tab-padding my-border-right">
+                <IoMdClose className="p-0" />
+              </span>
+            </div>
+          )}
         </NavLink>
 
-        <div className="p-4 my-border-bottom">
-          <h1 className="text-white mb-5">{`/personnal-info/about-me/${pathTitle}`}</h1>
-          <div className="d-flex primary">{text}</div>
-        </div>
+        {pathTitle && (
+          <div className="p-4 my-border-bottom">
+            <h1 className="text-white mb-5">{`/personnal-info/about-me/${pathTitle}`}</h1>
+            <div className="d-flex primary">{text}</div>
+            {children}
+          </div>
+        )}
       </div>
     </React.Fragment>
   );

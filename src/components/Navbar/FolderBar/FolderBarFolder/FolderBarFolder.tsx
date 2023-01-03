@@ -1,8 +1,8 @@
 import React from 'react';
 import { BiChevronDown, BiChevronRight } from 'react-icons/bi';
 import {
-  FolderBarFolder as FolderBarFolderModel,
-  FolderBarArticle as FolderBarArticleModel
+  FolderBarArticle as FolderBarArticleModel,
+  FolderBarFolder as FolderBarFolderModel
 } from '../FolderBar';
 import { FolderBarArticle } from '../FolderBarItems/FolderBarArticle';
 

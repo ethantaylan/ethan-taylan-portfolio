@@ -1,7 +1,7 @@
 // import Home from './packages/Home/Home';
 import 'bootstrap/dist/css/bootstrap.css';
 import React from 'react';
-import EnterFullScreen from './components/FullScreen/EnterFullScreen';
+// import EnterFullScreen from './components/FullScreen/EnterFullScreen';
 import useMediaQuery from './hooks/useMediaQuery';
 import AppLayout from './packages/AppLayout';
 
@@ -10,7 +10,7 @@ function App() {
 
   return (
     <React.Fragment>
-      <EnterFullScreen className={matches && 'd-none'} />
+      {/* <EnterFullScreen className={matches && 'd-none'} /> */}
       <AppLayout />
     </React.Fragment>
   );

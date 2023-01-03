@@ -32,7 +32,12 @@ export const Skills = () => {
 
   return (
     <React.Fragment>
-      <TextEmplacement text={text} pathTitle={'skills.txt'} fileName={'skills.txt'} />
+      <TextEmplacement
+        path="/about-me"
+        text={text}
+        pathTitle={'skills.txt'}
+        fileName={'skills.txt'}
+      />
     </React.Fragment>
   );
 };

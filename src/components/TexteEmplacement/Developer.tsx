@@ -27,6 +27,7 @@ export const Developer = () => {
   return (
     <React.Fragment>
       <TextEmplacement
+        path="/about-me"
         text={text}
         pathTitle={'developer.txt'}
         fileName={'developer.txt'}

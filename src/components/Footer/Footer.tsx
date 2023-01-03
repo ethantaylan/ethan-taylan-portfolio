@@ -42,7 +42,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className="d-flex h-100">
-        {matches && (
+        {/* {matches && (
           <span
             onClick={() => {
               exitFullScreenMode();
@@ -52,7 +52,7 @@ export const Footer = () => {
           >
             {mode ? 'FULLSCREEN MODE' : 'WINDOWED MODE'}
           </span>
-        )}
+        )} */}
 
         {matches && (
           <span className="version h-100 d-flex d-992-none justify-content-center align-items-center my-border-left my-border-right px-4">
