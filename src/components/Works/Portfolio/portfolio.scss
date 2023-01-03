@@ -24,5 +24,9 @@
     background-color: m.$secondary;
     color: m.$primary;
     border: none;
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+    border-radius: 4px;
   }
 }

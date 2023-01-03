@@ -17,8 +17,8 @@ export interface FolderBarArticle {
   title: string;
   icon: React.ReactElement;
   href: string;
-  resume: string
-  onClick: () => void
+  resume: string;
+  onClick: () => void;
 }
 
 interface FolderBarProps {
@@ -34,14 +34,12 @@ const FolderBar: React.FC<FolderBarProps> = ({ children, tabs, title }) => {
         <div className="folder-container">
           <h1 className="about-me-title">{title}</h1>
           {tabs?.map((tab: FolderBarTab, index: number) => (
-              <FolderBarTab key={index} tab={tab} />
+            <FolderBarTab key={index} tab={tab} />
           ))}
         </div>
         {children}
-
       </div>
     </div>
-    
   );
 };
 

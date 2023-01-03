@@ -1,10 +1,9 @@
-import React from 'react';
 import {
-  AiFillFilePdf,
   AiFillFileText,
   AiFillFolder,
   AiFillInstagram,
-  AiFillLinkedin
+  AiFillLinkedin,
+  AiOutlineFileJpg
 } from 'react-icons/ai';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { FaGithubSquare } from 'react-icons/fa';
@@ -35,8 +34,8 @@ const AboutMeTabs = [
             href: '/about-me/hobbies'
           },
           {
-            icon: <AiFillFilePdf size={16} />,
-            resume: 'resume.pdf'
+            icon: <AiOutlineFileJpg size={16} />,
+            resume: 'resume.jpg'
           }
         ]
       },

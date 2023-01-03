@@ -1,32 +1,32 @@
 @use '../../../../../styles/scss/styles.scss' as m;
 
 .card-title {
-	color: m.$purple;
-	font-weight: bold;
+  color: m.$purple;
+  font-weight: bold;
 }
 
 .subcard-title {
-	color: m.$primary;
-	font-weight: normal;
+  color: m.$primary;
+  font-weight: normal;
 }
 
 .card {
-	max-width: 300px;
+  max-width: 350px;
 }
 
 .portfolio-img-style {
-	object-fit: cover;
-	height: 250px;
-	width: 300px;
-	opacity: 0.8;
-  }
-  
-  .portfolio-img-style:hover {
-	filter: saturate(0.8);
-	opacity: 1;
-	cursor: pointer;
-  }
-  
-  .scroll-portfolio {
-	overflow-y: scroll;
-  }
+  object-fit: cover;
+  height: 150px;
+  width: 350px;
+  opacity: 0.8;
+}
+
+.portfolio-img-style:hover {
+  filter: saturate(0.8);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.scroll-portfolio {
+  overflow-y: scroll;
+}

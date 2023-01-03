@@ -1,7 +1,7 @@
 import React from 'react';
 import TextEmplacement from './TextEmplacement';
 
-export const Developer = ({}) => {
+export const Developer = () => {
   const text = (
     <span>
       // About me
@@ -26,7 +26,11 @@ export const Developer = ({}) => {
 
   return (
     <React.Fragment>
-      <TextEmplacement text={text} pathTitle={'developer.txt'} fileName={'developer.txt'} />
+      <TextEmplacement
+        text={text}
+        pathTitle={'developer.txt'}
+        fileName={'developer.txt'}
+      />
     </React.Fragment>
   );
 };

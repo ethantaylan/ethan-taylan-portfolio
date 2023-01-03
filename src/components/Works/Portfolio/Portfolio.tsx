@@ -10,7 +10,6 @@ import './portfolio.scss';
 import PortfolioCards from './PortfolioItems/PortfolioCards/PortfolioCards';
 
 const Portfolio = () => {
-  
   const matches = useMediaQuery('(max-width: 992px)');
 
   return (
@@ -76,7 +75,7 @@ const Portfolio = () => {
         <div className="d-flex justify-content-center align-items-center">
           <button
             onClick={() => scrollTo(0, 0)}
-            className="scroll-to-top-btn w-100 p-2 m-4"
+            className="scroll-to-top-btn p-2"
           >
             <AiOutlineArrowUp size={18} />
           </button>
