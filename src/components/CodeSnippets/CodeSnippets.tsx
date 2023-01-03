@@ -28,7 +28,7 @@ export const CodeSnippets: React.FC<CodeSnippetsProps> = ({
   return (
     <div
       className={`${className} ${matches && 'pt-5'} ${
-        showCodeSnippet ? 'my-border-top app-bg all-container' : 'd-none'
+        showCodeSnippet ? 'app-bg all-container' : 'd-none'
       }`}
     >
       <TextEmplacement

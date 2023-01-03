@@ -20,12 +20,10 @@ export const FolderBarFolder: React.FC<FolderBarFolderProps> = ({ folder }) => {
   }, [location.pathname]);
 
   return (
-    <div className="py-2 primary">
+    <div className="p-1 primary">
       <div
         onClick={() => setArticleActive(!isArticleActive)}
-        className={`d-flex hover align-items-center ${
-          isArticleActive && 'mb-2'
-        }`}
+        className="d-flex hover mb-2 align-items-center"
       >
         {isArticleActive ? (
           <BiChevronDown

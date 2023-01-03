@@ -9,7 +9,7 @@ interface TextEmplacementProps {
   pathTitle?: string;
   fileName: string;
   children?: any;
-  path: string;
+  path?: any;
   onClick?: () => void;
 }
 
@@ -46,7 +46,7 @@ export const TextEmplacement: React.FC<TextEmplacementProps> = ({
         {pathTitle && (
           <div className="p-4 my-border-bottom">
             <h1 className="text-white mb-5">{`/personnal-info/about-me/${pathTitle}`}</h1>
-            <div className="d-flex primary">{text}</div>
+            {text && <div className="d-flex primary">{text}</div>}
             {children}
           </div>
         )}
