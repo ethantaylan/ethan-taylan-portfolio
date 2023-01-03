@@ -1,3 +1,4 @@
+import React from 'react';
 import { Github } from 'react-bootstrap-icons';
 import { AiFillInstagram } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
@@ -10,6 +11,8 @@ export const Footer = () => {
   }
 
   const matches = useMediaQuery('(min-width:768px)');
+
+  const [mode, setMode] = React.useState<boolean>();
 
   return (
     <div className="global-types footer-container-main">
@@ -41,10 +44,13 @@ export const Footer = () => {
       <div className="d-flex h-100">
         {matches && (
           <span
-            onClick={() => exitFullScreenMode()}
+            onClick={() => {
+              exitFullScreenMode();
+              setMode(false);
+            }}
             className="h-100 d-flex d-992-none justify-content-center align-items-center my-border-left px-4"
           >
-            WINDOWED MODE
+            {mode ? 'FULLSCREEN MODE' : 'WINDOWED MODE'}
           </span>
         )}
 
