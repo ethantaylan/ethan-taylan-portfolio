@@ -44,7 +44,7 @@ export const TextEmplacement: React.FC<TextEmplacementProps> = ({
         </NavLink>
 
         {pathTitle && (
-          <div className="p-4 my-border-bottom">
+          <div className="p-4">
             <h1 className="text-white mb-5">{`/personnal-info/about-me/${pathTitle}`}</h1>
             {text && <div className="d-flex primary">{text}</div>}
             {children}

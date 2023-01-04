@@ -157,6 +157,25 @@ body,
     border-radius: 12px;
   }
 
+  @media screen and (min-width: 992px) {
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #root {
+      max-width: 77vw;
+      max-height: 77vh;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    #root {
+      max-width: 95vw;
+      max-height: 95vh;
+    }
+  }
+
   html,
   body,
   #root,
