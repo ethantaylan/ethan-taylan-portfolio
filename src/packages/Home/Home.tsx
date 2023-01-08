@@ -7,7 +7,10 @@ function Home() {
 
   return (
     <React.Fragment>
-      <div className="h-100 w-100 d-flex">
+      <div
+        className={`
+          ${matches && 'p-4 w-100 justify-content-center align-items-center'} h-100`}
+      >
         <LeftContent />
       </div>
     </React.Fragment>

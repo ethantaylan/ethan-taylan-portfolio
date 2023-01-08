@@ -8,15 +8,13 @@ const LeftContent = () => {
   return (
     <div
       className={`${
-        matches ? 'w-100' : 'w-75'
+        matches ? 'w-100 p-4' : 'w-75'
       } h-100 d-flex flex-column align-items-center justify-content-center`}
     >
       <div className="d-flex justify-content-around flex-column">
-        <div className="d-flex justify-content-around flex-column">
-          <span className="welcome"> HelloIm();</span>
-          <span className="name">Ethan Taylan</span>
-          <span className="front-end">Frontend developer</span>
-        </div>
+        <span className="welcome"> HelloIm();</span>
+        <span className="name">Ethan Taylan</span>
+        <span className="front-end">Frontend developer</span>
         <div className="d-flex mt-4 justify-content-around flex-column">
           <span className="left-content-subtitle">
             // You can see my works {'->'}{' '}

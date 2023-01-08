@@ -36,7 +36,7 @@ export const TextEmplacement: React.FC<TextEmplacementProps> = ({
               <span className={` ${matches ? 'w-100' : 'w-25'} me-4`}>
                 {fileName}
               </span>
-              <span className="tab-padding my-border-right">
+              <span className={`tab-padding ${matches} my-border-right`}>
                 <IoMdClose className="p-0" />
               </span>
             </div>
