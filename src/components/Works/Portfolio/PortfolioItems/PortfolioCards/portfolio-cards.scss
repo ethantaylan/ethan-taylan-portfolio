@@ -12,12 +12,14 @@
 
 .card {
   max-width: 350px;
+  &-body {
+    padding: 0px;
+  }
 }
 
 .portfolio-img-style {
   object-fit: cover;
   height: 150px;
-  width: 350px;
   opacity: 0.8;
 }
 

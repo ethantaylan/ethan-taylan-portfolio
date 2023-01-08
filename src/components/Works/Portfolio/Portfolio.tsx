@@ -1,4 +1,3 @@
-import { AiOutlineArrowUp } from 'react-icons/ai';
 import LaChouetteAgence from '../../../assets/Projects/lachouetteagence.png';
 import OhMyFood from '../../../assets/Projects/ohmyfood.png';
 import Orinoco from '../../../assets/Projects/orinoco.png';
@@ -19,7 +18,7 @@ const Portfolio = () => {
       <FolderBar title={'_works'} tabs={WorksTabs} />
       <div
         className={`d-flex flex-wrap ${
-          matches && 'my-border-top'
+          matches && ' my-border-top'
         } portfolio-container`}
       >
         <PortfolioCards
@@ -72,14 +71,6 @@ const Portfolio = () => {
             <img className="w-75" src={OhMyFood} alt="OhMyFood image" />
           }
         />
-        <div className="d-flex justify-content-center align-items-center">
-          <button
-            onClick={() => scrollTo(0, 0)}
-            className="scroll-to-top-btn p-2"
-          >
-            <AiOutlineArrowUp size={18} />
-          </button>
-        </div>
       </div>
     </div>
   );

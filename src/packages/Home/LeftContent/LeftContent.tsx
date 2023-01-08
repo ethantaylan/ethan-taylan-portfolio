@@ -1,16 +1,23 @@
 import { NavLink } from 'react-router-dom';
+import useMediaQuery from '../../../hooks/useMediaQuery';
 import './left-content.scss';
 
 const LeftContent = () => {
+  const matches = useMediaQuery('(max-width:992px)');
+
   return (
-    <div className="left-content-main-container">
-      <div className="d-flex p-3 justify-content-around flex-column">
+    <div
+      className={`${
+        matches ? 'w-100' : 'w-75'
+      } h-100 d-flex flex-column align-items-center justify-content-center`}
+    >
+      <div className="d-flex justify-content-around flex-column">
         <div className="d-flex justify-content-around flex-column">
-          <span className="welcome">_hello ! i'm</span>
+          <span className="welcome"> HelloIm();</span>
           <span className="name">Ethan Taylan</span>
-          <span className="front-end">{'>'} Frontend developer</span>
+          <span className="front-end">Frontend developer</span>
         </div>
-        <div className="d-flex mt-5 justify-content-around flex-column">
+        <div className="d-flex mt-4 justify-content-around flex-column">
           <span className="left-content-subtitle">
             // You can see my works {'->'}{' '}
             <NavLink
@@ -25,12 +32,12 @@ const LeftContent = () => {
             </NavLink>
           </span>
           <span className="left-content-subtitle">
-            // You can also go to my Github page
+            // Here is my Github profile
           </span>
 
           <span className="github-link">
             <span style={{ color: '#4d5bce' }}>const</span>{' '}
-            <span style={{ color: '#43D9AD' }}>GithubLink</span> ={' '}
+            <span style={{ color: '#43d98f' }}>GithubLink</span> ={' '}
             <span style={{ color: 'orange' }}>
               <a
                 target="_blank"

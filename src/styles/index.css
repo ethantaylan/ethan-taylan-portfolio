@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url("https://use.typekit.net/vzb1qkj.css");
+
+
 
 /* http://meyerweb.com/eric/tools/css/reset/
 v2.0 | 20110126
@@ -143,47 +146,12 @@ body,
 .App {
   height: 100%;
   font-size: 14px;
-  letter-spacing: -0.7px;
   height: 100%;
   font-family: 'Fira Code', monospace;
   background-color: #011627;
   width: 100%;
 }
 
-@media screen and (min-width: 992px) {
-  #root {
-    border: 1px solid #1e2d3d;
-    padding: 0px !important;
-    border-radius: 12px;
-  }
-
-  @media screen and (min-width: 992px) {
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    #root {
-      max-width: 77vw;
-      max-height: 77vh;
-    }
-  }
-
-  @media screen and (max-width: 1200px) {
-    #root {
-      max-width: 95vw;
-      max-height: 95vh;
-    }
-  }
-
-  html,
-  body,
-  #root,
-  .App {
-    padding: 30px;
-    background-color: #010c15;
-  }
-}
 .height-auto {
   height: auto;
 }

@@ -1,32 +1,16 @@
 @use '../../../styles/scss/styles.scss' as m;
 
-@media screen and (min-width: 992px) {
-  .portfolio-container {
-    padding: 20px;
-    max-height: 600px;
-    overflow-y: scroll;
-    border-bottom: 1px solid m.$secondary;
-  }
-  .scroll-to-top-btn {
-    display: none;
-  }
-}
-
 @media screen and (max-width: 992px) {
   .portfolio-container {
-    max-height: 600;
     overflow-y: scroll;
     display: flex;
     justify-content: center;
     width: 100%;
-  }
-  .scroll-to-top-btn {
-    background-color: m.$secondary;
-    color: m.$primary;
     border: none;
-    position: absolute;
-    bottom: 20px;
-    right: 50px;
-    border-radius: 4px;
+    overflow: auto;
   }
+}
+
+.portfolio-container {
+  overflow: auto;
 }
