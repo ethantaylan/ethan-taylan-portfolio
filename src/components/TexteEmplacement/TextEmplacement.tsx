@@ -10,7 +10,7 @@ interface TextEmplacementProps {
   fileName: string;
   children?: any;
   path?: any;
-  onClick?: () => void;
+  onClick: () => void;
 }
 
 export const TextEmplacement: React.FC<TextEmplacementProps> = ({

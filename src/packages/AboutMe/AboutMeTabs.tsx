@@ -43,6 +43,7 @@ const AboutMeTabs = [
         chevron: true,
         title: 'skills-and-tools',
         icon: <AiFillFolder size={18} color="teal" />,
+        singleFile: '',
         articles: [
           {
             title: 'skills.txt',
