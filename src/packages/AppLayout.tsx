@@ -9,14 +9,15 @@ import AboutMe from './AboutMe/AboutMe';
 import ContactMe from './ContactMe/ContactMe';
 import Home from './Home/Home';
 import NotFound from './NotFound';
-import Works from './Works/Works';
 import Hobbies from '../components/TexteEmplacement/Hobbies';
 import Education from '../components/TexteEmplacement/Education';
 import Developer from '../components/TexteEmplacement/Developer';
 import Skills from '../components/TexteEmplacement/Skills';
 import Tools from '../components/TexteEmplacement/Tools';
+import Portfolio from '../components/Works/Portfolio/Portfolio';
 
 function App() {
+
   return (
     <BrowserRouter>
       <div className="h-100 w-100 d-flex justify-content-between flex-column">
@@ -26,7 +27,6 @@ function App() {
             <Route path="*" element={<NotFound />} />
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
-            //* page ABOUTME *//
             <Route path="/about-me" element={<AboutMe />} />
             <Route
               path="/about-me/education"
@@ -48,9 +48,7 @@ function App() {
               path="/about-me/developer"
               element={<AboutMe children={<Developer />} />}
             />
-            //* page WORKS *//
-            <Route path="/works" element={<Works />} />
-            //* ROUTES FOR CONTACT PAGE//
+            <Route path="/works" element={<Portfolio />} />
             <Route
               path="/contact-me"
               element={<ContactMe children={<Contact />} />}

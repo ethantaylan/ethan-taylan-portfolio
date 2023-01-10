@@ -22,7 +22,7 @@ const NotFound = () => {
 					to='/home'
 				>
 					<AiOutlineArrowLeft />
-				</NavLink>{' '}
+				</NavLink>
 			</div>
 		</div>
 	);
