@@ -1,0 +1,45 @@
+@use'../../styles/scss/styles.scss' as m;
+
+.welcome {
+  color: m.$primary;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.slogan {
+  color: #8ba7c0;
+  font-size: 2vw;
+  margin-top: 5px;
+  font-family: marine,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.front-end {
+  color: cadetblue;
+  font-size: 75px;
+  margin-top: 5px;
+  font-family: marine, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  @media screen and (max-width: 992px) {
+    font-size: 22px;
+  }
+}
+
+.left-content-subtitle {
+  color: m.$primary;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 70%;
+  color: m.$primary;
+  font-size: 16px;
+  @media screen and (max-width: 992px) {
+  }
+}
+
+.home-icons {
+  font-size: 14px;
+  margin-top: 20px;
+  color: m.$primary;
+}
