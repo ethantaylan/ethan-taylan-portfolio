@@ -1,4 +1,4 @@
-@use '../../../styles/scss/styles.scss' as m;
+@use '../../styles/scss/styles.scss' as m;
 
 @media screen and (max-width: 992px) {
   .portfolio-container {
@@ -7,7 +7,4 @@
     width: 100%;
     border: none;
   }
-}
-
-.portfolio-container {
 }

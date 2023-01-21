@@ -1,7 +1,7 @@
 import React, { Children } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { BsCode, BsCodeSlash } from 'react-icons/bs';
-import StaticModal from '../../../../StaticModal/StaticModal';
+import StaticModal from '../../StaticModal/StaticModal';
 import './portfolio-cards.scss';
 
 interface PortfolioCardsProps {

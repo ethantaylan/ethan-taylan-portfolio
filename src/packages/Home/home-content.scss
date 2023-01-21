@@ -1,25 +1,19 @@
 @use'../../styles/scss/styles.scss' as m;
 
 .welcome {
-  color: m.$primary;
+  color: #6590bc;
   font-size: 20px;
   margin-bottom: 5px;
+  @media screen and (max-width: 992px) {
+    font-size: 16px;
+  }
 }
 
-.slogan {
-  color: #8ba7c0;
-  font-size: 2vw;
-  margin-top: 5px;
-  font-family: marine,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
 .front-end {
-  color: cadetblue;
-  font-size: 75px;
+  color: #9bc2ea;
+  font-size: 55px;
   margin-top: 5px;
-  font-family: marine, sans-serif;
   font-weight: 700;
   font-style: normal;
   @media screen and (max-width: 992px) {
@@ -28,18 +22,23 @@
 }
 
 .left-content-subtitle {
-  color: m.$primary;
+  color: #6590bc;
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 70%;
-  color: m.$primary;
+  width: 50%;
   font-size: 16px;
+  line-height: 20px;
   @media screen and (max-width: 992px) {
+    font-size: 14px;
+    width: 100%;
   }
 }
 
 .home-icons {
   font-size: 14px;
-  margin-top: 20px;
+  margin-top: 20px;;
   color: m.$primary;
+  @media screen and (max-width: 992px) {
+
+  }
 }

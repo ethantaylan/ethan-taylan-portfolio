@@ -14,7 +14,7 @@ import Education from '../components/TexteEmplacement/Education';
 import Developer from '../components/TexteEmplacement/Developer';
 import Skills from '../components/TexteEmplacement/Skills';
 import Tools from '../components/TexteEmplacement/Tools';
-import Portfolio from '../components/Works/Portfolio/Portfolio';
+import Portfolio from './Works/Works';
 
 function App() {
 

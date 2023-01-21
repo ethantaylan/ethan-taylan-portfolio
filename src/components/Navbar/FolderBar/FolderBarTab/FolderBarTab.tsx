@@ -4,6 +4,7 @@ import { FolderBarFolder } from '../FolderBarFolder/FolderBarFolder';
 
 interface FolderBarTabProps {
   tab: FolderBarTabModel;
+  onClick?: () => void
 }
 
 export const FolderBarTab: React.FC<FolderBarTabProps> = ({ tab }) => {

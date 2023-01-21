@@ -6,7 +6,7 @@ import {
   AiOutlineFileJpg
 } from 'react-icons/ai';
 import { BsFillTelephoneFill } from 'react-icons/bs';
-import { FaGithubSquare } from 'react-icons/fa';
+import { FaGithubSquare, FaReact } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
 
 const AboutMeTabs = [
@@ -78,7 +78,15 @@ const AboutMeTabs = [
             href: '//www.linkedin.com/in/ethan-taylan-697831199/'
           }
         ]
-      }
+      },
+      // {
+      //   icon: (
+      //     <span className="ms-2">
+      //       <FaReact className='me-2' size={16} />
+      //       code-snippets.tsx
+      //     </span>
+      //   ),
+      // },
     ]
   },
   {

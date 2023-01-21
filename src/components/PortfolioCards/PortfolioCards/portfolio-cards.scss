@@ -1,4 +1,4 @@
-@use '../../../../../styles/scss/styles.scss' as m;
+@use '../../../styles/scss/styles.scss' as m;
 
 .card-title {
   color: m.$purple;
@@ -12,6 +12,7 @@
 
 .card {
   max-width: 350px;
+  min-width: 250px;
   &-body {
     padding: 0px;
   }
@@ -19,16 +20,18 @@
 
 .portfolio-img-style {
   object-fit: cover;
+  filter: saturate(0.7);
   height: 150px;
-  opacity: 0.8;
-}
-
-.portfolio-img-style:hover {
-  filter: saturate(0.8);
-  opacity: 1;
-  cursor: pointer;
 }
 
 .scroll-portfolio {
   overflow-y: scroll;
+}
+
+@media screen and (max-width: 992px) {
+  .portfolio-img-style {
+    object-fit: cover;
+    filter: saturate(0.7);
+    height: 100%;
+  }
 }

@@ -1,9 +1,9 @@
-import React, { HTMLInputTypeAttribute } from 'react';
+import React from 'react';
 import useMediaQuery from '../../../hooks/useMediaQuery';
 import ContactSnippet from '../ContactSnippet/ContactSnippet';
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
-import { Button, Form, Input, TextArea } from 'semantic-ui-react';
+import { Form, Input, TextArea } from 'semantic-ui-react';
 import './contact-form.scss';
 
 const ContactForm = () => {
@@ -40,7 +40,7 @@ const ContactForm = () => {
 
   const matches = useMediaQuery('(max-width: 992px)');
 
-  const SERVICE_ID = 'service_u5lz5jn';
+  const SERVICE_ID = 'service_ocmb31v';
   const TEMPLATE_ID = 'template_nlic5e6';
   const USER_ID = 'ShI3iGfExRJvjBLGn';
 

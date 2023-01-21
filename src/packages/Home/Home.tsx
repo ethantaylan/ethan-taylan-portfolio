@@ -1,8 +1,8 @@
 import React from 'react';
 import useMediaQuery from '../../hooks/useMediaQuery';
-import LeftContent from './LeftContent/LeftContent';
+import HomeContent from './HomeContent';
 
-function Home() {
+export const Home = () => {
   const matches = useMediaQuery('(min-width:992px)');
 
   return (
@@ -11,7 +11,7 @@ function Home() {
         className={`
           ${matches && 'p-4 w-100 justify-content-center align-items-center'} h-100`}
       >
-        <LeftContent />
+        <HomeContent />
       </div>
     </React.Fragment>
   );
